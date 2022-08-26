@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+
+        <script src="https://kit.fontawesome.com/3c15a7e7ed.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <theme-button></theme-button>
+        <my-terminal id="terminal"></my-terminal>
+
+        <main>
+            <menu-button id="menu-button"></menu-button>
+            <read-me>
+                <pre slot="read-me">
+    <span style="color:rgb(0,128,255)"><em>this</em></span><span style="color:rgb(128,255,255)">.baby</span> = My portfolio
+    
+        This is my first build from scratch.
+I used the ECMAScript 6 Web components and
+vanilla javascript to get better use of 
+language and understanding of it.
+
+Feel free to interact with each entry! :).
+It is a static web page and it is not saved.
+In fact, it's a playground of code and fun.
+
+     I hope you enjoy <span style="color:rgb(0,128,255)"><em>this</em></span><span style="color:rgb(128,255,255)">.baby</span>.
+                </pre>
+            </read-me>
+            <dialog-box></dialog-box>
+            <section class="container portfolio active" id="portfolio">
+                <portfolio-tittle>
+                    <span
+                        slot="working"
+                        class="txt-type"
+                        data-wait="3000"
+                        data-words='["king"]'
+                    ></span>
+                </portfolio-tittle>
+                <portfolio-items id="portfolio-items"></portfolio-items>
+            </section>
+        </main>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.4/lottie.min.js"
+            integrity="sha512-ilxj730331yM7NbrJAICVJcRmPFErDqQhXJcn+PLbkXdE031JJbcK87Wt4VbAK+YY6/67L+N8p7KdzGoaRjsTg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script type="module" src="./components/theme-button.js"></script>
+        <script type="module" src="./components/menu-button.js"></script>
+        <script type="module" src="./components/portfolio/portfolio-tittle.js"></script>
+        <script type="module" src="./components/portfolio/portfolio-items.js"></script>
+        <script type="module" src="./components/portfolio/read-me.js"></script>
+        <script type="module" src="./components/portfolio/my-terminal.js"></script>
+        <script type="module" src="./components//portfolio/dialog-box.js"></script>
+    </body>
+</html>

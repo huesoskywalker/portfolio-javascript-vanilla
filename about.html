@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    </head>
+    <body id="skywalker">
+        <theme-button></theme-button>
+        <menu-button id="menu-button"></menu-button>
+        <main>
+            <section class="container about active" id="about">
+                <c3p0-anim></c3p0-anim>
+                <chewy-anim></chewy-anim>
+                <r2d2-anim></r2d2-anim>
+                <yoda-anim></yoda-anim>
+                <falcon-anim></falcon-anim>
+                <about-me id="about-me">
+                    <span slot="aka"> huesoskywalker</span>
+                    <h4 slot="storyTittle" id="storyTittle">Long story short</h4>
+                    <pre slot="story" id="story">
+        Im a good fella that likes to grow, learn
+and undertake. Im a nature and animal lover. 
+                            
+        Programming is a new road in my story.
+
+        Excited about this journey, as all the ones
+i already had, because it allows me to build 
+stuffs and makes me full fill what my soul loves. 
+
+    I'm a simple and minimalist man.
+                    </pre>
+                    <h1 id="brightside" slot="brightside">May the force be with you!</h1>
+                    <h2 id="darkside" slot="darkside">
+                        You don't know the power of the dark side!
+                    </h2>
+                </about-me>
+                <about-life id="about-life"> </about-life>
+                <about-stats id="about-stats" state> </about-stats>
+            </section>
+        </main>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.4/lottie.min.js"
+            integrity="sha512-ilxj730331yM7NbrJAICVJcRmPFErDqQhXJcn+PLbkXdE031JJbcK87Wt4VbAK+YY6/67L+N8p7KdzGoaRjsTg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script type="module" src="./components/theme-button.js"></script>
+        <script type="module" src="./components/menu-button.js"></script>
+        <script type="module" src="./components/about/about-me.js"></script>
+        <script type="module" src="./components/about/about-stats.js"></script>
+        <script type="module" src="./components/about/about-life.js"></script>
+        <script type="module" src="./components/about/c3po-anim.js"></script>
+        <script type="module" src="./components/about/r2d2-anim.js"></script>
+        <script type="module" src="./components/about/chewy-anim.js"></script>
+        <script type="module" src="./components/about/yoda-anim.js"></script>
+        <script type="module" src="./components/about/falcon-anim.js"></script>
+    </body>
+</html>
