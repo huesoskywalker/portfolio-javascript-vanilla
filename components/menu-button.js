@@ -29,12 +29,12 @@ buttonTemplate.innerHTML = `
 <nav class="nav">
 <ul class="menu-nav">
 ${menuData
-    .map((icon) => {
+    .map(({link, title, menuIcon}) => {
         return `
     <li class="menu-nav__item">
-    <a href=${icon.link} class="menu-nav__icons">
-    <span class="icon-title">${icon.title}</span>
-    <i class="icon" style="background-image:url(${icon.menuIcon})">
+    <a href=${link} class="menu-nav__icons">
+    <span class="icon-title">${title}</span>
+    <i class="icon" style="background-image:url(${menuIcon})">
     </i>
     </a>
             </li>
