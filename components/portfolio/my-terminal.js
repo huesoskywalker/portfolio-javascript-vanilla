@@ -262,11 +262,11 @@ class MyTerminal extends HTMLElement {
                 let wishes = new Promise(function (resolve) {
                     resolve(
                         `${newWish
-                            .map((esAsi) => {
+                            .map(({ _wish }) => {
                                 return `
                                 <h1 style="color: ${rgb()}";>
     
-                                ${esAsi._wish}
+                                ${_wish}
                                 </h1>
     
                                 `
