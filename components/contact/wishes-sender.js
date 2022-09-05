@@ -158,11 +158,11 @@ class GalaxyWishes extends HTMLElement {
 
                 this.shadowRoot.querySelector("#stampy").innerHTML = `
              ${storageSkills
-                 .map((wish) => {
+                 .map(({ _wish }) => {
                      return `
             
                     <div>
-                        ${wish._wish}
+                        ${_wish}
                     </div>
                         `
                  })
