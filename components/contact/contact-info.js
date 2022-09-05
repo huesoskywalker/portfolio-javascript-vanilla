@@ -176,29 +176,13 @@ class ContactInfo extends HTMLElement {
     connectedCallback() {
         this.render()
     }
-    render() {
+   render() {
         this.innerHTML = `
 
             <div class="left-contact">
             <h4 id="contactTitle">Buckle your seatbelt Dorothy</h4>
             <div class="contact-info">
         ${basicInfo
-            .map((mine) => {
-                return `
-            <div class="contact-item">
-                <div class="icon">
-                    <i class="${mine.icon} mine"></i>
-                    <span>${mine.type}</span>
-                </div>
-                <p>${mine.value}</p>
-            </div>
-            `
-            })
-            .join("")}
-           
-        </div>
-            <div class="contact-icon">
-            ${socialNetworks
             .map(({ icon, type, value }) => {
                 return `
             <div class="contact-item">
@@ -210,6 +194,21 @@ class ContactInfo extends HTMLElement {
             </div>
             `
             })
+            .join("")}
+           
+        </div>
+            <div class="contact-icon">
+            ${socialNetworks
+                .map(({ link, icon }) => {
+                    return `
+                <a
+                    href="${link}"
+                    target="_blank"
+                >
+                    <i class="${icon} item"></i>
+                </a>
+            `
+                })
                 .join("")}
             </div>
         </div>
