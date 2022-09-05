@@ -70,11 +70,11 @@ const projects = [
         author: "Udemy",
     },
     {
-        title: "Reading JavaScript books",
+        title: "Reading JavaScript",
         image: "../../img/sky.jpg",
         type: "Scratch",
-        link: "",
-        author: "",
+        link: "https://exploringjs.com/",
+        author: "[1 / 6]",
     },
     {
         title: "Portfolio",
