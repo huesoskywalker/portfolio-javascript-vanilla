@@ -288,15 +288,15 @@ class AboutStats extends HTMLElement {
         
         ${progressData
             .sort((a, b) => String(b.progress).localeCompare(a.progress))
-            .map((keepStudying) => {
+            .map(({ language, progress }) => {
                 return `
 
                 <div class="progress-bar">
-                <p class="prog-title" id="progTittle">${keepStudying.language}</p>
+                <p class="prog-title" id="progTittle">${language}</p>
                 <div class="progress-con">
-                <p class="prog-text">${keepStudying.progress}</p>
+                <p class="prog-text">${progress}</p>
                 <div class="progress">
-                <span class="progress-mode"style="width:${keepStudying.progress}"></span>
+                <span class="progress-mode"style="width:${progress}"></span>
         </div>
         </div>
         </div>
