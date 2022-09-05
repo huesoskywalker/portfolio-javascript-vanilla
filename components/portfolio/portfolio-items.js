@@ -70,7 +70,7 @@ const projects = [
         author: "Udemy",
     },
     {
-        title: "Cooming soon",
+        title: "Reading JavaScript books",
         image: "../../img/sky.jpg",
         type: "Scratch",
         link: "",
@@ -84,7 +84,7 @@ const projects = [
         author: "huesoskywalker",
     },
     {
-        title: "Coming Soon",
+        title: "Studying...",
         image: "../../img/sky.jpg",
         type: "Data Structure",
         link: "",
