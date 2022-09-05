@@ -54,16 +54,16 @@ lifeTemplate.innerHTML = `
 <div class="timeline">
 ${lifeTrip
     .sort((a, b) => String(a.duration).localeCompare(b.duration))
-    .map((workAndStudies) => {
+    .map(({ icon, duration, tittle, link, linkText, description }) => {
         return `
      <div class="timeline-item">
                         <div class="tl-icon">
-                            <i class="${workAndStudies.icon}"></i>
+                            <i class="${icon}"></i>
                         </div>
-                        <p class="tl-duration">${workAndStudies.duration}</p>
-                        <h5>${workAndStudies.tittle}<a class="show" target="_blank" ${workAndStudies.link}>${workAndStudies.linkText}</a></h5>
+                        <p class="tl-duration">${duration}</p>
+                        <h5>${tittle}<a class="show" target="_blank" ${link}>${linkText}</a></h5>
                         <p class="tl-description">
-                            ${workAndStudies.description}
+                            ${description}
                         </p>
                     </div>
     `
