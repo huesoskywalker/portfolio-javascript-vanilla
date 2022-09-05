@@ -285,9 +285,6 @@ class MyTerminal extends HTMLElement {
     }
 
     remove() {
-        // document
-        //     .querySelector("#portfolio-items")
-        //     .setAttribute("state", "visible")
         const wishes = localStorage.getItem("divs")
         const clearStamps = document.querySelectorAll(".stamps")
         if (wishes) {
