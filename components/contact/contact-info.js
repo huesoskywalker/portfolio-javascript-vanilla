@@ -199,16 +199,17 @@ class ContactInfo extends HTMLElement {
         </div>
             <div class="contact-icon">
             ${socialNetworks
-                .map((item) => {
-                    return `
-                <a
-                    href="${item.link}"
-                    target="_blank"
-                >
-                    <i class="${item.icon} item"></i>
-                </a>
+            .map(({ icon, type, value }) => {
+                return `
+            <div class="contact-item">
+                <div class="icon">
+                    <i class="${icon} mine"></i>
+                    <span>${type}</span>
+                </div>
+                <p>${value}</p>
+            </div>
             `
-                })
+            })
                 .join("")}
             </div>
         </div>
