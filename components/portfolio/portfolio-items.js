@@ -254,16 +254,16 @@ class PortfolioItems extends HTMLElement {
         <div class="portfolios" id="portfolios">
         ${projects
             .filter((type) => type.type === `${this.state}`)
-            .map((whatIcode) => {
+            .map(({ image, title, link, author }) => {
                 return `
         <div class="portfolio-item">
                 <div class="image">
-                    <img src=${whatIcode.image} alt="" />
+                    <img src=${image} alt="" />
                 </div>
                  <div class="hover-items">
-                    <h3>${whatIcode.title}</h3>
+                    <h3>${title}</h3>
                 <div class="icons">
-                    <a href="${whatIcode.link}" target="_blank">${whatIcode.author}
+                    <a href="${link}" target="_blank">${author}
                     </a>
                 </div>
             </div>
