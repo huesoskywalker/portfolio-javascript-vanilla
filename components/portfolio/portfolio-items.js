@@ -253,7 +253,7 @@ class PortfolioItems extends HTMLElement {
         this.innerHTML = `
         <div class="portfolios" id="portfolios">
         ${projects
-            .filter((type) => type.type === `${this.state}`)
+            .filter(({ type }) => type === `${this.state}`)
             .map(({ image, title, link, author }) => {
                 return `
         <div class="portfolio-item">
