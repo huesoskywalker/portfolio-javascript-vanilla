@@ -239,9 +239,9 @@ class PortfolioItems extends HTMLElement {
         this.setAttribute("state", val)
     }
     attributeChangedCallback(prop, oldVal, newVal) {
-        if (this.state === this.state) {
+        if (this.state !== "hide" ) {
             this.render()
-        } else if (this.state === "hide") {
+        } else {
             document.querySelector("#portfolios").style.display = "none"
             this.render()
         }
