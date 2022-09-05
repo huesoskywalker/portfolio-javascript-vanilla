@@ -232,7 +232,6 @@ class MenuButton extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log(Storage)
         this.shadowRoot
             .querySelector(".menu-btn")
             .addEventListener("click", () => this.toggleMenu())
