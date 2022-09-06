@@ -148,7 +148,7 @@ class GalaxyWishes extends HTMLElement {
         if (wishesWrapper) {
             georgeLucas.style.animation = "bestIntroEver 15s ease-out forwards"
 
-            this.shadowRoot.querySelector(".wishes-wrapper").style.display = "flex"
+            wishesWrapper.style.display = "flex"
 
             if (localStorage.getItem("divs")) {
                 const json = JSON.parse(localStorage.getItem("divs"))
