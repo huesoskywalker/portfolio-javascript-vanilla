@@ -93,6 +93,9 @@ class AboutMe extends HTMLElement {
                     
                 }
                 ::slotted(pre) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     letter-spacing: 2.2px;
                     color: var(--color-about-text);
                     font: italic small-caps 300 1rem/2rem Georgia, serif;
