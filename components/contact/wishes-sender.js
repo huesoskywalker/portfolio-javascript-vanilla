@@ -171,8 +171,10 @@ class GalaxyWishes extends HTMLElement {
             }
 
             setTimeout(() => {
-                wishesWrapper.parentNode.removeChild(wishesWrapper)
-            }, 20500)
+                while (wishesWrapper.firstChild) {
+                    wishesWrapper.removeChild(wishesWrapper.firstChild)
+                }
+            }, 15500)
         }
     }
 }
