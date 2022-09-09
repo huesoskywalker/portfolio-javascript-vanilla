@@ -74,7 +74,7 @@ const projects = [
         image: "../../img/sky.jpg",
         type: "Scratch",
         link: "https://exploringjs.com/",
-        author: "[1 / 6]",
+        author: "[2 / 6]",
     },
     {
         title: "Portfolio",
