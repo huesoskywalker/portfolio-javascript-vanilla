@@ -87,8 +87,8 @@ const projects = [
         title: "Studying...",
         image: "../../img/sky.jpg",
         type: "Data Structure",
-        link: "",
-        author: "",
+        link: "https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/",
+        author: "Udemy",
     },
 ]
 
