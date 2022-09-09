@@ -13,19 +13,19 @@ const progressData = [
     },
     {
         language: "Javascript",
-        progress: "60%",
+        progress: "73%",
     },
     {
         language: "NodeJs",
-        progress: "46%",
+        progress: "51%",
     },
     {
         language: "ExpressJs, NextJs",
-        progress: "42%",
+        progress: "49%",
     },
     {
         language: "Java",
-        progress: "38%",
+        progress: "44%",
     },
     {
         language: "Hibernate, Struts",
@@ -37,7 +37,7 @@ const progressData = [
     },
     {
         language: "GraphQL, Moralis",
-        progress: "44%",
+        progress: "46%",
     },
     {
         language: "Php",
