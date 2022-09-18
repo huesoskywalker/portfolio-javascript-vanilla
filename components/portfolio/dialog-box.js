@@ -7,6 +7,7 @@ dialogTemplate.innerHTML = `
           <option value="hide">None</option>
         <optgroup label="Courses">
           <option>Java</option>
+          <option>Javascript</option>
           <option>Solidity</option>
           <option>Data Structure</option>
         </optgroup>

@@ -70,11 +70,11 @@ const projects = [
         author: "Udemy",
     },
     {
-        title: "Reading JavaScript",
-        image: "../../img/sky.jpg",
-        type: "Scratch",
-        link: "https://exploringjs.com/",
-        author: "[2 / 6]",
+        title: "Recap+1",
+        image: "../../img/impatient-js.jpg",
+        type: "Javascript",
+        link: "https://exploringjs.com/impatient-js/toc.html",
+        author: "Dr. Axel Rauschmayer",
     },
     {
         title: "Portfolio",
