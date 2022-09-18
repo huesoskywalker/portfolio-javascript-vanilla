@@ -79,7 +79,7 @@ const projects = [
     {
         title: "Portfolio",
         image: "../../img/portfolio.png",
-        type: "Scratch",
+        type: "Portfolio",
         link: "https://www.github.com/huesoskywalker/portfolio-javascript-vanilla",
         author: "huesoskywalker",
     },
@@ -89,6 +89,13 @@ const projects = [
         type: "Data Structure",
         link: "https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/",
         author: "Udemy",
+    },
+    {
+        title: "Starting...",
+        image: "../../img/sky.jpg",
+        type: "Unnamed",
+        link: "",
+        author: "huesoskywalker",
     },
 ]
 
