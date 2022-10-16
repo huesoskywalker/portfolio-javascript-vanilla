@@ -1,18 +1,21 @@
-const themeTemplate = document.createElement("template")
+const themeTemplate = document.createElement("template");
 themeTemplate.innerHTML = `
 <div class="theme-btn" id="dark-button">
 <div class="theme-icon"></div>
 </div>
 
-`
+`;
 
 class ThemeButton extends HTMLElement {
+    static get observedAttributes() {
+        return ["state"];
+    }
     constructor() {
-        super()
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(themeTemplate.content.cloneNode(true))
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(themeTemplate.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
         .theme-btn {
             z-index: 1;
@@ -68,32 +71,40 @@ class ThemeButton extends HTMLElement {
             }
         
         
-        `
-        this.shadowRoot.appendChild(style)
+        `;
+        this.shadowRoot.appendChild(style);
+    }
+    get state() {
+        return this.getAttribute("state");
+    }
+    set state(value) {
+        this.setAttribute("state", value);
     }
 
     toggleDark(e) {
-        e.preventDefault()
+        e.preventDefault();
         if (document.body.classList.contains("dark-mode")) {
-            document.body.classList.remove("dark-mode")
-            localStorage.setItem("theme", "dark")
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "dark");
+            document.querySelector("#theme").setAttribute("state", "star-wars");
         } else {
-            document.body.classList.add("dark-mode")
-            localStorage.setItem("theme", "light")
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("theme", "light");
+            document.querySelector("#theme").setAttribute("state", "solid");
         }
     }
 
     connectedCallback() {
         this.shadowRoot
             .querySelector("#dark-button")
-            .addEventListener("mouseenter", (e) => this.toggleDark(e))
+            .addEventListener("mouseenter", (e) => this.toggleDark(e));
         if (localStorage.getItem("theme") === "light") {
-            document.body.classList.add("dark-mode")
+            document.body.classList.add("dark-mode");
         }
     }
     disconnectedCallback() {
-        this.shadowRoot.querySelector("#dark-button").removeEventListener()
+        this.shadowRoot.querySelector("#dark-button").removeEventListener();
     }
 }
 
-customElements.define("theme-button", ThemeButton)
+customElements.define("theme-button", ThemeButton);

@@ -19,8 +19,8 @@ const menuData = [
         link: "contact.html",
         menuIcon: "./img/menu-xwing2.png",
     },
-]
-const buttonTemplate = document.createElement("template")
+];
+const buttonTemplate = document.createElement("template");
 buttonTemplate.innerHTML = `
 
 <div class="menu-btn" id="vaderActivate">
@@ -29,7 +29,7 @@ buttonTemplate.innerHTML = `
 <nav class="nav">
 <ul class="menu-nav">
 ${menuData
-    .map(({link, title, menuIcon}) => {
+    .map(({ link, title, menuIcon }) => {
         return `
     <li class="menu-nav__item">
     <a href=${link} class="menu-nav__icons">
@@ -38,24 +38,24 @@ ${menuData
     </i>
     </a>
             </li>
-    `
+    `;
     })
     .join("")}
             </ul>
             </nav>
            
-            `
+            `;
 
 class MenuButton extends HTMLElement {
     static get observedAttributes() {
-        return ["state"]
+        return ["state"];
     }
     constructor() {
-        super()
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(buttonTemplate.content.cloneNode(true))
+        super();
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(buttonTemplate.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
         .menu-btn {
             position: fixed;
@@ -189,69 +189,69 @@ class MenuButton extends HTMLElement {
             width: 20vw
          }
         }
-        `
+        `;
 
-        this.shadowRoot.appendChild(style)
+        this.shadowRoot.appendChild(style);
     }
     get state() {
-        return this.getAttribute("state")
+        return this.getAttribute("state");
     }
     set state(value) {
-        this.setAttribute("state", value)
+        this.setAttribute("state", value);
     }
     attributeChangedCallback(prop, oldVal, newVal) {
         if (this.state === "hold") {
-            alert("Please interact to keep walking")
-            this.toggleMenu(!this.showInfo)
+            alert("Please interact to keep walking");
+            this.toggleMenu(!this.showInfo);
         }
     }
 
     toggleMenu() {
-        this.showInfo = !this.showInfo
+        this.showInfo = !this.showInfo;
 
-        const hamburger = this.shadowRoot.querySelector("._showMenu")
-        const nav = this.shadowRoot.querySelector(".nav")
-        const menuNav = this.shadowRoot.querySelector(".menu-nav")
-        const navItems = this.shadowRoot.querySelectorAll(".menu-nav__item")
+        const hamburger = this.shadowRoot.querySelector("._showMenu");
+        const nav = this.shadowRoot.querySelector(".nav");
+        const menuNav = this.shadowRoot.querySelector(".menu-nav");
+        const navItems = this.shadowRoot.querySelectorAll(".menu-nav__item");
 
-        document.querySelector("#menu-button").setAttribute("state", "open")
+        document.querySelector("#menu-button").setAttribute("state", "open");
 
         if (this.showInfo) {
-            hamburger.classList.add("open")
-            nav.classList.add("open")
-            menuNav.classList.add("moveY")
-            navItems.forEach((item) => item.classList.add("moveX"))
+            hamburger.classList.add("open");
+            nav.classList.add("open");
+            menuNav.classList.add("moveY");
+            navItems.forEach((item) => item.classList.add("moveX"));
         } else {
-            hamburger.classList.remove("open")
-            nav.classList.remove("open")
-            menuNav.classList.remove("open")
-            navItems.forEach((item) => item.classList.remove("open"))
+            hamburger.classList.remove("open");
+            nav.classList.remove("open");
+            menuNav.classList.remove("open");
+            navItems.forEach((item) => item.classList.remove("open"));
 
-            document.querySelector("#menu-button").setAttribute("state", "close")
+            document.querySelector("#menu-button").setAttribute("state", "close");
         }
     }
 
     connectedCallback() {
         this.shadowRoot
             .querySelector(".menu-btn")
-            .addEventListener("click", () => this.toggleMenu())
+            .addEventListener("click", () => this.toggleMenu());
 
-        const menuAnimation = this.shadowRoot.querySelector(".menuAnim")
+        const menuAnimation = this.shadowRoot.querySelector(".menuAnim");
         const menuRender = bodymovin.loadAnimation({
             container: menuAnimation,
             renderer: "svg",
             loop: true,
             autoplay: true,
             path: "https://assets1.lottiefiles.com/private_files/lf30_42ffmwih.json",
-        })
+        });
 
-        menuRender.play()
+        menuRender.play();
     }
 
     disconnectedCallback() {
-        this.shadowRoot.querySelector(".menu-btn").removeEventListener()
+        this.shadowRoot.querySelector(".menu-btn").removeEventListener();
 
-        const menuAnim = this.shadowRoot.querySelector(".menuAnim").pause()
+        this.shadowRoot.querySelector(".menuAnim").pause();
     }
 }
-window.customElements.define("menu-button", MenuButton)
+window.customElements.define("menu-button", MenuButton);
