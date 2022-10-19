@@ -77,6 +77,13 @@ const projects = [
         author: "Dr. Axel Rauschmayer",
     },
     {
+        title: "Deep Javascript",
+        image: "../../img/sky.jpg",
+        type: "Javascript",
+        link: "https://exploringjs.com/deep-js/toc.html",
+        author: "awaiting...",
+    },
+    {
         title: "Portfolio",
         image: "../../img/portfolio.png",
         type: "Portfolio",
