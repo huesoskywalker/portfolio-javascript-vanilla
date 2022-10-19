@@ -1,6 +1,6 @@
 # Hello !
 
-### This is my **first** project.
+### This is my **portfolio** where you can see what I've code for practice and my studies.
 
 ### I hope you enjoy it as much as I do and we get in touch !
 
