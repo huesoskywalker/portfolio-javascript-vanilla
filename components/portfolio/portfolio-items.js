@@ -85,9 +85,9 @@ const projects = [
     },
     {
         title: "Studying...",
-        image: "../../img/sky.jpg",
+        image: "../../img/datastructure.jpg",
         type: "Data Structure",
-        link: "https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/",
+        link: "https://www.udemy.com/certificate/UC-0fb3ba80-5b92-432a-bb9d-c99a11114225/",
         author: "Udemy",
     },
     {
