@@ -1,15 +1,15 @@
-const r2d2Anim = document.createElement("template")
+const r2d2Anim = document.createElement("template");
 r2d2Anim.innerHTML = `
 <div id="r2d2" class="r2d2"></div>
-`
+`;
 class R2d2Anim extends HTMLElement {
     constructor() {
-        super()
+        super();
 
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(r2d2Anim.content.cloneNode(true))
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(r2d2Anim.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
         .r2d2 {
             z-index: 1;
@@ -113,10 +113,29 @@ class R2d2Anim extends HTMLElement {
                     }
                 }
         
-        `
+        `;
 
-        this.shadowRoot.appendChild(style)
+        this.shadowRoot.appendChild(style);
+    }
+    mode() {
+        const mode = document.querySelector("#theme").getAttribute("state");
+        const r2d2 = this.shadowRoot.querySelector(".r2d2");
+        if (mode === "solid") {
+            r2d2.style.display = "none";
+        } else {
+            r2d2.style.display = "block";
+        }
+    }
+    connectedCallback() {
+        const mode = localStorage.getItem("mode");
+        const theme = this.shadowRoot.querySelector(".r2d2");
+        if (mode !== "star-wars") theme.style.display = "none";
+
+        document.querySelector("#theme").addEventListener("click", () => this.mode());
+    }
+    disconnectedCallback() {
+        document.querySelector("#theme").removeEventListener();
     }
 }
 
-window.customElements.define("r2d2-anim", R2d2Anim)
+window.customElements.define("r2d2-anim", R2d2Anim);

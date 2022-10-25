@@ -18,6 +18,10 @@ body {
     background-attachment: fixed;
     z-index: 1;
 }
+.solid-mode{
+    background-image: none;
+    background-color: var(--color-grey-3)
+}
 
 a {
     display: inline-block;

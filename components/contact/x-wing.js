@@ -1,4 +1,4 @@
-const xTemplate = document.createElement("template")
+const xTemplate = document.createElement("template");
 xTemplate.innerHTML = `
 <div class="explosion"></div>
 <div class="x-wing"></div>
@@ -7,19 +7,19 @@ xTemplate.innerHTML = `
 <div class="yellow flame"></div>
 <div class="white flame"></div>
 </div>
-`
+`;
 
 class XWing extends HTMLElement {
     static get observedAttributes() {
-        return ["state"]
+        return ["state"];
     }
     constructor() {
-        super()
+        super();
 
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(xTemplate.content.cloneNode(true))
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(xTemplate.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
         .x-wing {
             z-index: -1;
@@ -261,42 +261,63 @@ class XWing extends HTMLElement {
                 display: none;
             }
         }
-        `
+        `;
 
-        this.shadowRoot.appendChild(style)
+        this.shadowRoot.appendChild(style);
     }
     get state() {
-        return this.getAttribute("state")
+        return this.getAttribute("state");
     }
     set state(value) {
-        this.setAttribute("state", value)
+        this.setAttribute("state", value);
     }
 
     attributeChangedCallback(prop, oldVal, newVal) {
         if (this.state === "gogogo") {
-            this.shadowRoot.querySelector(".x-wing").style.animation = "xwing 10s 1 forwards"
+            this.shadowRoot.querySelector(".x-wing").style.animation = "xwing 10s 1 forwards";
             this.shadowRoot.querySelector(".explosion").style.animation =
-                "explosion 4.5s 4.65s 1 alternate"
+                "explosion 4.5s 4.65s 1 alternate";
             this.shadowRoot.querySelector(".flama").style.animation =
-                "flama 1s 7s infinite alternate"
+                "flama 1s 7s infinite alternate";
         }
     }
-
+    mode() {
+        const mode = document.querySelector("#theme").getAttribute("state");
+        const xwing = this.shadowRoot.querySelector(".x-wing");
+        const explosion = this.shadowRoot.querySelector(".explosion");
+        const flama = this.shadowRoot.querySelector(".flama");
+        if (mode === "solid") {
+            xwing.style.display = "none";
+            explosion.style.display = "none";
+            flama.style.display = "none";
+        } else {
+            xwing.style.display = "block";
+            explosion.style.display = "block";
+            flama.style.display = "block";
+        }
+    }
     connectedCallback() {
-        const fireAnimation = this.shadowRoot.querySelector(".fireAnim")
+        const fireAnimation = this.shadowRoot.querySelector(".fireAnim");
         const fireRender = bodymovin.loadAnimation({
             container: fireAnimation,
             renderer: "svg",
             loop: true,
             autoplay: true,
             path: "https://assets1.lottiefiles.com/packages/lf20_uletvhke.json",
-        })
+        });
 
-        fireRender.play()
+        fireRender.play();
+
+        const mode = localStorage.getItem("mode");
+        const theme = this.shadowRoot.querySelector(".x-wing");
+        if (mode !== "star-wars") theme.style.display = "none";
+
+        document.querySelector("#theme").addEventListener("click", () => this.mode());
     }
     disconnectedCallback() {
-        const fireAnimation = this.shadowRoot.querySelector(".fireAnim").pause()
+        this.shadowRoot.querySelector(".fireAnim").pause();
+        document.querySelector("#theme").removeEventListener();
     }
 }
 
-customElements.define("x-wing", XWing)
+customElements.define("x-wing", XWing);

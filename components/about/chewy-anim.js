@@ -1,16 +1,16 @@
-const chewyAnim = document.createElement("template")
+const chewyAnim = document.createElement("template");
 chewyAnim.innerHTML = `
 <div id="chewy" class="chewy">
-`
+`;
 
 class ChewyAnim extends HTMLElement {
     constructor() {
-        super()
+        super();
 
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(chewyAnim.content.cloneNode(true))
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(chewyAnim.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
         .chewy {
             z-index: -1;
@@ -39,10 +39,29 @@ class ChewyAnim extends HTMLElement {
             }
         }
             
-        `
+        `;
 
-        this.shadowRoot.appendChild(style)
+        this.shadowRoot.appendChild(style);
+    }
+    mode() {
+        const mode = document.querySelector("#theme").getAttribute("state");
+        const chewy = this.shadowRoot.querySelector(".chewy");
+        if (mode === "solid") {
+            chewy.style.display = "none";
+        } else {
+            chewy.style.display = "block";
+        }
+    }
+    connectedCallback() {
+        const mode = localStorage.getItem("mode");
+        const theme = this.shadowRoot.querySelector(".chewy");
+        if (mode !== "star-wars") theme.style.display = "none";
+
+        document.querySelector("#theme").addEventListener("click", () => this.mode());
+    }
+    disconnectedCallback() {
+        document.querySelector("#theme").removeEventListener();
     }
 }
 
-window.customElements.define("chewy-anim", ChewyAnim)
+window.customElements.define("chewy-anim", ChewyAnim);

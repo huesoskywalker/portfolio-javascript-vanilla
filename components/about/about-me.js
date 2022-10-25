@@ -1,4 +1,4 @@
-const meTemplate = document.createElement("template")
+const meTemplate = document.createElement("template");
 meTemplate.innerHTML = `
 <slot name="aka"></slot>
 <div class="about-container">
@@ -20,19 +20,19 @@ meTemplate.innerHTML = `
     <div id="beam-white"></div>
 </div>
 </div>
-`
+`;
 
 class AboutMe extends HTMLElement {
     static get observedAttributes() {
-        return ["story"]
+        return ["story"];
     }
     constructor() {
-        super()
+        super();
 
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(meTemplate.content.cloneNode(true))
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(meTemplate.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
         ::slotted(span) {
             z-index: -1;
@@ -343,46 +343,47 @@ class AboutMe extends HTMLElement {
                 font-size: 1.1rem;
             }
         }
-            `
-        this.shadowRoot.appendChild(style)
+            `;
+        this.shadowRoot.appendChild(style);
     }
 
     deathstarActive() {
-        const vader = document.querySelector("#menu-button").getAttribute("state")
+        const vader = document.querySelector("#menu-button").getAttribute("state");
+        const mode = document.querySelector("#theme").getAttribute("state");
 
-        if (vader === "open") {
-            this.shadowRoot.querySelector("#wrapper").classList.add("wrapper")
-            this.shadowRoot.querySelector("#beam-wrapper").classList.add("beam-wrapper")
-            this.shadowRoot.querySelector("#beam-green").classList.add("beam", "green")
-            this.shadowRoot.querySelector("#beam-white").classList.add("beam", "white")
-            this.shadowRoot.querySelector("#vader").classList.add("vader")
-            document.querySelector("#darkside").style.visibility = "visible"
-            document.querySelector("#storyTittle").style.visibility = "hidden"
-            document.querySelector("#story").style.visibility = "hidden"
-            document.querySelector("#brightside").style.visibility = "hidden"
+        if (vader === "open" && mode === "star-wars") {
+            this.shadowRoot.querySelector("#wrapper").classList.add("wrapper");
+            this.shadowRoot.querySelector("#beam-wrapper").classList.add("beam-wrapper");
+            this.shadowRoot.querySelector("#beam-green").classList.add("beam", "green");
+            this.shadowRoot.querySelector("#beam-white").classList.add("beam", "white");
+            this.shadowRoot.querySelector("#vader").classList.add("vader");
+            document.querySelector("#darkside").style.visibility = "visible";
+            document.querySelector("#storyTittle").style.visibility = "hidden";
+            document.querySelector("#story").style.visibility = "hidden";
+            document.querySelector("#brightside").style.visibility = "hidden";
 
-            window.scrollTo(0, 0)
+            window.scrollTo(0, 0);
         } else {
-            this.shadowRoot.querySelector("#wrapper").classList.remove("wrapper")
-            this.shadowRoot.querySelector("#beam-wrapper").classList.remove("beam-wrapper")
-            this.shadowRoot.querySelector("#beam-green").classList.remove("beam", "green")
-            this.shadowRoot.querySelector("#beam-white").classList.remove("beam", "white")
-            this.shadowRoot.querySelector("#vader").classList.remove("vader")
-            document.querySelector("#darkside").style.visibility = "hidden"
-            document.querySelector("#storyTittle").style.visibility = "visible"
-            document.querySelector("#story").style.visibility = "visible"
-            document.querySelector("#brightside").style.visibility = "visible"
+            this.shadowRoot.querySelector("#wrapper").classList.remove("wrapper");
+            this.shadowRoot.querySelector("#beam-wrapper").classList.remove("beam-wrapper");
+            this.shadowRoot.querySelector("#beam-green").classList.remove("beam", "green");
+            this.shadowRoot.querySelector("#beam-white").classList.remove("beam", "white");
+            this.shadowRoot.querySelector("#vader").classList.remove("vader");
+            document.querySelector("#darkside").style.visibility = "hidden";
+            document.querySelector("#storyTittle").style.visibility = "visible";
+            document.querySelector("#story").style.visibility = "visible";
+            document.querySelector("#brightside").style.visibility = "visible";
         }
     }
 
     connectedCallback() {
         document
             .querySelector("#menu-button")
-            .addEventListener("click", () => this.deathstarActive())
+            .addEventListener("click", () => this.deathstarActive());
     }
 
     disconnectedCallback() {
-        document.querySelector("#menu-button").removeEventListener()
+        document.querySelector("#menu-button").removeEventListener();
     }
 }
-customElements.define("about-me", AboutMe)
+customElements.define("about-me", AboutMe);

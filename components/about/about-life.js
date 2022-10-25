@@ -75,9 +75,6 @@ ${lifeTrip
 `;
 
 class AboutLife extends HTMLElement {
-    static get observedAttributes() {
-        return ["icon", "tittle", "duration", "description"];
-    }
     constructor() {
         super();
         this.attachShadow({ mode: "open" });

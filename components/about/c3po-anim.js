@@ -1,16 +1,16 @@
-const c3p0Anim = document.createElement("template")
+const c3p0Anim = document.createElement("template");
 c3p0Anim.innerHTML = `
 <div id="c3po" class="c3po"></div>
-`
+`;
 
 class C3p0Anim extends HTMLElement {
     constructor() {
-        super()
+        super();
 
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(c3p0Anim.content.cloneNode(true))
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(c3p0Anim.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
         .c3po {
             z-index: 1;
@@ -25,7 +25,7 @@ class C3p0Anim extends HTMLElement {
             background-repeat: no-repeat;
             animation: arnold 5s ease-in forwards;
             animation-delay: 11s;
-s
+            display: block;
         }
             @keyframes arnold {
                 0% {
@@ -222,8 +222,27 @@ s
                     display: none;
                 }
             }
-        `
-        this.shadowRoot.appendChild(style)
+        `;
+        this.shadowRoot.appendChild(style);
+    }
+    mode() {
+        const mode = document.querySelector("#theme").getAttribute("state");
+        const c3po = this.shadowRoot.querySelector(".c3po");
+        if (mode === "solid") {
+            c3po.style.display = "none";
+        } else {
+            c3po.style.display = "block";
+        }
+    }
+    connectedCallback() {
+        const mode = localStorage.getItem("mode");
+        const theme = this.shadowRoot.querySelector(".c3po");
+        if (mode !== "star-wars") theme.style.display = "none";
+
+        document.querySelector("#theme").addEventListener("click", () => this.mode());
+    }
+    disconnectedCallback() {
+        document.querySelector("#theme").removeEventListener();
     }
 }
-window.customElements.define("c3p0-anim", C3p0Anim)
+window.customElements.define("c3p0-anim", C3p0Anim);

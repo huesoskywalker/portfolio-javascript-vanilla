@@ -1,18 +1,18 @@
-const yodaAnim = document.createElement("template")
+const yodaAnim = document.createElement("template");
 yodaAnim.innerHTML = `
 <div class="k1">
             <div id="yoda" class="yoda"></div>
         </div>
-`
+`;
 
 class YodaAnim extends HTMLElement {
     constructor() {
-        super()
+        super();
 
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(yodaAnim.content.cloneNode(true))
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(yodaAnim.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
         .k1:hover {
                 z-index: 1;
@@ -130,9 +130,28 @@ class YodaAnim extends HTMLElement {
                 }
             }
             
-        `
-        this.shadowRoot.appendChild(style)
+        `;
+        this.shadowRoot.appendChild(style);
+    }
+    mode() {
+        const mode = document.querySelector("#theme").getAttribute("state");
+        const yoda = this.shadowRoot.querySelector(".yoda");
+        if (mode === "solid") {
+            yoda.style.display = "none";
+        } else {
+            yoda.style.display = "block";
+        }
+    }
+    connectedCallback() {
+        const mode = localStorage.getItem("mode");
+        const theme = this.shadowRoot.querySelector(".yoda");
+        if (mode !== "star-wars") theme.style.display = "none";
+
+        document.querySelector("#theme").addEventListener("click", () => this.mode());
+    }
+    disconnectedCallback() {
+        document.querySelector("#theme").removeEventListener();
     }
 }
 
-window.customElements.define("yoda-anim", YodaAnim)
+window.customElements.define("yoda-anim", YodaAnim);

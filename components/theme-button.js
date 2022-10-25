@@ -86,10 +86,14 @@ class ThemeButton extends HTMLElement {
         if (document.body.classList.contains("dark-mode")) {
             document.body.classList.remove("dark-mode");
             localStorage.setItem("theme", "dark");
+            document.body.classList.remove("solid-mode");
+            localStorage.setItem("mode", "star-wars");
             document.querySelector("#theme").setAttribute("state", "star-wars");
         } else {
             document.body.classList.add("dark-mode");
             localStorage.setItem("theme", "light");
+            document.body.classList.add("solid-mode");
+            localStorage.setItem("mode", "solid");
             document.querySelector("#theme").setAttribute("state", "solid");
         }
     }
@@ -97,9 +101,10 @@ class ThemeButton extends HTMLElement {
     connectedCallback() {
         this.shadowRoot
             .querySelector("#dark-button")
-            .addEventListener("mouseenter", (e) => this.toggleDark(e));
+            .addEventListener("click", (e) => this.toggleDark(e));
         if (localStorage.getItem("theme") === "light") {
             document.body.classList.add("dark-mode");
+            document.body.classList.add("solid-mode");
         }
     }
     disconnectedCallback() {

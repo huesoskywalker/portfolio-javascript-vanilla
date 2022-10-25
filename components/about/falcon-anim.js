@@ -1,20 +1,20 @@
-const falconAnim = document.createElement("template")
+const falconAnim = document.createElement("template");
 falconAnim.innerHTML = `
 <img
                     src="./img/milennium-falcon.webp"
                     class="falcon"
                     id="falcon"
                 />
-`
+`;
 
 class FalconAnim extends HTMLElement {
     constructor() {
-        super()
+        super();
 
-        this.attachShadow({ mode: "open" })
-        this.shadowRoot.appendChild(falconAnim.content.cloneNode(true))
+        this.attachShadow({ mode: "open" });
+        this.shadowRoot.appendChild(falconAnim.content.cloneNode(true));
 
-        const style = document.createElement("style")
+        const style = document.createElement("style");
         style.textContent = `
     .falcon {
         z-index: 0;
@@ -95,8 +95,27 @@ class FalconAnim extends HTMLElement {
                display: none;
             }
         }
-    `
-        this.shadowRoot.appendChild(style)
+    `;
+        this.shadowRoot.appendChild(style);
+    }
+    mode() {
+        const mode = document.querySelector("#theme").getAttribute("state");
+        const falcon = this.shadowRoot.querySelector(".falcon");
+        if (mode === "solid") {
+            falcon.style.display = "none";
+        } else {
+            falcon.style.display = "block";
+        }
+    }
+    connectedCallback() {
+        const mode = localStorage.getItem("mode");
+        const theme = this.shadowRoot.querySelector(".falcon");
+        if (mode !== "star-wars") theme.style.display = "none";
+
+        document.querySelector("#theme").addEventListener("click", () => this.mode());
+    }
+    disconnectedCallback() {
+        document.querySelector("#theme").removeEventListener();
     }
 }
-window.customElements.define("falcon-anim", FalconAnim)
+window.customElements.define("falcon-anim", FalconAnim);
