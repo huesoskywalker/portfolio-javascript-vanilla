@@ -310,8 +310,13 @@ class XWing extends HTMLElement {
 
         const mode = localStorage.getItem("mode");
         const theme = this.shadowRoot.querySelector(".x-wing");
-        if (mode !== "star-wars") theme.style.display = "none";
-
+        const explosion = this.shadowRoot.querySelector(".explosion");
+        const flama = this.shadowRoot.querySelector(".flama");
+        if (mode !== "star-wars") {
+            theme.style.display = "none";
+            explosion.style.display = "none";
+            flama.style.display = "none";
+        }
         document.querySelector("#theme").addEventListener("click", () => this.mode());
     }
     disconnectedCallback() {
