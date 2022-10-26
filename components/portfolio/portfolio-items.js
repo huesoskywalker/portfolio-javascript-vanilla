@@ -81,7 +81,7 @@ const projects = [
         image: "../../img/sky.jpg",
         type: "Javascript",
         link: "https://exploringjs.com/deep-js/toc.html",
-        author: "awaiting...",
+        author: "Reading...",
     },
     {
         title: "Portfolio",
@@ -96,6 +96,13 @@ const projects = [
         type: "Data Structure",
         link: "https://www.udemy.com/certificate/UC-0fb3ba80-5b92-432a-bb9d-c99a11114225/",
         author: "Udemy",
+    },
+    {
+        title: "Cloud Practitioner",
+        image: "../../img/sky.jpg",
+        type: "AWS",
+        link: "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/",
+        author: "awaiting...",
     },
     {
         title: "Starting...",
@@ -253,7 +260,7 @@ class PortfolioItems extends HTMLElement {
         this.setAttribute("state", val)
     }
     attributeChangedCallback(prop, oldVal, newVal) {
-        if (this.state !== "hide" ) {
+        if (this.state !== "hide") {
             this.render()
         } else {
             document.querySelector("#portfolios").style.display = "none"
