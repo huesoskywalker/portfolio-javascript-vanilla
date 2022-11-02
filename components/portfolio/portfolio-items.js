@@ -77,11 +77,11 @@ const projects = [
         author: "Dr. Axel Rauschmayer",
     },
     {
-        title: "Deep Javascript",
-        image: "../../img/sky.jpg",
+        title: "Nice 1",
+        image: "../../img/deep-javascript.jpg",
         type: "Javascript",
         link: "https://exploringjs.com/deep-js/toc.html",
-        author: "Reading...",
+        author: "Dr. Axel Rauschmayer",
     },
     {
         title: "Portfolio",
@@ -102,7 +102,7 @@ const projects = [
         image: "../../img/sky.jpg",
         type: "AWS",
         link: "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/",
-        author: "awaiting...",
+        author: "Studying...",
     },
     {
         title: "Starting...",
