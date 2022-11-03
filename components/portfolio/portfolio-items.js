@@ -84,6 +84,13 @@ const projects = [
         author: "Dr. Axel Rauschmayer",
     },
     {
+        title: "Node.js",
+        image: "../../img/sky.jpg",
+        type: "Javascript",
+        link: "https://exploringjs.com/nodejs-shell-scripting/toc.html",
+        author: "awaiting...",
+    },
+    {
         title: "Portfolio",
         image: "../../img/portfolio.png",
         type: "Portfolio",
