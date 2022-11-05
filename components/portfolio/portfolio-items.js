@@ -88,7 +88,7 @@ const projects = [
         image: "../../img/sky.jpg",
         type: "Javascript",
         link: "https://exploringjs.com/nodejs-shell-scripting/toc.html",
-        author: "awaiting...",
+        author: "Reading...",
     },
     {
         title: "Portfolio",
@@ -109,7 +109,7 @@ const projects = [
         image: "../../img/sky.jpg",
         type: "AWS",
         link: "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/",
-        author: "Studying...",
+        author: "throw new Error('broken media')...",
     },
     {
         title: "Starting...",
