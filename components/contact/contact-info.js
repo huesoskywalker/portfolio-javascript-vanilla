@@ -20,18 +20,6 @@ const socialNetworks = [
         link: "https://github.com/HuesoSkywalker",
         icon: "fab fa-github",
     },
-    {
-        link: "https://www.discord.com/channels/HuesoSkywalker#6919",
-        icon: "fab fa-discord",
-    },
-    {
-        link: "https://twitter.com/HuesoSkywalker",
-        icon: "fab fa-twitter",
-    },
-    {
-        link: "https://www.instagram.com/huesoskywalker/",
-        icon: "fab fa-instagram",
-    },
 ]
 
 class ContactInfo extends HTMLElement {
@@ -176,7 +164,7 @@ class ContactInfo extends HTMLElement {
     connectedCallback() {
         this.render()
     }
-   render() {
+    render() {
         this.innerHTML = `
 
             <div class="left-contact">
