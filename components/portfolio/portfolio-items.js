@@ -84,11 +84,11 @@ const projects = [
         author: "Dr. Axel Rauschmayer",
     },
     {
-        title: "Node.js",
-        image: "../../img/sky.jpg",
+        title: "Shell",
+        image: "../../img/shell-scripting.jpg",
         type: "Javascript",
         link: "https://exploringjs.com/nodejs-shell-scripting/toc.html",
-        author: "awaiting...",
+        author: "Dr. Axel Rauschmayer",
     },
     {
         title: "Portfolio",
@@ -109,13 +109,13 @@ const projects = [
         image: "../../img/sky.jpg",
         type: "AWS",
         link: "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/",
-        author: "Studying...",
+        author: "await viper",
     },
     {
-        title: "Starting...",
+        title: "building",
         image: "../../img/sky.jpg",
-        type: "Unnamed",
-        link: "",
+        type: "viper",
+        link: "https://github.com/huesoskywalker/viper-express-react",
         author: "huesoskywalker",
     },
 ]
