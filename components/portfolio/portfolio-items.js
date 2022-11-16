@@ -115,7 +115,7 @@ const projects = [
         title: "building",
         image: "../../img/sky.jpg",
         type: "viper",
-        link: "https://github.com/huesoskywalker/viper-express-react",
+        link: "https://github.com/huesoskywalker/viper-next",
         author: "huesoskywalker",
     },
 ]
