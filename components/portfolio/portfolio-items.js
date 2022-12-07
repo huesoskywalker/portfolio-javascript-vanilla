@@ -113,7 +113,7 @@ const projects = [
     },
     {
         title: "building",
-        image: "../../img/sky.jpg",
+        image: "../../img/viper.jpg",
         type: "viper",
         link: "https://github.com/huesoskywalker/viper-next",
         author: "huesoskywalker",
@@ -142,9 +142,6 @@ class PortfolioItems extends HTMLElement {
                 border-radius: 15px;
             }
             
-            .image{
-
-            }
             img {
                 display: flex;
                 align-items: center;
