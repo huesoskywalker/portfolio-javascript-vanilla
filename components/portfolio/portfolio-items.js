@@ -112,10 +112,10 @@ const projects = [
         author: "await viper",
     },
     {
-        title: "building",
+        title: "rookie and goldie",
         image: "../../img/viper.jpg",
         type: "viper",
-        link: "https://github.com/huesoskywalker/viper-next",
+        link: "https://github.com/huesoskywalker/viper-nextjs-mongodb",
         author: "huesoskywalker",
     },
 ]
