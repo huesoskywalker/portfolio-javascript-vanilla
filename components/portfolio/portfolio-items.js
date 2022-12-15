@@ -72,21 +72,21 @@ const projects = [
     {
         title: "Recap+1",
         image: "../../img/impatient-js.jpg",
-        type: "Javascript",
+        type: "JavaScript",
         link: "https://exploringjs.com/impatient-js/toc.html",
         author: "Dr. Axel Rauschmayer",
     },
     {
         title: "Nice 1",
         image: "../../img/deep-javascript.jpg",
-        type: "Javascript",
+        type: "JavaScript",
         link: "https://exploringjs.com/deep-js/toc.html",
         author: "Dr. Axel Rauschmayer",
     },
     {
         title: "Shell",
         image: "../../img/shell-scripting.jpg",
-        type: "Javascript",
+        type: "JavaScript",
         link: "https://exploringjs.com/nodejs-shell-scripting/toc.html",
         author: "Dr. Axel Rauschmayer",
     },
@@ -117,6 +117,13 @@ const projects = [
         type: "viper",
         link: "https://github.com/huesoskywalker/viper-nextjs-mongodb",
         author: "huesoskywalker",
+    },
+    {
+        title: "TypeScript",
+        image: "../../img/typescript.png",
+        type: "JavaScript",
+        link: "https://www.typescriptlang.org/docs/handbook/intro.html",
+        author: "typescriptlang.org",
     },
 ]
 
