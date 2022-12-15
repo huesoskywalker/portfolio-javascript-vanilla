@@ -118,6 +118,13 @@ const projects = [
         link: "https://github.com/huesoskywalker/viper-nextjs-mongodb",
         author: "huesoskywalker",
     },
+    {
+        title: "TypeScript",
+        image: "../../img/typescript.png",
+        type: "JavaScript",
+        link: "https://www.typescriptlang.org/docs/handbook/intro.html",
+        author: "typescriptlang.org",
+    },
 ]
 
 class PortfolioItems extends HTMLElement {
