@@ -112,11 +112,18 @@ const projects = [
         author: "await viper",
     },
     {
-        title: "rookie and goldie",
+        title: "Next.Js 12 Only API's",
         image: "../../img/viper.jpg",
-        type: "viper",
+        type: "Viper",
         link: "https://github.com/huesoskywalker/viper-nextjs-mongodb",
         author: "huesoskywalker",
+    },
+    {
+        title: "Next.Js 13 - Viper",
+        image: "../../img/sky.jpg",
+        type: "Viper",
+        link: "/portfolio",
+        author: "Uploading soon",
     },
     {
         title: "TypeScript",

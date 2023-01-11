@@ -1,43 +1,47 @@
 const progressData = [
     {
-        language: "Html && Css",
+        language: "Html & Css / Tailwind",
         progress: "70%",
     },
     {
-        language: "Tailwind & Sass",
-        progress: "65%",
+        language: "React.js",
+        progress: "72%",
     },
     {
-        language: "React, Angular",
-        progress: "50%",
-    },
-    {
-        language: "Javascript",
-        progress: "78%",
+        language: "JavaScript / TypeScript",
+        progress: "79%",
     },
     {
         language: "NodeJs",
-        progress: "61%",
+        progress: "75%",
     },
     {
-        language: "ExpressJs, NextJs",
-        progress: "55%",
+        language: "Next.Js",
+        progress: "78%",
+    },
+    {
+        language: "Express.Js",
+        progress: "68%",
     },
     {
         language: "Java",
-        progress: "44%",
+        progress: "55%",
     },
     {
         language: "Hibernate, Struts",
-        progress: "34%",
+        progress: "44%",
     },
     {
         language: "MySql, MongoDB",
-        progress: "50%",
+        progress: "73%",
     },
     {
-        language: "GraphQL, Moralis",
-        progress: "46%",
+        language: "Python",
+        progress: "47%",
+    },
+    {
+        language: "GraphQL",
+        progress: "48%",
     },
     {
         language: "Php",

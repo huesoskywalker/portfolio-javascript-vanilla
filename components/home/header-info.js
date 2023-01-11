@@ -25,10 +25,10 @@ headerTemplate.innerHTML = `
 <span class="close">close</span>
 <svg height="200" width="710">
     <text x="10" y="20" style="fill: rgb(255, 255, 128)">
-        <tspan x="75" y="65">Javascript</tspan>
-        <tspan x="170" y="150">AWS</tspan>
-        <tspan x="255" y="65">Solidity || Rust</tspan>
-        <tspan x="400" y="150">Build</tspan>
+        <tspan x="75" y="65">Typescript</tspan>
+        <tspan x="170" y="150">Building</tspan>
+        <tspan x="255" y="65">AWS</tspan>
+        <tspan x="400" y="150">Solidity || Rust</tspan>
         <tspan x="550" y="65">Whisky oak</tspan>
     </text>
     <polyline

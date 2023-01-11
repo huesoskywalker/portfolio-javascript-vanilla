@@ -13,11 +13,11 @@ const basicInfo = [
 
 const socialNetworks = [
     {
-        link: "https://www.linkedin.com/in/agustin-bigoni-lavezzari-28a55921a/",
+        link: "https://www.linkedin.com/in/agustin-lavezzari",
         icon: "fab fa-linkedin-in",
     },
     {
-        link: "https://github.com/HuesoSkywalker",
+        link: "https://github.com/huesoskywalker",
         icon: "fab fa-github",
     },
 ]

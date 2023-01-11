@@ -18,7 +18,7 @@ dialogTemplate.innerHTML = `
         </optgroup>
         <optgroup label="Do it yourself">
         <option>Portfolio</option>
-        <option>viper</option>
+        <option>Viper</option>
         </optgroup>
       </select>
     </label></p>
