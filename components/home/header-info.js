@@ -28,11 +28,11 @@ headerTemplate.innerHTML = `
         <tspan x="75" y="65">Typescript</tspan>
         <tspan x="170" y="150">Building</tspan>
         <tspan x="255" y="65">AWS</tspan>
-        <tspan x="400" y="150">Solidity || Rust</tspan>
-        <tspan x="550" y="65">Whisky oak</tspan>
+        <tspan x="355" y="150">Solidity || Rust</tspan>
+        <tspan x="450" y="65">Whisky oak</tspan>
     </text>
     <polyline
-        points="19,100 90,100 95,75 100,100 180,100 185,125 190, 100 270, 100 275,75 280,100 420,100 425,125 430,100 570,100 575,75 580,100 680,100"
+        points="19,100 90,100 95,75 100,100 180,100 185,125 190, 100 270, 100 275,75 280,100 400,100 405,125 410,100 510,100 515,75 520,100 630,100"
         style="fill: none; stroke: black; stroke-width: 3"
     />
     <circle
@@ -44,7 +44,7 @@ headerTemplate.innerHTML = `
         fill="rgb(255,128,128)"
     />
     <polygon
-        points="680,90  680,110 710,100"
+        points="630,90  630,110 660,100"
         style="
             fill: rgb(128, 255, 128);
             stroke: rgb(0, 0, 0);
@@ -219,10 +219,10 @@ class HeaderInfo extends HTMLElement {
                 }
                 
                 .close {
-                    color: rgb(128, 0, 128);
+                    color: rgb(255, 0, 255);
                     position: fixed;
-                    left: 80%;
-                    bottom: 18%;
+                    left: 78%;
+                    bottom: 10%;
                     font-size: 28px;
                     font-weight: bold;
                     margin-bottom: 3rem;
