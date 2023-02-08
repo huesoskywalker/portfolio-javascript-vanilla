@@ -125,11 +125,11 @@ class MenuButton extends HTMLElement {
             justify-content: center;
            align-self: center;
             font-size: 1.2rem;
-            color: rgb(128,128,128);
+            color: rgb(255,255,255);
             
         }
         .icon-title:hover{
-            color: rgb(255,255,255);
+            color: rgb(200,200,200);
         text-shadow: 1px 1px 1px var(--color-grey-4),
         1px 1px 1px var(--color-grey-4),
         1px 1px 1px var(--color-grey-4);
