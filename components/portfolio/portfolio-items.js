@@ -120,10 +120,10 @@ const projects = [
     },
     {
         title: "Next.Js 13 - Viper",
-        image: "../../img/sky.jpg",
+        image: "../../img/viper-13b.png",
         type: "Viper",
-        link: "/portfolio",
-        author: "Uploading soon",
+        link: "https://youtu.be/nlp_7W6O2B4",
+        author: "First draft",
     },
     {
         title: "TypeScript",
