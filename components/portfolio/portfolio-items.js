@@ -126,6 +126,13 @@ const projects = [
         author: "First draft",
     },
     {
+        title: "Shopify - Viper",
+        image: "../../img/shopify-viper.jpg",
+        type: "Viper",
+        link: "https://www.youtube.com/watch?v=Cnmtfi2yzQg",
+        author: "Shopify draft",
+    },
+    {
         title: "TypeScript",
         image: "../../img/typescript.png",
         type: "JavaScript",
