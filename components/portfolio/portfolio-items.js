@@ -112,11 +112,18 @@ const projects = [
         author: "await viper",
     },
     {
-        title: "Next.Js 12 Only API's",
-        image: "../../img/viper.jpg",
+        title: "Cypress e2e",
+        image: "../../img/cypress-e2e.png",
         type: "Viper",
-        link: "https://github.com/huesoskywalker/viper-nextjs-mongodb",
-        author: "huesoskywalker",
+        link: "https://youtu.be/Vnpv851Q6Pc",
+        author: "Cypress draft",
+    },
+    {
+        title: "Shopify - Viper",
+        image: "../../img/shopify-viper.jpg",
+        type: "Viper",
+        link: "https://www.youtube.com/watch?v=Cnmtfi2yzQg",
+        author: "Shopify draft",
     },
     {
         title: "Next.Js 13 - Viper",
@@ -126,12 +133,13 @@ const projects = [
         author: "First draft",
     },
     {
-        title: "Shopify - Viper",
-        image: "../../img/shopify-viper.jpg",
+        title: "Next.Js 12 Only API's",
+        image: "../../img/viper.jpg",
         type: "Viper",
-        link: "https://www.youtube.com/watch?v=Cnmtfi2yzQg",
-        author: "Shopify draft",
+        link: "https://github.com/huesoskywalker/viper-nextjs-mongodb",
+        author: "huesoskywalker",
     },
+
     {
         title: "TypeScript",
         image: "../../img/typescript.png",

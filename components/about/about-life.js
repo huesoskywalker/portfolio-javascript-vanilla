@@ -46,14 +46,14 @@ const lifeTrip = [
         link: "",
         linkText: "",
     },
-];
-const lifeTemplate = document.createElement("template");
+]
+const lifeTemplate = document.createElement("template")
 lifeTemplate.innerHTML = `
 <div class="about-life">
 <h4 class="stat-title">My life</h4>
 <div class="timeline">
 ${lifeTrip
-    .sort((a, b) => String(a.duration).localeCompare(b.duration))
+    .sort((a, b) => String(b.duration).localeCompare(a.duration))
     .map(({ icon, duration, tittle, link, linkText, description }) => {
         return `
      <div class="timeline-item">
@@ -66,21 +66,21 @@ ${lifeTrip
                             ${description}
                         </p>
                     </div>
-    `;
+    `
     })
     .join("")}
     </div>
     </div>
 
-`;
+`
 
 class AboutLife extends HTMLElement {
     constructor() {
-        super();
-        this.attachShadow({ mode: "open" });
-        this.shadowRoot.appendChild(lifeTemplate.content.cloneNode(true));
+        super()
+        this.attachShadow({ mode: "open" })
+        this.shadowRoot.appendChild(lifeTemplate.content.cloneNode(true))
 
-        const style = document.createElement("style");
+        const style = document.createElement("style")
         style.textContent = `
         .about-life{
             padding-top: 4rem;
@@ -262,77 +262,77 @@ class AboutLife extends HTMLElement {
                         height: 44px;
                     }
         }
-        `;
+        `
 
-        this.shadowRoot.appendChild(style);
+        this.shadowRoot.appendChild(style)
     }
     connectedCallback() {
-        const codeAnimation = this.shadowRoot.querySelector(".codeAnim");
+        const codeAnimation = this.shadowRoot.querySelector(".codeAnim")
         const codeRender = bodymovin.loadAnimation({
             container: codeAnimation,
             renderer: "svg",
             loop: true,
             autoplay: true,
             path: "https://assets2.lottiefiles.com/private_files/lf30_ZOuB83.json",
-        });
+        })
 
-        codeRender.play();
+        codeRender.play()
 
-        const treeAnimation = this.shadowRoot.querySelector(".treeAnim");
+        const treeAnimation = this.shadowRoot.querySelector(".treeAnim")
         const treeRender = bodymovin.loadAnimation({
             container: treeAnimation,
             renderer: "svg",
             loop: true,
             autoplay: true,
             path: "https://assets1.lottiefiles.com/packages/lf20_5szujujo.json",
-        });
+        })
 
-        treeRender.play();
+        treeRender.play()
 
-        const beerAnimation = this.shadowRoot.querySelector(".beerAnim");
+        const beerAnimation = this.shadowRoot.querySelector(".beerAnim")
         const beerRender = bodymovin.loadAnimation({
             container: beerAnimation,
             renderer: "svg",
             loop: true,
             autoplay: true,
             path: "https://assets10.lottiefiles.com/packages/lf20_1x1kukyl.json",
-        });
+        })
 
-        beerRender.play();
+        beerRender.play()
 
-        const designAnimation = this.shadowRoot.querySelector(".designAnim");
+        const designAnimation = this.shadowRoot.querySelector(".designAnim")
         const designRender = bodymovin.loadAnimation({
             container: designAnimation,
             renderer: "svg",
             loop: true,
             autoplay: true,
             path: "https://assets9.lottiefiles.com/packages/lf20_kts3o7k3.json",
-        });
+        })
 
-        designRender.play();
+        designRender.play()
 
-        const travelAnimation = this.shadowRoot.querySelector(".travelAnim");
+        const travelAnimation = this.shadowRoot.querySelector(".travelAnim")
         const travelRender = bodymovin.loadAnimation({
             container: travelAnimation,
             renderer: "svg",
             loop: true,
             autoplay: true,
             path: "https://assets2.lottiefiles.com/packages/lf20_wzaxxisv.json",
-        });
+        })
 
-        travelRender.play();
+        travelRender.play()
     }
 
     disconnectedCallback() {
-        this.shadowRoot.querySelector(".codeAnim").pause();
+        this.shadowRoot.querySelector(".codeAnim").pause()
 
-        this.shadowRoot.querySelector(".treeAnim").pause();
+        this.shadowRoot.querySelector(".treeAnim").pause()
 
-        this.shadowRoot.querySelector(".beerAnim").pause();
+        this.shadowRoot.querySelector(".beerAnim").pause()
 
-        this.shadowRoot.querySelector(".designAnim").pause();
+        this.shadowRoot.querySelector(".designAnim").pause()
 
-        this.shadowRoot.querySelector(".travelAnim").pause();
+        this.shadowRoot.querySelector(".travelAnim").pause()
     }
 }
-customElements.define("about-life", AboutLife);
+customElements.define("about-life", AboutLife)
