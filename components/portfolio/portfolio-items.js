@@ -106,10 +106,10 @@ const projects = [
     },
     {
         title: "Cloud Practitioner",
-        image: "../../img/sky.jpg",
+        image: "../../img/cloud.png",
         type: "AWS",
-        link: "https://www.udemy.com/course/aws-certified-cloud-practitioner-new/",
-        author: "await viper",
+        link: "https://www.udemy.com/certificate/UC-e478599a-70b3-4041-bdbe-43d69e9e1e05/",
+        author: "Udemy",
     },
     {
         title: "Cypress e2e",
