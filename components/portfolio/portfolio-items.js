@@ -106,7 +106,7 @@ const projects = [
     },
     {
         title: "Cloud Practitioner",
-        image: "../../img/cloud.png",
+        image: "../../img/cloud-practitioner.png",
         type: "AWS",
         link: "https://www.udemy.com/certificate/UC-e478599a-70b3-4041-bdbe-43d69e9e1e05/",
         author: "Udemy",
