@@ -24,6 +24,10 @@ const socialNetworks = [
         link: "https://www.youtube.com/@huesoskywalker",
         icon: "fab fa-youtube",
     },
+    {
+        link: "https://leetcode.com/huesoskywalker/",
+        icon: "fa fa-code",
+    },
 ]
 
 class ContactInfo extends HTMLElement {
