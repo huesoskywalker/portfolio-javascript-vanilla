@@ -19,6 +19,7 @@ dialogTemplate.innerHTML = `
         <optgroup label="Do it yourself">
         <option>Portfolio</option>
         <option>Viper</option>
+        <option>Google Maps API</option>
         </optgroup>
       </select>
     </label></p>

@@ -147,6 +147,13 @@ const projects = [
         link: "https://www.typescriptlang.org/docs/handbook/intro.html",
         author: "typescriptlang.org",
     },
+    {
+        title: "Google Maps API",
+        image: "../../img/google-maps-api.png",
+        type: "Google Maps API",
+        link: "https://www.youtube.com/watch?v=USTM_HdKN2I",
+        author: "huesoskywalker",
+    },
 ]
 
 class PortfolioItems extends HTMLElement {
