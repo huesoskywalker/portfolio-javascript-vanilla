@@ -112,6 +112,13 @@ const projects = [
         author: "Udemy",
     },
     {
+        title: "DevOps",
+        image: "../../img/DevOps.png",
+        type: "DevOps",
+        link: "https://www.udemy.com/certificate/UC-3b45d537-6ab3-4aa5-a259-31a44164ea0a/",
+        author: "Udemy",
+    },
+    {
         title: "Cypress e2e",
         image: "../../img/cypress-e2e.png",
         type: "Viper",

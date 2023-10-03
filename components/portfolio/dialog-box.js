@@ -11,6 +11,7 @@ dialogTemplate.innerHTML = `
           <option>Solidity</option>
           <option>Data Structure</option>
           <option>AWS</option>
+          <option>DevOps</option>
         </optgroup>
         <optgroup label="Tutorials">
           <option>Web 3</option>
