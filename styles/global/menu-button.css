@@ -1,0 +1,219 @@
+.menu-btn {
+    width: 100%;
+    max-width: 10vw;
+    height: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    top: 5%;
+    right: 0%;
+    cursor: pointer;
+}
+.checkbox {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    opacity: 0;
+}
+
+.hamburger-lines {
+    width: 30%;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line {
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.line1 {
+    transform-origin: 13% 0%;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    background: var(--color-menu-button);
+}
+
+.line2 {
+    transition: transform 0.2s ease-in-out;
+    background: var(--color-secondary);
+}
+
+.line3 {
+    transform-origin: 13% 100%;
+    transition: transform 0.3s ease-in-out;
+    background: var(--color-menu-button);
+}
+
+.menu-btn input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+    filter: brightness(2) invert(1);
+}
+
+.menu-btn input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.menu-btn input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+.nav-container {
+    z-index: 1;
+    position: absolute;
+    margin-top: 22%;
+    top: 0;
+    right: 0;
+    width: 12vw;
+    height: auto;
+    visibility: hidden;
+    transform: translateX(12vw);
+    transition: transform 0.3s ease-in-out;
+}
+.nav-menu {
+    border-radius: 30px 30px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 3rem 0;
+    background: var(--color-menu-background);
+    backdrop-filter: blur(15px);
+    list-style-type: none;
+}
+.nav-menu__link {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.nav-menu__item {
+    transform: translateX(12vw);
+}
+.open {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.moveX {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+}
+.item-image {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: auto;
+}
+.item-title {
+    z-index: 1;
+    position: fixed;
+    justify-content: center;
+    align-self: center;
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px var(--color-grey-4), 1px 1px 1px var(--color-grey-4),
+        1px 1px 1px var(--color-grey-4);
+}
+
+@media only screen and (max-width: 1480px) {
+    .hamburger-lines {
+        height: 30px;
+    }
+    .line {
+        height: 4px;
+    }
+    .line1 {
+        transform-origin: 6% 0%;
+    }
+    .line3 {
+        transform-origin: 6% 100%;
+    }
+    .nav-container {
+        margin-top: 20%;
+    }
+    .nav-menu {
+        gap: 60px;
+        padding: 2.5rem 0;
+    }
+    .item-image {
+        width: 60px;
+    }
+    .item-title {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .hamburger-lines {
+        width: 35%;
+        height: 25px;
+    }
+    .line {
+        height: 3px;
+    }
+    .nav-container {
+        margin-top: 18%;
+    }
+    .nav-menu {
+        gap: 50px;
+        padding: 2rem 0;
+    }
+    .item-image {
+        width: 50px;
+    }
+
+    .item-title {
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .hamburger-lines {
+        width: 40%;
+    }
+    .line1 {
+        transform-origin: -8% 0%;
+    }
+    .line2 {
+        transform-origin: -8% 100%;
+    }
+    .nav-container {
+        width: 14vw;
+    }
+    .nav-menu {
+        gap: 65px;
+    }
+    .item-image {
+        width: 40px;
+    }
+    .item-title {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .hamburger-lines {
+        width: 75%;
+        height: 23px;
+    }
+    .line1 {
+        transform-origin: 4% 0%;
+    }
+    .line2 {
+        transform-origin: 4% 100%;
+    }
+    .nav-container {
+        margin-top: 28%;
+        width: 25vw;
+    }
+    .nav-menu {
+        border-radius: 15px 15px;
+    }
+}
+@media only screen and (max-width: 390px) {
+}

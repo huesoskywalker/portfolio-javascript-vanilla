@@ -296,12 +296,13 @@ class MyTerminal extends HTMLElement {
     }
 
     pleaseInteract() {
-        const feedBack = document.querySelector("#menu-button").getAttribute("state")
+        // const feedBack = document.querySelector("#menu-button").getAttribute("state")
         const haveWishes = localStorage.getItem("divs")
         const openTerminal = document.querySelector("#wantToWrapper")
         const focusWish = document.querySelector("#wishCatcher")
 
-        if (feedBack === "open" && !haveWishes) {
+        // if (feedBack === "open" && !haveWishes) {
+        if (!haveWishes) {
             openTerminal.style.visibility = "visible"
             focusWish.focus({ focusVisible: true })
             document.querySelector("#menu-button").setAttribute("state", "hold")

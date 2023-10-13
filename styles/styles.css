@@ -18,9 +18,9 @@ body {
     background-attachment: fixed;
     z-index: 1;
 }
-.solid-mode{
+.solid-mode {
     background-image: none;
-    background-color: var(--color-grey-3)
+    background-color: var(--color-grey-3);
 }
 
 a {
@@ -67,9 +67,9 @@ section {
     transform: translateY(0) scaleY(1);
 }
 
-@mixin transition-ease {
+/* @mixin transition-ease {
     transition: all 0.3s ease-in-out;
-}
+} */
 
 @media screen and (min-width: 2560px) {
     .contact-content-con {
@@ -110,7 +110,7 @@ section {
         background-image: url("../img/tattoine.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachkment: fixed;
+        background-attachment: fixed;
         z-index: 1;
     }
     .contact-content-con {
