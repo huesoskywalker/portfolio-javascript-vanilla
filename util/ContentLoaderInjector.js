@@ -2,6 +2,9 @@ import { ContentLoaderInjectorInterface } from "../interfaces/ContentLoaderInjec
 import { ContentLoader } from "./ContentLoader.js"
 
 export class ContentLoaderInjector extends ContentLoaderInjectorInterface {
+    /**
+     * @type {ContentLoader}
+     */
     static instance
 
     static getInstance() {

@@ -3,13 +3,17 @@
     max-width: 10vw;
     height: auto;
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 2;
     top: 5%;
     right: 0%;
+    z-index: 6;
 }
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .checkbox {
     position: absolute;
     width: 30%;
@@ -107,9 +111,6 @@
     transition: transform 0.3s ease-in-out;
 }
 .item-image {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     width: 70px;
     height: auto;
 }
@@ -202,7 +203,7 @@
 }
 @media only screen and (max-width: 440px) {
     .menu-btn {
-        margin-right: 2%;
+        margin-right: 3%;
     }
     .checkbox,
     .hamburger-lines {

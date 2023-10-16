@@ -16,6 +16,7 @@ export class ContentLoader extends ContentLoaderInterface {
         const style = document.createElement("style")
         style.textContent = css
         style.setAttribute("nonce", nonce)
+
         return { template, style }
     }
 }
