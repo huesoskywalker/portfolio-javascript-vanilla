@@ -1,25 +1,4 @@
-const menuItems = [
-    {
-        title: "HOME",
-        link: "index.html",
-        image: "./img/menu/jedi.png",
-    },
-    {
-        title: "ABOUT",
-        link: "about.html",
-        image: "./img/menu/jedi-order.png",
-    },
-    {
-        title: "PORTFOLIO",
-        link: "portfolio.html",
-        image: "./img/menu/jedi-new-order.png",
-    },
-    {
-        title: "CONTACT",
-        link: "contact.html",
-        image: "./img/menu/x-wing.png",
-    },
-]
+import { menuItems } from "../constants/menu/menuItems.js"
 
 class MenuButton extends HTMLElement {
     static get observedAttributes() {
@@ -28,8 +7,10 @@ class MenuButton extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: "open" })
+        this.menuItems = menuItems
         this.toggleMenuHandler = this.toggleMenu.bind(this)
-        this.showInfo = false
+        this.menuCheckbox = undefined
+        this.navContainer = undefined
     }
     async loadContent() {
         await Promise.all([
@@ -46,75 +27,65 @@ class MenuButton extends HTMLElement {
     }
 
     renderMenu() {
-        const navContainer = this.shadowRoot.getElementById("navContainer")
+        this.navContainer = this.shadowRoot.getElementById("navContainer")
 
         const navMenu = document.createElement("ul")
         navMenu.classList.add("nav-menu")
 
         const fragment = new DocumentFragment()
 
-        menuItems.forEach((item) => {
+        this.menuItems.forEach((item) => {
             const listItem = document.createElement("li")
             listItem.classList.add("nav-menu__item")
 
-            const itemAnchor = document.createElement("a")
-            itemAnchor.href = item.link
-            itemAnchor.classList.add("nav-menu__link")
-            listItem.appendChild(itemAnchor)
+            const itemLink = document.createElement("a")
+            itemLink.href = item.link
+            itemLink.classList.add("nav-menu__link")
+            listItem.appendChild(itemLink)
 
             const itemTitle = document.createElement("span")
             itemTitle.classList.add("item-title")
             itemTitle.textContent = item.title
-            itemAnchor.appendChild(itemTitle)
+            itemLink.appendChild(itemTitle)
 
             const itemImage = document.createElement("img")
             itemImage.classList.add("item-image")
             itemImage.src = item.image
-            itemAnchor.appendChild(itemImage)
+            itemLink.appendChild(itemImage)
 
             fragment.appendChild(listItem)
         })
         navMenu.appendChild(fragment)
-        navContainer.appendChild(navMenu)
+        this.navContainer.appendChild(navMenu)
     }
 
     attributeChangedCallback(props, oldValue, newValue) {
-        console.log(`attributeChangedCallback`)
         if (props === "state") {
             if (newValue === "hold") {
                 alert("Please interact to keep walking")
-                const checkbox = this.shadowRoot.getElementById("menuCheckbox")
-                checkbox.checked = false
+                this.menuCheckbox.checked = false
                 this.toggleMenuHandler()
             }
         }
     }
 
     toggleMenu() {
-        this.showInfo = !this.showInfo
+        const navItems = this.navContainer.querySelectorAll(".nav-menu__item")
 
-        const navContainer = this.shadowRoot.getElementById("navContainer")
-        const navItems = this.shadowRoot.querySelectorAll(".nav-menu__item")
-
-        if (this.showInfo) {
-            navContainer.classList.add("open")
-            navItems.forEach((item) => item.classList.add("moveX"))
-        } else {
-            navContainer.classList.remove("open")
-            navItems.forEach((item) => item.classList.remove("moveX"))
-        }
+        this.navContainer.classList.toggle("open")
+        navItems.forEach((item) => item.classList.toggle("moveX"))
     }
 
     async connectedCallback() {
         await this.loadContent()
         this.renderMenu()
-        this.shadowRoot
-            .querySelector(".menu-btn")
-            .addEventListener("click", () => this.toggleMenuHandler())
+
+        this.menuCheckbox = this.shadowRoot.getElementById("menuCheckbox")
+        this.menuCheckbox.addEventListener("click", () => this.toggleMenuHandler())
     }
 
     disconnectedCallback() {
-        this.shadowRoot.querySelector(".menu-btn").removeEventListener(this.toggleMenuHandler())
+        this.menuCheckbox.removeEventListener(this.toggleMenuHandler())
     }
 }
 window.customElements.define("menu-button", MenuButton)
