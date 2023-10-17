@@ -1,5 +1,5 @@
 import { menuItems } from "../constants/menu/menuItems.js"
-import { ContentLoader } from "../util/ContentLoader.js"
+import { ContentLoaderInterface } from "../interfaces/ContentLoaderInterface.js"
 import { ContentLoaderInjector } from "../util/ContentLoaderInjector.js"
 
 class MenuButton extends HTMLElement {
@@ -7,7 +7,7 @@ class MenuButton extends HTMLElement {
         return ["state"]
     }
     /**
-     * @param {ContentLoader} contentLoader
+     * @param {ContentLoaderInterface} contentLoader
      */
     constructor(contentLoader) {
         super()
@@ -56,7 +56,8 @@ class MenuButton extends HTMLElement {
 
             const itemImage = document.createElement("img")
             itemImage.classList.add("item-image")
-            itemImage.src = item.image
+            itemImage.src = item.image.src
+            itemImage.alt = item.image.alt
             itemImage.loading = "lazy"
             itemLink.appendChild(itemImage)
 

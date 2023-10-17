@@ -12,15 +12,17 @@
 
 /* Global Styles */
 body {
-    background-image: url("../img/ds1.jpg");
+    background-color: var(--color-grey-3);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
     z-index: 1;
 }
-.solid-mode {
-    background-image: none;
-    background-color: var(--color-grey-3);
+.bright-side {
+    background-image: url("../img/background/tatooine_1920w.jpg");
+}
+.dark-side {
+    background-image: url("../img/background/death-star_1920w.jpg");
 }
 
 a {
@@ -40,7 +42,7 @@ section {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 3rem 10.5rem;
+    padding: 6rem 20rem;
 }
 
 .txt-type > .txt {
@@ -48,10 +50,11 @@ section {
 }
 
 /* Contact Grid */
+/* Contact Page */
 .contact-content-con {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 5rem;
 }
 
 .container {
@@ -67,33 +70,30 @@ section {
     transform: translateY(0) scaleY(1);
 }
 
-/* @mixin transition-ease {
-    transition: all 0.3s ease-in-out;
-} */
-
-@media screen and (min-width: 2560px) {
+@media only screen and (max-width: 1480px) {
     .contact-content-con {
-        grid-gap: 5rem;
+        grid-gap: 2rem;
     }
-
     section {
-        padding: 6rem 20rem;
+        padding: 6rem 10.5rem;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1040px) {
+    body {
+        background-position: right;
+    }
+    .bright-side {
+        background-image: url("../img/background/tatooine_1024w.jpg");
+    }
+    .dark-side {
+        background-image: url("../img/background/death-star_1024w.jpg");
+    }
     section {
         padding: 2rem 6rem;
     }
 }
-@media screen and (max-width: 768px) {
-    body {
-        background-image: url("../img/ds1.jpg");
-        background-size: 888px 638px;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        z-index: 1;
-    }
+@media screen and (max-width: 780px) {
     .contact-content-con {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -105,13 +105,15 @@ section {
     }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 440px) {
     body {
-        background-image: url("../img/tattoine.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        z-index: 1;
+        background-position: center;
+    }
+    .bright-side {
+        background-image: url("../img/background/tatooine_425w.jpg");
+    }
+    .dark-side {
+        background-image: url("../img/background/death-star_425w.jpg");
     }
     .contact-content-con {
         justify-content: center;

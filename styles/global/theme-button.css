@@ -1,0 +1,73 @@
+.theme-btn {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3%;
+    left: 2.5%;
+    width: 75px;
+    height: 75px;
+    border: solid 4px var(--color-secondary);
+    border-radius: 50%;
+    background-color: var(--color-hover-portfolio);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+.theme-btn:hover {
+    box-shadow: 1px 4px 15px var(--color-about-life);
+    transform: translateY(3px);
+}
+.theme-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+.invert-color {
+    filter: invert(1);
+}
+
+@media only screen and (max-width: 1480px) {
+    .theme-btn {
+        width: 60px;
+        height: 60px;
+        border: solid 3px var(--color-secondary);
+    }
+    .theme-btn img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .theme-btn {
+        width: 50px;
+        height: 50px;
+    }
+    .theme-btn img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .theme-btn {
+        width: 45px;
+        height: 45px;
+    }
+    .theme-btn img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .theme-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .theme-btn img {
+        width: 25px;
+        height: 25px;
+    }
+}
