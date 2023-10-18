@@ -58,7 +58,6 @@ label {
 
 .menu-btn input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
     transform: rotate(45deg);
-    filter: brightness(2) invert(1);
 }
 
 .menu-btn input[type="checkbox"]:checked ~ .hamburger-lines .line2 {

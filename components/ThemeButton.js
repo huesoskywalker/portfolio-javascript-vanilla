@@ -62,11 +62,9 @@ class ThemeButton extends HTMLElement {
 
     async connectedCallback() {
         const localStorageTheme = localStorage.getItem("theme")
-        if (!localStorageTheme) {
-            this.state = "bright-side"
-        } else {
-            this.state = localStorageTheme
-        }
+        const validThemes = ["dark-side", "bright-side"]
+
+        this.state = validThemes.includes(localStorageTheme) ? localStorageTheme : "bright-side"
 
         document.body.classList.add(...this.themeMap[this.state])
 
