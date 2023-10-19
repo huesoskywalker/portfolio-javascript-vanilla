@@ -168,6 +168,13 @@ const projects = [
         link: "https://www.youtube.com/watch?v=USTM_HdKN2I",
         author: "huesoskywalker",
     },
+    {
+        title: "Chicago Medical",
+        image: "../../img/chicago-medical.jpg",
+        type: "Chicago Medical",
+        link: "https://chicago-medical-checkup.vercel.app/",
+        author: "huesoskywalker",
+    },
 ]
 
 class PortfolioItems extends HTMLElement {

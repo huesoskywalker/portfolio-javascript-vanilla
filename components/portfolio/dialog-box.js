@@ -13,14 +13,11 @@ dialogTemplate.innerHTML = `
           <option>AWS</option>
           <option>DevOps</option>
         </optgroup>
-        <optgroup label="Tutorials">
-          <option>Web 3</option>
-          <option>Web 2</option>
-        </optgroup>
         <optgroup label="Do it yourself">
         <option>Portfolio</option>
         <option>Viper</option>
         <option>Google Maps API</option>
+        <option>Chicago Medical</option>
         </optgroup>
       </select>
     </label></p>

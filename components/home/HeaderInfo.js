@@ -1,5 +1,6 @@
 import { ContentLoaderInterface } from "../../interfaces/ContentLoaderInterface.js"
 import { ContentLoaderInjector } from "../../util/ContentLoaderInjector.js"
+import { slotsData } from "../../constants/home/slotsData.js"
 
 class HeaderInfo extends HTMLElement {
     /**
@@ -10,6 +11,7 @@ class HeaderInfo extends HTMLElement {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
+        this.slotsData = slotsData
     }
     async loadContent() {
         const templatePath = "/templates/home/header-info.html"
@@ -25,9 +27,21 @@ class HeaderInfo extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true))
         this.shadowRoot.appendChild(style)
     }
+    renderSlots() {
+        console.log(this.slotsData)
+        const fragment = new DocumentFragment()
+        this.slotsData.forEach((data) => {
+            const element = document.createElement(data.tag)
+            element.slot = data.slot
+            element.textContent = data.content
+            fragment.appendChild(element)
+        })
+        this.appendChild(fragment)
+    }
 
     async connectedCallback() {
         await this.loadContent()
+        this.renderSlots()
     }
 }
 
