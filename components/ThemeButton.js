@@ -13,7 +13,6 @@ class ThemeButton extends HTMLElement {
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
         this.themeButton = undefined
-        this.buttonImage = undefined
         this.themeMap = {
             "dark-side": ["dark-theme", "dark-side"],
             "bright-side": ["light-theme", "bright-side"],
@@ -56,15 +55,13 @@ class ThemeButton extends HTMLElement {
         this.state = stateTransition[this.state]
 
         document.body.classList.add(...this.themeMap[this.state])
-
-        this.buttonImage.classList.toggle("invert-color")
     }
 
     async connectedCallback() {
         const localStorageTheme = localStorage.getItem("theme")
         const validThemes = ["dark-side", "bright-side"]
 
-        this.state = validThemes.includes(localStorageTheme) ? localStorageTheme : "bright-side"
+        this.state = validThemes.includes(localStorageTheme) ? localStorageTheme : "dark-side"
 
         document.body.classList.add(...this.themeMap[this.state])
 
@@ -72,11 +69,6 @@ class ThemeButton extends HTMLElement {
 
         this.themeButton = this.shadowRoot.getElementById("themeButton")
         this.themeButton.addEventListener("click", () => this.toggleThemeHandler())
-
-        this.buttonImage = this.themeButton.querySelector("img")
-        if (this.state === "dark-side") {
-            this.buttonImage.classList.add("invert-color")
-        }
     }
     disconnectedCallback() {
         this.themeButton.removeEventListener("click", () => this.toggleThemeHandler())

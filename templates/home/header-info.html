@@ -1,0 +1,19 @@
+<header class="container home active" id="home">
+    <div class="home-content">
+        <div class="left-home">
+            <img
+                srcset="/img/home/profile_1024w.jpg 1024w, /img/home/profile_1920w.jpg 1920w"
+                src="/img/home/profile_1920w.jpg"
+                alt="Profile image"
+                loading="lazy"
+            />
+        </div>
+        <div class="right-home">
+            <slot name="salute"></slot>
+            <slot name="myName"></slot>
+            <slot name="born"></slot>
+            <slot name="introduction"></slot>
+            <road-map></road-map>
+        </div>
+    </div>
+</header>

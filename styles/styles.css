@@ -8,6 +8,7 @@
     max-width: 100%;
     letter-spacing: 0.5px;
     line-height: 1.3;
+    box-sizing: border-box;
 }
 
 /* Global Styles */
@@ -28,12 +29,6 @@ body {
 a {
     display: inline-block;
     text-decoration: none;
-}
-
-header {
-    min-height: 100vh;
-    overflow: hidden;
-    padding: 0 !important;
 }
 
 section {

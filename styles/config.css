@@ -1,4 +1,8 @@
 /* Global variables */
+/* :host {
+    --align-self: flex-start;
+    align-self: var(--align-self);
+} */
 .light-theme {
     --color-primary: rgba(128, 128, 128, 0.1);
     --color-secondary: rgba(0, 101, 64, 0.945);
@@ -47,4 +51,28 @@
     --color-theme-inverse: rgb(1, 1, 1);
     --color-input-form: rgba(0, 13, 36, 0.369);
     --color-hover-portfolio: rgba(52, 52, 52, 0.334);
+}
+:root {
+    --COLOR-MODAL-TEXT: rgb(136, 39, 0);
+}
+.light-theme {
+    --INVERT-ICON: invert(0);
+    --COLOR-PRIMARY: rgba(128, 128, 128, 0.32);
+    --COLOR-SECONDARY: rgba(0, 101, 64, 0.945);
+    --COLOR-PRIMARY-TEXT: rgb(0, 0, 0);
+    --COLOR-SECONDARY-TEXT: rgba(255, 64, 64);
+    --COLOR-MODAL-TEXT: rgb(136, 39, 0);
+    --COLOR-GREY: rgba(182, 182, 182, 0.5);
+    --COLOR-CONTACT-ME: rgb(0, 65, 0);
+}
+
+.dark-theme {
+    --INVERT-ICON: invert(1);
+    --COLOR-PRIMARY: rgba(0, 0, 0, 0.22);
+    --COLOR-SECONDARY: rgba(158, 38, 38, 0.7);
+    --COLOR-PRIMARY-TEXT: rgba(255, 255, 255, 0.9);
+    --COLOR-SECONDARY-TEXT: rgba(255, 255, 128);
+    --COLOR-MODAL-TEXT: rgb(255, 255, 128);
+    --COLOR-GREY: rgba(49, 53, 57, 0.5);
+    --COLOR-CONTACT-ME: rgb(65, 0, 0);
 }
