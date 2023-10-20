@@ -1,0 +1,177 @@
+/* we can make an <img> out of this */
+.vader {
+    z-index: 0;
+    display: none;
+    position: fixed;
+    width: 750px;
+    height: 750px;
+    top: 10%;
+    left: 36%;
+    transition: all ease-out 3s;
+    background-color: rgb(0, 0, 0);
+    /* img tag? */
+    -webkit-mask-image: url(../img/vader1.png);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+}
+
+::slotted(h3) {
+    z-index: 1;
+    display: none;
+    /* visibility: visible; */
+    column-span: all;
+    position: fixed;
+    width: 400px;
+    top: 14%;
+    left: 43%;
+    font-size: 2.4rem;
+    color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.7px rgba(255, 255, 0, 0.88);
+}
+.wrapper {
+    position: fixed;
+    width: 100px;
+    left: 74.3%;
+    top: 10.2%;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.beam-wrapper {
+    position: relative;
+    animation: superLaser 200ms ease-in-out infinite;
+}
+.beam {
+    bottom: 0;
+    position: absolute;
+    border-radius: 50% 50% 50% 0%;
+    transform: rotate(-45deg);
+}
+
+.green {
+    width: 35px;
+    height: 55px;
+    background: rgba(0, 255, 0);
+    box-shadow: 1px -1px 20px 5px rgba(0, 255, 0);
+    filter: brightness(1000%);
+}
+.white {
+    left: 5px;
+    width: 35px;
+    height: 45px;
+    background: rgba(255, 255, 255);
+    filter: blur(5px);
+}
+
+@keyframes superLaser {
+    0% {
+        transform: rotate(-1.5deg) scaleY(4);
+    }
+    20% {
+        transform: rotate(1.5deg) scaleY(4.5) scale;
+    }
+    40% {
+        transform: rotate(-1.5deg) scaleY(5);
+    }
+    60% {
+        transform: rotate(1.5deg) scaleY(5.5);
+    }
+    80% {
+        transform: rotate(-1.5deg) scaleY(6);
+    }
+    100% {
+        transform: rotate(1.5deg) scaleY(6.5);
+    }
+}
+
+@media screen and (max-width: 1480px) {
+    ::slotted(h3) {
+        width: 300px;
+        top: 9%;
+        left: 38%;
+        font-size: 1.7rem;
+    }
+    .wrapper {
+        left: 74%;
+        top: 6.5%;
+    }
+    .vader {
+        width: 550px;
+        height: 550px;
+        top: 6%;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .vader {
+        width: 400px;
+        height: 400px;
+        top: 6%;
+        left: 30%;
+    }
+    ::slotted(h3) {
+        width: 220px;
+        top: 8%;
+        left: 38.5%;
+        font-size: 1.2rem;
+    }
+    .wrapper {
+        left: 80.3%;
+        top: 5.2%;
+    }
+    .green {
+        width: 20px;
+        height: 38px;
+    }
+    .white {
+        width: 20px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .vader {
+        top: 6%;
+        left: 25%;
+    }
+    ::slotted(h3) {
+        top: 8%;
+        left: 37%;
+    }
+    .wrapper {
+        left: 84%;
+        top: 5%;
+    }
+    .green {
+        width: 10px;
+        height: 11px;
+    }
+    .white {
+        width: 10px;
+        height: 11px;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .vader {
+        top: 3%;
+        left: 8%;
+        width: 300px;
+        height: 300px;
+    }
+    ::slotted(h3) {
+        top: 3.8%;
+        left: 26%;
+        width: 150px;
+        font-size: 1.1rem;
+    }
+    .wrapper {
+        display: none;
+    }
+}
+@media only screen and (max-width: 390px) {
+}
+@media only screen and (max-width: 340px) {
+}

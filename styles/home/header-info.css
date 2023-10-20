@@ -43,8 +43,8 @@ header {
     color: var(--COLOR-SECONDARY);
     text-indent: 40px;
     font-size: 3rem;
-    text-shadow: 1px 1px 1px var(--COLOR-CONTACT-ME), 1px 1px 1px var(--COLOR-CONTACT-ME),
-        1px 1px 1px var(--COLOR-CONTACT-ME);
+    text-shadow: 1px 1px 1px var(--COLOR-TEXT-SHADOW), 1px 1px 1px var(--COLOR-TEXT-SHADOW),
+        1px 1px 1px var(--COLOR-TEXT-SHADOW);
 }
 ::slotted(span) {
     align-self: flex-end;

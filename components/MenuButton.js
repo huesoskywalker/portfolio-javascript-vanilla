@@ -14,7 +14,6 @@ class MenuButton extends HTMLElement {
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
         this.menuItems = menuItems
-        this.toggleMenuHandler = this.toggleMenu.bind(this)
         this.menuCheckbox = undefined
         this.navContainer = undefined
     }
@@ -72,9 +71,17 @@ class MenuButton extends HTMLElement {
             if (newValue === "hold") {
                 alert("Please interact to keep walking")
                 this.menuCheckbox.checked = false
-                this.toggleMenuHandler()
+                this.toggleMenu()
             }
         }
+    }
+
+    get state() {
+        return this.getAttribute("state")
+    }
+
+    set state(value) {
+        return this.setAttribute("state", value)
     }
 
     toggleMenu() {
@@ -82,6 +89,12 @@ class MenuButton extends HTMLElement {
 
         this.navContainer.classList.toggle("open")
         navItems.forEach((item) => item.classList.toggle("moveX"))
+
+        const stateHandler = {
+            open: "closed",
+            closed: "open",
+        }
+        this.state = stateHandler[this.state]
     }
 
     async connectedCallback() {
@@ -89,11 +102,11 @@ class MenuButton extends HTMLElement {
         this.renderMenu()
 
         this.menuCheckbox = this.shadowRoot.getElementById("menuCheckbox")
-        this.menuCheckbox.addEventListener("click", () => this.toggleMenuHandler())
+        this.menuCheckbox.addEventListener("click", () => this.toggleMenu())
     }
 
     disconnectedCallback() {
-        this.menuCheckbox.removeEventListener("click", () => this.toggleMenuHandler())
+        this.menuCheckbox.removeEventListener("click", () => this.toggleMenu())
     }
 }
 const contentLoaderInstance = ContentLoaderInjector.getInstance()

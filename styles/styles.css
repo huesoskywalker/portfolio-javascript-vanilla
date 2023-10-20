@@ -11,9 +11,7 @@
     box-sizing: border-box;
 }
 
-/* Global Styles */
 body {
-    background-color: var(--color-grey-3);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -30,14 +28,13 @@ a {
     display: inline-block;
     text-decoration: none;
 }
-
 section {
-    min-height: 100vh;
     width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 6rem 20rem;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .txt-type > .txt {
@@ -52,25 +49,9 @@ section {
     grid-gap: 5rem;
 }
 
-.container {
-    display: block;
-    transform: translateY(-100%) scale(0);
-    transition: all 0.3s ease-in-out;
-    background-color: var(--color-primary);
-}
-
-/* Show sections */
-.active {
-    display: block;
-    transform: translateY(0) scaleY(1);
-}
-
 @media only screen and (max-width: 1480px) {
     .contact-content-con {
         grid-gap: 2rem;
-    }
-    section {
-        padding: 6rem 10.5rem;
     }
 }
 
@@ -84,19 +65,12 @@ section {
     .dark-side {
         background-image: url("../img/background/death-star_1024w.jpg");
     }
-    section {
-        padding: 2rem 6rem;
-    }
 }
 @media screen and (max-width: 780px) {
     .contact-content-con {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 1rem;
-    }
-
-    section {
-        padding: 2rem 7rem;
     }
 }
 
@@ -109,13 +83,10 @@ section {
     }
     .dark-side {
         background-image: url("../img/background/death-star_425w.jpg");
+        background-size: contain;
     }
     .contact-content-con {
         justify-content: center;
         align-items: center;
-    }
-
-    section {
-        padding: 0.7rem 0.7rem;
     }
 }

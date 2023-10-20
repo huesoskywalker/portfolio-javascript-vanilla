@@ -1,8 +1,8 @@
 import { ContentLoaderInterface } from "../../interfaces/ContentLoaderInterface.js"
 import { ContentLoaderInjector } from "../../util/ContentLoaderInjector.js"
-import { headerData } from "../../constants/home/headerData.js"
+import { aboutMeData } from "../../constants/about/aboutMeData.js"
 
-class HeaderInfo extends HTMLElement {
+class AboutMe extends HTMLElement {
     /**
      *
      * @param {ContentLoaderInterface} contentLoader
@@ -11,12 +11,14 @@ class HeaderInfo extends HTMLElement {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
-        this.slotsData = headerData
+        this.slotsData = aboutMeData
+        this
     }
+
     async loadContent() {
-        const templatePath = "/templates/home/header-info.html"
-        const stylePath = "/styles/home/header-info.css"
-        const nonce = "header-info"
+        const templatePath = "/templates/about/about-me.html"
+        const stylePath = "/styles/about/about-me.css"
+        const nonce = "about-me"
 
         const { template, style } = await this.contentLoader.loadContent(
             templatePath,
@@ -27,8 +29,15 @@ class HeaderInfo extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true))
         this.shadowRoot.appendChild(style)
     }
+
     renderSlots() {
-        const rightContainer = this.shadowRoot.getElementById("rightHome")
+        const mainContainer = this.shadowRoot.getElementById("aboutContainer")
+
+        const leftAbout = document.createElement("div")
+        leftAbout.classList.add("left-about")
+
+        const rightAbout = document.createElement("div")
+        rightAbout.classList.add("right-about")
 
         const lightFragment = new DocumentFragment()
         const shadowFragment = new DocumentFragment()
@@ -36,7 +45,13 @@ class HeaderInfo extends HTMLElement {
         this.slotsData.forEach((data) => {
             const slot = document.createElement("slot")
             slot.name = data.slot
-            shadowFragment.appendChild(slot)
+            if (data.slot === "story-title" || data.slot === "story") {
+                leftAbout.appendChild(slot)
+            } else if (data.slot === "bright-side" || data.slot === "dark-side") {
+                rightAbout.appendChild(slot)
+            } else {
+                shadowFragment.appendChild(slot)
+            }
 
             const element = document.createElement(data.tag)
             element.slot = data.slot
@@ -44,7 +59,9 @@ class HeaderInfo extends HTMLElement {
             lightFragment.appendChild(element)
         })
 
-        rightContainer.insertBefore(shadowFragment, rightContainer.firstChild)
+        shadowFragment.appendChild(leftAbout)
+        shadowFragment.appendChild(rightAbout)
+        mainContainer.appendChild(shadowFragment)
         this.appendChild(lightFragment)
     }
 
@@ -57,8 +74,8 @@ class HeaderInfo extends HTMLElement {
 const contentLoaderInstance = ContentLoaderInjector.getInstance()
 
 customElements.define(
-    "header-info",
-    class extends HeaderInfo {
+    "about-me",
+    class extends AboutMe {
         constructor() {
             super(contentLoaderInstance)
         }

@@ -1,4 +1,4 @@
-export const slotsData = [
+export const headerData = [
     {
         tag: "h1",
         slot: "salute",

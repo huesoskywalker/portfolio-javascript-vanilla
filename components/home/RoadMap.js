@@ -10,8 +10,6 @@ class RoadMap extends HTMLElement {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
-        this.showRoadMapHandler = this.showRoadMap.bind(this)
-        this.closeRoadMapHandler = this.closeRoadMap.bind(this)
     }
     async loadContent() {
         const templatePath = "/templates/home/road-map.html"
@@ -27,28 +25,23 @@ class RoadMap extends HTMLElement {
         this.shadowRoot.appendChild(style)
     }
 
-    showRoadMap() {
+    toggleRoadMap() {
         const modal = this.shadowRoot.getElementById("myModal")
-        const currentDisplay = modal.style.display
+        modal.classList.toggle("show-modal")
+    }
 
-        modal.style.display = currentDisplay === "flex" ? "none" : "flex"
-    }
-    closeRoadMap() {
-        const modal = this.shadowRoot.getElementById("myModal")
-        modal.style.display = "none"
-    }
     async connectedCallback() {
         await this.loadContent()
 
         this.openButton = this.shadowRoot.getElementById("roadMap")
-        this.openButton.addEventListener("click", () => this.showRoadMapHandler())
+        this.openButton.addEventListener("click", () => this.toggleRoadMap())
 
         this.closeButton = this.shadowRoot.getElementById("closeModal")
-        this.closeButton.addEventListener("click", () => this.closeRoadMapHandler())
+        this.closeButton.addEventListener("click", () => this.toggleRoadMap())
     }
     disconnectedCallback() {
-        this.openButton.removeEventListener("click", () => this.showRoadMapHandler())
-        this.closeButton.removeEventListener("click", () => this.closeRoadMapHandler())
+        this.openButton.removeEventListener("click", () => this.toggleRoadMap())
+        this.closeButton.removeEventListener("click", () => this.toggleRoadMap())
     }
 }
 

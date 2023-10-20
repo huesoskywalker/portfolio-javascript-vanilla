@@ -17,7 +17,6 @@ class ThemeButton extends HTMLElement {
             "dark-side": ["dark-theme", "dark-side"],
             "bright-side": ["light-theme", "bright-side"],
         }
-        this.toggleThemeHandler = this.toggleTheme.bind(this)
     }
     async loadContent() {
         const templatePath = `/templates/global/theme-button.html`
@@ -68,10 +67,10 @@ class ThemeButton extends HTMLElement {
         await this.loadContent()
 
         this.themeButton = this.shadowRoot.getElementById("themeButton")
-        this.themeButton.addEventListener("click", () => this.toggleThemeHandler())
+        this.themeButton.addEventListener("click", () => this.toggleTheme())
     }
     disconnectedCallback() {
-        this.themeButton.removeEventListener("click", () => this.toggleThemeHandler())
+        this.themeButton.removeEventListener("click", () => this.toggleTheme())
     }
 }
 
