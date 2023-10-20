@@ -35,39 +35,43 @@ header {
     gap: 10px;
 }
 
-::slotted(h1) {
+.salute {
     color: var(--COLOR-PRIMARY-TEXT);
     font-size: 3rem;
+    margin: 0;
 }
-::slotted(h2) {
+.name {
     color: var(--COLOR-SECONDARY);
     text-indent: 40px;
     font-size: 3rem;
     text-shadow: 1px 1px 1px var(--COLOR-TEXT-SHADOW), 1px 1px 1px var(--COLOR-TEXT-SHADOW),
         1px 1px 1px var(--COLOR-TEXT-SHADOW);
+    margin: 0;
 }
-::slotted(span) {
+.birth {
     align-self: flex-end;
     font-size: 1.6rem;
     color: var(--COLOR-MODAL-TEXT);
+    margin: 0;
 }
-::slotted(p) {
+.introduction {
     line-height: 2rem;
     font-size: 1.8rem;
     color: var(--COLOR-PRIMARY-TEXT);
+    margin: 0;
 }
 
 @media only screen and (max-width: 1480px) {
-    ::slotted(h1) {
+    .salute {
         font-size: 2rem;
     }
-    ::slotted(h2) {
+    .name {
         font-size: 2rem;
     }
-    ::slotted(span) {
+    .birth {
         font-size: 1.1rem;
     }
-    ::slotted(p) {
+    .introduction {
         line-height: 1.5rem;
         font-size: 1.3rem;
     }
@@ -76,16 +80,16 @@ header {
     .left-home img {
         width: 45%;
     }
-    ::slotted(h1) {
+    .salute {
         font-size: 1.8rem;
     }
-    ::slotted(h2) {
+    .name {
         font-size: 1.8rem;
     }
-    ::slotted(span) {
+    .birth {
         font-size: 1rem;
     }
-    ::slotted(p) {
+    .introduction {
         font-size: 1.2rem;
     }
 }
@@ -93,16 +97,16 @@ header {
     .left-home img {
         width: 55%;
     }
-    ::slotted(h1) {
+    .salute {
         font-size: 1.5rem;
     }
-    ::slotted(h2) {
+    .name {
         font-size: 1.5rem;
     }
-    ::slotted(span) {
+    .birth {
         font-size: 0.9rem;
     }
-    ::slotted(p) {
+    .introduction {
         font-size: 1.1rem;
     }
 }
@@ -117,41 +121,41 @@ header {
     .left-home img {
         width: 48%;
     }
-    ::slotted(h1) {
+    .salute {
         font-size: 1.3rem;
     }
-    ::slotted(h2) {
+    .name {
         text-indent: 15px;
         font-size: 1.3rem;
     }
-    ::slotted(span) {
+    .birth {
         font-size: 1rem;
     }
-    ::slotted(p) {
+    .introduction {
         font-size: 1.2rem;
     }
 }
 
 @media only screen and (max-width: 390px) {
-    ::slotted(h1) {
+    .salute {
         font-size: 1.2rem;
     }
-    ::slotted(h2) {
+    .name {
         font-size: 1.1rem;
     }
-    ::slotted(span) {
+    .birth {
         font-size: 0.8rem;
     }
-    ::slotted(p) {
+    .introduction {
         font-size: 1rem;
     }
 }
 
 @media only screen and (max-width: 340px) {
-    ::slotted(h1) {
+    .salute {
         font-size: 1.1rem;
     }
-    ::slotted(h2) {
+    .name {
         text-indent: 5px;
         font-size: 1rem;
     }

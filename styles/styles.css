@@ -55,7 +55,7 @@ section {
     }
 }
 
-@media screen and (max-width: 1040px) {
+@media only screen and (max-width: 1040px) {
     body {
         background-position: right;
     }
@@ -66,7 +66,7 @@ section {
         background-image: url("../img/background/death-star_1024w.jpg");
     }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (max-width: 780px) {
     .contact-content-con {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -74,19 +74,24 @@ section {
     }
 }
 
-@media screen and (max-width: 440px) {
+@media only screen and (max-width: 440px) {
     body {
         background-position: center;
+        background-size: contain;
     }
     .bright-side {
         background-image: url("../img/background/tatooine_425w.jpg");
     }
     .dark-side {
         background-image: url("../img/background/death-star_425w.jpg");
-        background-size: contain;
     }
     .contact-content-con {
         justify-content: center;
         align-items: center;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .dark-side {
+        background-size: cover;
     }
 }

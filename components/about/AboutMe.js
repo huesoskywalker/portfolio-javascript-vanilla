@@ -30,7 +30,7 @@ class AboutMe extends HTMLElement {
         this.shadowRoot.appendChild(style)
     }
 
-    renderSlots() {
+    renderData() {
         const mainContainer = this.shadowRoot.getElementById("aboutContainer")
 
         const leftAbout = document.createElement("div")
@@ -39,35 +39,30 @@ class AboutMe extends HTMLElement {
         const rightAbout = document.createElement("div")
         rightAbout.classList.add("right-about")
 
-        const lightFragment = new DocumentFragment()
         const shadowFragment = new DocumentFragment()
 
         this.slotsData.forEach((data) => {
-            const slot = document.createElement("slot")
-            slot.name = data.slot
-            if (data.slot === "story-title" || data.slot === "story") {
-                leftAbout.appendChild(slot)
-            } else if (data.slot === "bright-side" || data.slot === "dark-side") {
-                rightAbout.appendChild(slot)
-            } else {
-                shadowFragment.appendChild(slot)
-            }
-
             const element = document.createElement(data.tag)
-            element.slot = data.slot
+            element.classList.add(data.class)
             element.textContent = data.content
-            lightFragment.appendChild(element)
+
+            if (data.class === "story-title" || data.class === "story") {
+                leftAbout.appendChild(element)
+            } else if (data.class === "bright-side") {
+                rightAbout.appendChild(element)
+            } else {
+                shadowFragment.appendChild(element)
+            }
         })
 
         shadowFragment.appendChild(leftAbout)
         shadowFragment.appendChild(rightAbout)
         mainContainer.appendChild(shadowFragment)
-        this.appendChild(lightFragment)
     }
 
     async connectedCallback() {
         await this.loadContent()
-        this.renderSlots()
+        this.renderData()
     }
 }
 

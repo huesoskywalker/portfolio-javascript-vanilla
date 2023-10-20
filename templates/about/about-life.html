@@ -1,0 +1,16 @@
+<div class="about-life">
+    <h4 class="stat-title">My life</h4>
+    <div id="timeLine" class="timeline">
+        ${lifeTrip .sort((a, b) => String(b.duration).localeCompare(a.duration)) .map(({ icon,
+        duration, tittle, link, linkText, description }) => { return `
+        <div class="timeline-item">
+            <div class="tl-icon">
+                <i class="${icon}"></i>
+            </div>
+            <p class="tl-duration">${duration}</p>
+            <h5>${tittle}<a class="show" target="_blank" ${link}>${linkText}</a></h5>
+            <p class="tl-description">${description}</p>
+        </div>
+        ` }) .join("")}
+    </div>
+</div>

@@ -1,8 +1,6 @@
 import { ContentLoaderInterface } from "../../interfaces/ContentLoaderInterface.js"
 import { ContentLoaderInjector } from "../../util/ContentLoaderInjector.js"
-import { headerInfoData } from "../../constants/home/headerInfoData.js"
-
-class HeaderInfo extends HTMLElement {
+class AboutLife extends HTMLElement {
     /**
      *
      * @param {ContentLoaderInterface} contentLoader
@@ -11,12 +9,11 @@ class HeaderInfo extends HTMLElement {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
-        this.headerData = headerInfoData
     }
     async loadContent() {
-        const templatePath = "/templates/home/header-info.html"
-        const stylePath = "/styles/home/header-info.css"
-        const nonce = "header-info"
+        const templatePath = "/templates/about/about-life.html"
+        const stylePath = "/styles/about/about-life.css"
+        const nonce = "about-life"
 
         const { template, style } = await this.contentLoader.loadContent(
             templatePath,
@@ -27,33 +24,20 @@ class HeaderInfo extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true))
         this.shadowRoot.appendChild(style)
     }
-    renderSlots() {
-        const rightContainer = this.shadowRoot.getElementById("rightHome")
-
-        const shadowFragment = new DocumentFragment()
-
-        this.headerData.forEach((data) => {
-            const element = document.createElement(data.tag)
-
-            element.classList.add(data.class)
-            element.textContent = data.content
-            shadowFragment.appendChild(element)
-        })
-
-        rightContainer.insertBefore(shadowFragment, rightContainer.firstChild)
-    }
-
     async connectedCallback() {
         await this.loadContent()
-        this.renderSlots()
+        this.renderContent()
+        // const codeAnimation = this.shadowRoot.querySelector(".codeAnim")
     }
+
+    disconnectedCallback() {}
 }
 
 const contentLoaderInstance = ContentLoaderInjector.getInstance()
 
 customElements.define(
-    "header-info",
-    class extends HeaderInfo {
+    "about-life",
+    class extends AboutLife {
         constructor() {
             super(contentLoaderInstance)
         }

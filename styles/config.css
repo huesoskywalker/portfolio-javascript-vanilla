@@ -1,8 +1,4 @@
 /* Global variables */
-/* :host {
-    --align-self: flex-start;
-    align-self: var(--align-self);
-} */
 .light-theme {
     --color-primary: rgba(128, 128, 128, 0.1);
     --color-secondary: rgba(0, 101, 64, 0.945);

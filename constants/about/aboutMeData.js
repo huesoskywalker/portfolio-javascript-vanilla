@@ -1,17 +1,17 @@
 export const aboutMeData = [
     {
         tag: "span",
-        slot: "aka",
+        class: "aka",
         content: "huesoskywalker",
     },
     {
         tag: "h1",
-        slot: "story-title",
+        class: "story-title",
         content: "Long story short",
     },
     {
         tag: "p",
-        slot: "story",
+        class: "story",
         content:
             "A passionate enthusiast of growth, I embrace the path of programming as a new chapter in my life's narrative. \
         This journey excites me, just like the adventures I've embarked on before, for it empowers me to craft and manifest the creations my soul adores. \
@@ -19,7 +19,7 @@ export const aboutMeData = [
     },
     {
         tag: "h2",
-        slot: "bright-side",
+        class: "bright-side",
         content: "May the force be with you",
     },
 ]

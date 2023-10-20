@@ -1,22 +1,22 @@
-export const headerData = [
+export const headerInfoData = [
     {
         tag: "h1",
-        slot: "salute",
+        class: "salute",
         content: "HelloWorld, I'm",
     },
     {
         tag: "h2",
-        slot: "myName",
+        class: "name",
         content: "Agustin Bigoni Lavezzari",
     },
     {
         tag: "span",
-        slot: "born",
+        class: "birth",
         content: "since September 5th, 1988",
     },
     {
         tag: "p",
-        slot: "introduction",
+        class: "introduction",
         content:
             " I'm passionate about creating diverse types of projects. Exploring this innovative \
         approach to development has been truly fascinating, and I find myself thoroughly \
