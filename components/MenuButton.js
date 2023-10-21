@@ -1,4 +1,4 @@
-import { menuItems } from "../constants/menu/menuItems.js"
+import { menuData } from "../constants/menu/menuData.js"
 import { ContentLoaderInterface } from "../interfaces/ContentLoaderInterface.js"
 import { ContentLoaderInjector } from "../util/ContentLoaderInjector.js"
 
@@ -13,7 +13,7 @@ class MenuButton extends HTMLElement {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
-        this.menuItems = menuItems
+        this.menuItems = menuData
         this.menuCheckbox = undefined
         this.navContainer = undefined
     }

@@ -1,4 +1,4 @@
-export const menuItems = [
+export const menuData = [
     {
         title: "HOME",
         link: "index.html",
@@ -8,7 +8,7 @@ export const menuItems = [
         },
     },
     {
-        title: "ABOUT",
+        title: "ABOUT ME",
         link: "about.html",
         image: {
             src: "./img/menu/jedi-order_70x70.png",

@@ -23,7 +23,6 @@
     height: 50px;
     filter: var(--INVERT-ICON);
 }
-
 @media only screen and (max-width: 1480px) {
     .theme-btn {
         width: 60px;
@@ -35,7 +34,6 @@
         height: 40px;
     }
 }
-
 @media only screen and (max-width: 1040px) {
     .theme-btn {
         width: 50px;
@@ -46,7 +44,6 @@
         height: 35px;
     }
 }
-
 @media only screen and (max-width: 780px) {
     .theme-btn {
         width: 45px;
@@ -57,7 +54,6 @@
         height: 30px;
     }
 }
-
 @media only screen and (max-width: 440px) {
     .theme-btn {
         width: 40px;

@@ -1,49 +1,80 @@
-const lifeTrip = [
+export const aboutLifeData = [
     {
         duration: "2021 - ∞",
-        tittle: "Full Stack Developer",
+        title: "Software Developer",
         description:
-            "While I was in nature and had time, I started to study Java and I liked it very much. The backend part is certainly more attractive for my personal tastes. Then Javascript to get to know the frontend and a world of questions, knowledge and curiosities opened up for me. Eager to continue studying, professionalizing and creating, I let you continue browsing my portfolio.",
-        icon: "codeAnim",
-        link: "",
-        linkText: "",
+            "Passionate about software development, I'm constantly learning and innovating. \
+            In the startup world, I first contributed to a dynamic venture aimed at enhancing communication within a law firm. \
+            Subsequently, I joined a startup dedicated to streamlining property management, embracing the dynamic world of innovation and development. \
+             Additionally, I focus on a personal project, ensuring code quality, good practices, maintainability and scalability.",
+        image: {
+            src: "",
+            alt: "",
+        },
     },
 
     {
-        duration: "2019 - 2022",
-        tittle: "Carpenter&Gardener     / Booking",
+        duration: "2020 - 2022",
+        title: "Carpenter",
         description:
-            "Back in my country, I began to study the technology of wood and furniture to travel to Australia and work as a carpenter. My flight was canceled on the 17th of March 2020 and I stayed on a family land working in nature, planting trees and growing vegetables, renting a house in the summer season and making furniture.",
-        icon: "treeAnim",
-        link: "",
-        linkText: "",
+            "I have a deep passion for working with the noble material of wood.\
+             My love for craftsmanship extends to a patience for the meticulous process of creating products.\
+              With a particular focus on garden-related items",
+        image: {
+            src: "",
+            alt: "",
+        },
     },
 
     {
-        duration: "2016-2019",
-        tittle: "bartender",
+        duration: "2017-2019",
+        title: "Bartender",
         description:
-            "I arrived in Barcelona and started working in a clothing store and at the same time in a bar. I began to read the history of cocktails to learn more and that led me to study the Spirits. So called because the craftsman collects the steam from the distillations he carried out from nature. Tasting placer of the palate I lived in Eivissa and then Andorra working in bars.",
-        icon: "beerAnim",
-        link: "",
-        linkText: "",
+            "My journey as a bartender has been a thrilling European adventure. \
+            From the heart of Barcelona to the elegant ambiance of Ibiza, and even the picturesque mountains of Andorra. \
+            I've not only perfected my mixology skills but also absorbed the diverse and rich bar cultures across Europe. \
+            It's a journey that's ignited my passion for hospitality and the art of mixology, making each stop along the way a unique chapter in my story.",
+        image: {
+            src: "",
+            alt: "",
+        },
     },
     {
-        duration: "2015-2016",
-        tittle: "loco diamante",
+        duration: "2015-2017",
+        title: "Loco Diamante",
         description:
-            "I returned from Spain to my country, Argentina, and started studying Industrial Design. Fresh, nourished by many adventures and new things and wanting to continue traveling, I started to build a clothing brand from scratch. At the end of that year I created a spring-summer collection of t-shirts and jeans. The following year I started developing shirts and sweatshirts for autumn-winter. And at the time of making another collection, something happened inside me that I got on a plane back to Europe to satisfy some appetites I had.",
-        icon: "designAnim",
-        link: "href='https://www.instagram.com/loco.diamante'",
+            "As the Founder and Creative Director of LOCO DIAMANTE, I led the journey from concept to success.\
+             I started with a vision of a clothe brand, bringing ideas from Europe and designing products, shaping branding, and creating unique design patterns using Optitex Pattern Design Software.",
+        image: {
+            src: "",
+            alt: "",
+        },
+        link: "https://www.instagram.com/loco.diamante",
         linkText: "Let's Watch!",
     },
     {
         duration: "2012-2014",
-        tittle: "hospitality",
+        title: "Hospitality",
         description:
-            "I started a Europe trip to clear my mind after 2 years of Mechanical Engineering and I fell in love with Barcelona. I stayed to work there, I got to know new cultures, languages, stories, cities and countries. Then I went to live in Mexico, I did the same and I returned to Barcelona for the summer season.",
-        icon: "travelAnim",
-        link: "",
-        linkText: "",
+            "My journey began with a Europe trip that led me to Barcelona, where I decided to stay and work.\
+             This decision opened doors to new cultures, languages, stories, and the exploration of various cities and countries. \
+             During my travels, I had the opportunity to work in hospitality, which allowed me to be part of dynamic teams and connect with people from all walks of life, enriching my understanding of diverse cultures.\
+              It's been an incredible journey of personal and cultural growth, ",
+        image: {
+            src: "",
+            alt: "",
+        },
+    },
+    {
+        duration: "2011 - 2012",
+        title: "Agriculture",
+        description:
+            "I had the opportunity to work in a family-owned agricultural venture.\
+         Our work involved a dual-focus on long-term Capers cultivation and short-term Bahia Grass projects, all with a strong emphasis on sustainable agricultural practices.\
+         In this position, I was responsible for hands-on work and overseeing every aspect of these initiatives, ensuring that resources were used efficiently and crop yields were optimized.",
+        image: {
+            src: "",
+            alt: "",
+        },
     },
 ]

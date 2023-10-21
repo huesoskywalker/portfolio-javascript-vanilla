@@ -2,7 +2,6 @@ header {
     min-height: 100vh;
     overflow: hidden;
 }
-
 .home-content {
     width: 100%;
     height: auto;
@@ -10,14 +9,12 @@ header {
     grid-template-columns: 5fr 7fr 2fr;
     min-height: 100vh;
 }
-
 .left-home {
     display: flex;
     align-items: center;
     position: relative;
     justify-content: center;
 }
-
 .left-home img {
     width: 35%;
     height: auto;
@@ -25,7 +22,6 @@ header {
     border: solid;
     outline: groove;
 }
-
 .right-home {
     display: flex;
     flex-direction: column;
@@ -34,7 +30,6 @@ header {
     align-items: self-start;
     gap: 10px;
 }
-
 .salute {
     color: var(--COLOR-PRIMARY-TEXT);
     font-size: 3rem;
@@ -60,7 +55,6 @@ header {
     color: var(--COLOR-PRIMARY-TEXT);
     margin: 0;
 }
-
 @media only screen and (max-width: 1480px) {
     .salute {
         font-size: 2rem;
@@ -135,7 +129,6 @@ header {
         font-size: 1.2rem;
     }
 }
-
 @media only screen and (max-width: 390px) {
     .salute {
         font-size: 1.2rem;
@@ -150,7 +143,6 @@ header {
         font-size: 1rem;
     }
 }
-
 @media only screen and (max-width: 340px) {
     .salute {
         font-size: 1.1rem;

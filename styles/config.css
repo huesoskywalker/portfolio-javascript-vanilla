@@ -1,4 +1,3 @@
-/* Global variables */
 .light-theme {
     --color-primary: rgba(128, 128, 128, 0.1);
     --color-secondary: rgba(0, 101, 64, 0.945);
@@ -23,7 +22,6 @@
     --color-input-form: rgba(0, 13, 36, 0.369);
     --color-hover-portfolio: rgba(164, 164, 164, 0.15);
 }
-
 .dark-theme {
     --color-primary: rgba(0, 0, 0, 0.22);
     --color-secondary: rgba(158, 38, 38, 0.7);
@@ -48,7 +46,9 @@
     --color-input-form: rgba(0, 13, 36, 0.369);
     --color-hover-portfolio: rgba(52, 52, 52, 0.334);
 }
-
+:root {
+    --COLOR-WHITE: rgb(255, 255, 255);
+}
 .light-theme {
     --INVERT-ICON: invert(0);
     --COLOR-PRIMARY: rgba(128, 128, 128, 0.32);
@@ -58,9 +58,10 @@
     --COLOR-MODAL-TEXT: rgb(136, 39, 0);
     --COLOR-GREY: rgba(182, 182, 182, 0.5);
     --COLOR-TEXT-SHADOW: rgb(0, 65, 0);
+    --COLOR-TEXT-SHADOW-2: rgb(128, 128, 128);
     --COLOR-AKA-TEXT: rgba(0, 13, 36, 0.88);
+    --COLOR-BACKGROUND: rgb(133, 101, 101);
 }
-
 .dark-theme {
     --INVERT-ICON: invert(1);
     --COLOR-PRIMARY: rgba(0, 0, 0, 0.22);
@@ -70,5 +71,7 @@
     --COLOR-MODAL-TEXT: rgb(255, 255, 128);
     --COLOR-GREY: rgba(49, 53, 57, 0.5);
     --COLOR-TEXT-SHADOW: rgb(65, 0, 0);
-    --COLOR-AKA-TEXT: rgba(255, 255, 0, 0.8);
+    --COLOR-TEXT-SHADOW-2: rgba(158, 38, 38, 0.7);
+    --COLOR-AKA-TEXT: rgba(255, 255, 0, 0.7);
+    --COLOR-BACKGROUND: rgb(17, 34, 51);
 }

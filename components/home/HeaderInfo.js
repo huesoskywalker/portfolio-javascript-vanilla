@@ -27,7 +27,7 @@ class HeaderInfo extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true))
         this.shadowRoot.appendChild(style)
     }
-    renderSlots() {
+    renderData() {
         const rightContainer = this.shadowRoot.getElementById("rightHome")
 
         const shadowFragment = new DocumentFragment()
@@ -45,7 +45,7 @@ class HeaderInfo extends HTMLElement {
 
     async connectedCallback() {
         await this.loadContent()
-        this.renderSlots()
+        this.renderData()
     }
 }
 
