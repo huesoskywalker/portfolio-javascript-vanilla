@@ -41,8 +41,9 @@ class AboutLife extends HTMLElement {
             imageContainer.classList.add("image-container")
 
             const itemImg = document.createElement("img")
-            // itemImg.src = data.image.src
-            // itemImg.alt = data.image.alt
+            itemImg.src = data.image.src
+            itemImg.alt = data.image.alt
+            itemImg.srcset = data.image.srcset
             itemImg.loading = "lazy"
             imageContainer.appendChild(itemImg)
 

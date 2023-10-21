@@ -1,4 +1,12 @@
-export const headerInfoData = [
+export const leftHeaderData = {
+    image: {
+        src: "/img/home/profile_1920w.jpg",
+        alt: "Profile Image",
+        srcset: "/img/home/profile_1920w.jpg 1920w, /img/home/profile_1024w.jpg 1040w",
+    },
+}
+
+export const rightHeaderData = [
     {
         tag: "h1",
         class: "salute",

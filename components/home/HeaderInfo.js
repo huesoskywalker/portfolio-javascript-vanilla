@@ -1,6 +1,6 @@
 import { ContentLoaderInterface } from "../../interfaces/ContentLoaderInterface.js"
 import { ContentLoaderInjector } from "../../util/ContentLoaderInjector.js"
-import { headerInfoData } from "../../constants/home/headerInfoData.js"
+import { rightHeaderData, leftHeaderData } from "../../constants/home/headerInfoData.js"
 
 class HeaderInfo extends HTMLElement {
     /**
@@ -11,7 +11,8 @@ class HeaderInfo extends HTMLElement {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
-        this.headerData = headerInfoData
+        this.leftHeader = leftHeaderData
+        this.rightHeader = rightHeaderData
     }
     async loadContent() {
         const templatePath = "/templates/home/header-info.html"
@@ -27,12 +28,23 @@ class HeaderInfo extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true))
         this.shadowRoot.appendChild(style)
     }
-    renderData() {
+    renderLeftHeader() {
+        const leftContainer = this.shadowRoot.getElementById("leftHome")
+
+        const profileImage = document.createElement("img")
+        profileImage.src = this.leftHeader.image.src
+        profileImage.alt = this.leftHeader.image.alt
+        profileImage.srcset = this.leftHeader.image.srcset
+        profileImage.loading = "lazy"
+
+        leftContainer.appendChild(profileImage)
+    }
+    renderRightHeader() {
         const rightContainer = this.shadowRoot.getElementById("rightHome")
 
         const shadowFragment = new DocumentFragment()
 
-        this.headerData.forEach((data) => {
+        this.rightHeader.forEach((data) => {
             const element = document.createElement(data.tag)
 
             element.classList.add(data.class)
@@ -45,7 +57,8 @@ class HeaderInfo extends HTMLElement {
 
     async connectedCallback() {
         await this.loadContent()
-        this.renderData()
+        this.renderLeftHeader()
+        this.renderRightHeader()
     }
 }
 

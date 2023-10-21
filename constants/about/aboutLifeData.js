@@ -8,8 +8,9 @@ export const aboutLifeData = [
             Subsequently, I joined a startup dedicated to streamlining property management, embracing the dynamic world of innovation and development. \
              Additionally, I focus on a personal project, ensuring code quality, good practices, maintainability and scalability.",
         image: {
-            src: "",
-            alt: "",
+            src: "/img/about/developer_1920w.png",
+            alt: "Software Developer",
+            srcset: "/img/about/developer_1920w.png 1920w, /img/about/developer_768w.png 780w",
         },
     },
 
@@ -21,8 +22,9 @@ export const aboutLifeData = [
              My love for craftsmanship extends to a patience for the meticulous process of creating products.\
               With a particular focus on garden-related items",
         image: {
-            src: "",
-            alt: "",
+            src: "/img/about/carpenter_1920w.png",
+            alt: "Carpenter",
+            srcset: "/img/about/carpenter_1920w.png 1920w, /img/about/carpenter_768w.png 780w",
         },
     },
 
@@ -35,8 +37,9 @@ export const aboutLifeData = [
             I've not only perfected my mixology skills but also absorbed the diverse and rich bar cultures across Europe. \
             It's a journey that's ignited my passion for hospitality and the art of mixology, making each stop along the way a unique chapter in my story.",
         image: {
-            src: "",
-            alt: "",
+            src: "/img/about/martini_1920w.png",
+            alt: "Martini Cocktail",
+            srcset: "/img/about/martini_1920w.png 1920w, /img/about/martini_768w.png 780w",
         },
     },
     {
@@ -46,8 +49,9 @@ export const aboutLifeData = [
             "As the Founder and Creative Director of LOCO DIAMANTE, I led the journey from concept to success.\
              I started with a vision of a clothe brand, bringing ideas from Europe and designing products, shaping branding, and creating unique design patterns using Optitex Pattern Design Software.",
         image: {
-            src: "",
-            alt: "",
+            src: "/img/about/loco-diamante_1920w.png",
+            alt: "Loco Diamante",
+            srcset: "/img/about/loco-diamante_1920w.png 1920w, /img/about/loco-diamante_768w.png 780w",
         },
         link: "https://www.instagram.com/loco.diamante",
         linkText: "Let's Watch!",
@@ -61,8 +65,9 @@ export const aboutLifeData = [
              During my travels, I had the opportunity to work in hospitality, which allowed me to be part of dynamic teams and connect with people from all walks of life, enriching my understanding of diverse cultures.\
               It's been an incredible journey of personal and cultural growth, ",
         image: {
-            src: "",
-            alt: "",
+            src: "/img/about/hospitality_1920w.png",
+            alt: "Hospitality",
+            srcset: "/img/about/hospitality_1920w.png 1920w, /img/about/hospitality_768w.png 780w",
         },
     },
     {
@@ -73,8 +78,9 @@ export const aboutLifeData = [
          Our work involved a dual-focus on long-term Capers cultivation and short-term Bahia Grass projects, all with a strong emphasis on sustainable agricultural practices.\
          In this position, I was responsible for hands-on work and overseeing every aspect of these initiatives, ensuring that resources were used efficiently and crop yields were optimized.",
         image: {
-            src: "",
-            alt: "",
+            src: "/img/about/agriculture_1920w.png",
+            alt: "Agriculture",
+            srcset: "/img/about/agriculture_1920w.png 1920w, /img/about/agriculture_768w.png 780w",
         },
     },
 ]
