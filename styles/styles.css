@@ -64,13 +64,14 @@ section {
     }
 }
 @media only screen and (max-width: 440px) {
-    .bright-side {
-        background-image: url("../img/background/tatooine_425w.jpg");
+    body {
+        background-position: center;
     }
     .dark-side {
         background-image: url("../img/background/death-star_425w.jpg");
-        background-size: contain;
-        background-position: center;
+    }
+    .bright-side {
+        background-image: url("../img/background/tatooine_425w.jpg");
     }
     .contact-content-con {
         justify-content: center;

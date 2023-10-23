@@ -1,18 +1,19 @@
 .about-life {
     padding: 0 10%;
+    margin: 5rem 0;
 }
-.stat-title {
+.main-title {
     position: relative;
     text-align: center;
     font-size: 2.2rem;
     text-transform: uppercase;
-    margin-bottom: 3rem;
-    color: var(--COLOR-MODAL-TEXT);
+    margin: 5rem;
+    color: var(--COLOR-SECONDARY-TEXT);
 }
 .timeline {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4rem;
+    gap: 4rem;
 }
 .timeline-item {
     position: relative;
@@ -25,6 +26,7 @@
     border-bottom: 2px solid var(--COLOR-AKA-TEXT);
     gap: 30px;
     background: var(--COLOR-BACKGROUND);
+    transition: background 0.3s ease-in-out;
 }
 .image-container {
     display: flex;
@@ -81,11 +83,14 @@ a {
     color: var(--COLOR-WHITE);
 }
 @media only screen and (max-width: 1480px) {
-    .stat-title {
+    .about-life {
+        margin: 4rem auto;
+    }
+    .main-title {
         font-size: 1.8rem;
     }
     .timeline {
-        grid-gap: 2rem;
+        gap: 2rem;
     }
     .timeline-item {
         padding: 1.3rem 1.1rem;
@@ -110,11 +115,11 @@ a {
     }
 }
 @media only screen and (max-width: 1040px) {
-    .stat-title {
+    .main-title {
         font-size: 1.5rem;
     }
     .timeline {
-        grid-gap: 1.5rem;
+        gap: 1.5rem;
     }
     .timeline-item img {
         width: 60px;
@@ -135,9 +140,12 @@ a {
     }
 }
 @media only screen and (max-width: 780px) {
-    .stat-title {
+    .about-life {
+        margin: 3rem auto;
+    }
+    .main-title {
         font-size: 1.4rem;
-        margin-bottom: 2rem;
+        margin: 3rem;
     }
     .timeline {
         grid-template-columns: repeat(1, 1fr);
@@ -160,9 +168,10 @@ a {
     }
 }
 @media only screen and (max-width: 440px) {
-    .stat-title {
+    .main-title {
         font-size: 1.2rem;
         font-weight: 700;
+        text-align: center;
     }
     .timeline-item {
         width: 75%;
@@ -170,7 +179,7 @@ a {
         margin: 0 auto;
     }
     .timeline {
-        grid-gap: 1rem;
+        gap: 1rem;
     }
     .item-duration {
         font-size: 0.6rem;
@@ -187,7 +196,7 @@ a {
     }
 }
 @media only screen and (max-width: 390px) {
-    .stat-title {
+    .main-title {
         font-size: 1rem;
     }
     .item-title {

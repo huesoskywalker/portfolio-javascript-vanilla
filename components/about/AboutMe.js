@@ -11,7 +11,7 @@ class AboutMe extends HTMLElement {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
-        this.slotsData = aboutMeData
+        this.aboutMeData = aboutMeData
         this
     }
 
@@ -41,7 +41,7 @@ class AboutMe extends HTMLElement {
 
         const shadowFragment = new DocumentFragment()
 
-        this.slotsData.forEach((data) => {
+        this.aboutMeData.forEach((data) => {
             const element = document.createElement(data.tag)
             element.classList.add(data.class)
             element.textContent = data.content

@@ -1,0 +1,21 @@
+<div class="about-skills">
+    <h4 class="main-title" id="statTittle">Coding Skills</h4>
+    <form id="skillForm" class="skills-form" onsubmit="return false">
+        <label for="skill" class="label-skill">
+            <input id="skill" class="input-skill" type="text" placeholder="Try me" required />
+        </label>
+        <label for="progress" class="label-progress">
+            <input
+                id="progress"
+                class="input-progress"
+                type="number"
+                placeholder="0-100"
+                min="0"
+                max="100"
+                required
+            />
+        </label>
+        <button id="addButton" class="add-button" type="button">ADD</button>
+    </form>
+    <div id="skillsContainer" class="skills-container"></div>
+</div>

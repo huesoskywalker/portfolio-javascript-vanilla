@@ -48,30 +48,67 @@
 }
 :root {
     --COLOR-WHITE: rgb(255, 255, 255);
+    --COLOR-BLACK: rgb(0, 0, 0);
+
+    --COLOR-STAR-WARS: rgb(255, 232, 31);
+    --SABER-BLUE: rgb(0, 0, 255);
+    --SABER-SKY-BLUE: rgb(0, 140, 255);
+    --SABER-BLUE-2: rgb(46, 103, 248);
+    --SABER-BLUE-3: rgb(21, 242, 253);
+    --SABER-RED: rgb(235, 33, 46);
+    --SABER-GREEN: rgb(0, 255, 0);
+    --SABER-GREEN-2: rgb(0, 158, 39);
+    --SABER-GREEN-3: rgb(33, 235, 82);
+    --SABER-GREEN-4: rgb(0, 255, 140);
+    --SABER-NEON-GREEN: rgb(180, 255, 0);
+    --SABER-LIME: rgb(70, 255, 0);
+    --SABER-MINT-GREEN: rgb(0, 255, 60);
+    --SABER-SILVER-BLUE: rgb(100, 100, 200);
+    --SABER-WHITE: rgb(150, 150, 150);
+    --SABER-PINK-RED: rgb(255, 5, 5); /* ANH VADER */
+    --SABER-BLOOD-ORANGE: rgb(255, 15, 0);
+    --SABER-ORANGE: rgb(255, 30, 0);
+    --SABER-GOLD: rgb(255, 180, 0);
+    --SABER-PURPLE: rgb(155, 0, 255);
+    --SABER-MAGENTA: rgb(220, 0, 255);
 }
 .light-theme {
     --INVERT-ICON: invert(0);
     --COLOR-PRIMARY: rgba(128, 128, 128, 0.32);
     --COLOR-SECONDARY: rgba(0, 101, 64, 0.945);
     --COLOR-PRIMARY-TEXT: rgb(0, 0, 0);
+    --PRIMARY-TEXT-INVERT: rgb(255, 255, 255);
     --COLOR-SECONDARY-TEXT: rgba(255, 64, 64);
     --COLOR-MODAL-TEXT: rgb(136, 39, 0);
     --COLOR-GREY: rgba(182, 182, 182, 0.5);
+    --COLOR-GREY-2: rgb(40, 40, 40);
     --COLOR-TEXT-SHADOW: rgb(0, 65, 0);
     --COLOR-TEXT-SHADOW-2: rgb(128, 128, 128);
-    --COLOR-AKA-TEXT: rgba(0, 13, 36, 0.88);
+    --BOX-SHADOW: rgb(0, 65, 0);
+    --COLOR-AKA-TEXT: rgb(0, 51, 139);
+    /* --COLOR-AKA-TEXT: rgba(0, 13, 36, 0.88); */
     --COLOR-BACKGROUND: rgb(133, 101, 101);
+    --PROGRESS-SPAN: rgba(238, 109, 16, 0.9);
+    /* --COLOR-PROGRESS-SPAN: rgb(0, 110, 255); */
+    --BACKGROUND-BUTTON: rgb(255, 136, 0);
 }
 .dark-theme {
     --INVERT-ICON: invert(1);
     --COLOR-PRIMARY: rgba(0, 0, 0, 0.22);
     --COLOR-SECONDARY: rgba(158, 38, 38, 0.7);
     --COLOR-PRIMARY-TEXT: rgba(255, 255, 255, 0.9);
+    --PRIMARY-TEXT-INVERT: rgb(0, 0, 0);
     --COLOR-SECONDARY-TEXT: rgba(255, 255, 128);
     --COLOR-MODAL-TEXT: rgb(255, 255, 128);
     --COLOR-GREY: rgba(49, 53, 57, 0.5);
+    --COLOR-GREY-2: rgb(128, 128, 128);
     --COLOR-TEXT-SHADOW: rgb(65, 0, 0);
     --COLOR-TEXT-SHADOW-2: rgba(158, 38, 38, 0.7);
-    --COLOR-AKA-TEXT: rgba(255, 255, 0, 0.7);
+    --BOX-SHADOW: rgb(158, 38, 38);
+    /* --COLOR-AKA-TEXT: rgba(255, 255, 0, 0.7); */
+    --COLOR-AKA-TEXT: rgba(255, 232, 31);
     --COLOR-BACKGROUND: rgb(17, 34, 51);
+    /* --COLOR-PROGRESS-SPAN: rgb(196, 82, 0); */
+    --PROGRESS-SPAN: rgb(0, 110, 255);
+    --BACKGROUND-BUTTON: rgb(0, 0, 0);
 }

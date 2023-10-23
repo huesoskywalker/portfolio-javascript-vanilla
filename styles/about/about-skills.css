@@ -1,0 +1,296 @@
+.about-skills {
+    margin: 5rem 0;
+}
+.main-title {
+    position: relative;
+    text-align: center;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin: 5rem auto;
+    color: var(--COLOR-SECONDARY-TEXT);
+}
+.skills-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 3rem auto;
+    gap: 2rem;
+}
+label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.label-skill {
+    width: 40%;
+}
+.label-progress {
+    width: 15%;
+}
+.input-skill,
+.input-progress,
+.add-button {
+    font-size: larger;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--COLOR-AKA-TEXT);
+    outline: none;
+}
+.input-skill,
+.input-progress {
+    background-color: var(--COLOR-BACKGROUND);
+    color: var(--COLOR-PRIMARY-TEXT);
+}
+.input-skill:focus,
+.input-progress:focus {
+    background-color: var(--PRIMARY-TEXT-INVERT);
+    border-color: var(--COLOR-SECONDARY-TEXT);
+    transition: background 0.3s, border-color 0.3s;
+}
+
+::placeholder {
+    color: rgba(158, 171, 184, 0.9);
+    font-size: large;
+}
+.add-button {
+    width: 13%;
+    color: var(--COLOR-AKA-TEXT);
+    background-color: var(--BACKGROUND-BUTTON);
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+    box-shadow: 2px 2px 2px var(--BOX-SHADOW), 2px 2px 2px var(--BOX-SHADOW),
+        2px 2px 2px var(--BOX-SHADOW);
+}
+.add-button:hover {
+    border-color: var(--COLOR-SECONDARY-TEXT);
+}
+.clicked {
+    transform: scale(0.9);
+    background-color: var(--COLOR-BACKGROUND);
+    box-shadow: none;
+}
+.error-input {
+    border-color: red;
+}
+.error-message {
+    position: absolute;
+    font-size: large;
+    color: red;
+    top: -100%;
+    left: 0%;
+    width: 100%;
+    transform: translate(0, -20%);
+    white-space: nowrap;
+}
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1em;
+    column-gap: 5em;
+}
+.skill {
+    position: relative;
+}
+.skill-name {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: larger;
+    color: var(--COLOR-AKA-TEXT);
+    text-shadow: 1px 1px 1px var(--COLOR-TEXT-SHADOW-2), 1px 1px 1px var(--COLOR-TEXT-SHADOW-2),
+        1px 1px 1px var(--COLOR-TEXT-SHADOW-2);
+}
+.progress-container {
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0.6rem;
+    background-color: var(--COLOR-GREY-2);
+    position: relative;
+}
+.progress-bar-fill {
+    position: absolute;
+    height: 100%;
+    background-color: var(--PROGRESS-SPAN);
+}
+@media only screen and (max-width: 1480px) {
+    .about-skills {
+        padding: 0 8%;
+        margin: 4rem 0;
+    }
+    .main-title {
+        font-size: 1.8rem;
+        margin: 4rem auto;
+    }
+    .skills-form {
+        gap: 1.5rem;
+    }
+    .input-skill,
+    .input-progress,
+    .add-button {
+        padding: 0.4rem;
+        font-size: medium;
+    }
+    ::placeholder,
+    .error-message {
+        font-size: medium;
+    }
+    .skills-container {
+        column-gap: 4rem;
+    }
+    .skill-name {
+        font-size: medium;
+    }
+    .progress-bar {
+        height: 0.45rem;
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .main-title {
+        font-size: 1.5rem;
+        margin: 3rem auto;
+    }
+    .skills-form {
+        width: 90%;
+        gap: 1rem;
+        margin: 2rem auto;
+    }
+    .input-skill,
+    .input-progress,
+    .add-button {
+        padding: 0.3rem;
+        font-size: small;
+    }
+    ::placeholder,
+    .error-message {
+        font-size: small;
+    }
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .skill-name {
+        margin: 0.8rem 0;
+    }
+    .progress-bar {
+        height: 0.4rem;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .about-skills {
+        margin: 3rem 0;
+    }
+    .about-skills {
+        padding: 0 10%;
+    }
+    .main-title {
+        font-size: 1.4rem;
+    }
+    .skills-form {
+        width: 100%;
+    }
+    .input-skill,
+    .input-progress,
+    .add-button {
+        font-size: smaller;
+    }
+    .error-message {
+        font-size: smaller;
+    }
+    .skills-container {
+        column-gap: 3rem;
+        row-gap: 0.8rem;
+    }
+    .skill-name {
+        font-size: small;
+    }
+    .progress-bar {
+        height: 0.35rem;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .main-title {
+        font-size: 1.2rem;
+    }
+    .skills-form {
+        gap: 0.7rem;
+        margin: 1.5rem 0;
+    }
+    .label-skill {
+        width: 50%;
+    }
+    .label-progress {
+        width: 21%;
+    }
+    .add-button {
+        width: 20%;
+    }
+    ::placeholder {
+        font-size: smaller;
+    }
+    .error-message {
+        font-size: x-small;
+    }
+    .skills-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .skill-name {
+        font-size: smaller;
+    }
+    .progress-bar {
+        height: 0.3rem;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .about-skills {
+        padding: 0 15%;
+    }
+    .main-title {
+        font-size: 1rem;
+    }
+    .skills-form {
+        gap: 0.5rem;
+    }
+    .add-button {
+        font-size: x-small;
+    }
+    .error-message {
+        font-size: xx-small;
+    }
+    .skills-container {
+        row-gap: 0.6rem;
+    }
+    .skill-name {
+        font-weight: 500;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .about-skills {
+        padding: 0 18%;
+    }
+    .label-skill {
+        width: 45%;
+    }
+    .label-progress {
+        width: 24%;
+    }
+    .input-skill,
+    .input-progress {
+        font-size: x-small;
+    }
+    .add-button {
+        width: 22%;
+    }
+    .skill-name {
+        font-size: x-small;
+    }
+    .progress-bar {
+        height: 0.25rem;
+    }
+}

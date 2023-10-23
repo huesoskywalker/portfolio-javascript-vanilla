@@ -15,7 +15,7 @@
 }
 .left-about {
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -56,7 +56,6 @@
 }
 @media screen and (max-width: 1480px) {
     .left-about {
-        width: 70%;
         gap: 20px;
     }
     .aka {
@@ -77,6 +76,9 @@
 @media only screen and (max-width: 1040px) {
     .aka {
         font-size: 2.9rem;
+    }
+    .left-about {
+        width: 65%;
     }
     .story-title {
         font-size: 1.5rem;
@@ -106,8 +108,8 @@
 @media only screen and (max-width: 440px) {
     .about-container {
         grid-template-columns: repeat(1, 1fr);
-        margin-top: 30%;
-        gap: 40px;
+        margin-top: 15%;
+        gap: 50px;
     }
     .left-about {
         gap: 15px;
@@ -127,6 +129,9 @@
     }
 }
 @media only screen and (max-width: 390px) {
+    .about-container {
+        margin-top: 25%;
+    }
     .aka {
         font-size: 1.2rem;
     }
@@ -142,7 +147,6 @@
 }
 @media only screen and (max-width: 340px) {
     .about-container {
-        margin-top: 43%;
         gap: 30px;
     }
     .left-about {
