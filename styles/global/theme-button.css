@@ -6,13 +6,12 @@
     align-items: center;
     top: 3.5%;
     left: 2.5%;
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     border: solid 4px var(--COLOR-SECONDARY);
     border-radius: 50%;
     background-color: var(--color-hover-portfolio);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
 }
 .theme-btn:hover {
     box-shadow: 1px 4px 15px var(--color-about-life);
@@ -40,8 +39,8 @@
         height: 50px;
     }
     .theme-btn img {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
     }
 }
 @media only screen and (max-width: 780px) {
@@ -50,8 +49,8 @@
         height: 45px;
     }
     .theme-btn img {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
 }
 @media only screen and (max-width: 440px) {

@@ -1,7 +1,15 @@
-.about-container {
+.about-me {
     display: grid;
     grid-template-columns: 3fr 2fr 0.4fr;
     margin-top: 6%;
+    /* Modify this to flex? what you think? */
+    /* Will look better  */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: row;
+    gap: 4rem; */
 }
 .aka {
     z-index: 2;
@@ -14,6 +22,7 @@
     text-transform: uppercase;
 }
 .left-about {
+    /* flex: 3; */
     position: relative;
     width: 70%;
     margin: 0 auto;
@@ -41,6 +50,7 @@
     margin: 0;
 }
 .right-about {
+    /* flex: 2; */
     position: relative;
     display: flex;
     align-items: center;
@@ -106,7 +116,7 @@
     }
 }
 @media only screen and (max-width: 440px) {
-    .about-container {
+    .about-me {
         grid-template-columns: repeat(1, 1fr);
         margin-top: 15%;
         gap: 50px;
@@ -122,6 +132,7 @@
     }
     .right-about {
         justify-content: center;
+        align-self: flex-start;
     }
     .bright-side {
         font-size: 1.1rem;
@@ -129,7 +140,7 @@
     }
 }
 @media only screen and (max-width: 390px) {
-    .about-container {
+    .about-me {
         margin-top: 25%;
     }
     .aka {
@@ -146,9 +157,6 @@
     }
 }
 @media only screen and (max-width: 340px) {
-    .about-container {
-        gap: 30px;
-    }
     .left-about {
         gap: 10px;
     }

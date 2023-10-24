@@ -1,45 +1,19 @@
-const yodaAnim = document.createElement("template");
+const yodaAnim = document.createElement("template")
 yodaAnim.innerHTML = `
-<div class="k1">
             <div id="yoda" class="yoda"></div>
-        </div>
-`;
+`
 
 class YodaAnim extends HTMLElement {
     constructor() {
-        super();
+        super()
 
-        this.attachShadow({ mode: "open" });
-        this.shadowRoot.appendChild(yodaAnim.content.cloneNode(true));
+        this.attachShadow({ mode: "open" })
+        this.shadowRoot.appendChild(yodaAnim.content.cloneNode(true))
 
-        const style = document.createElement("style");
+        const style = document.createElement("style")
         style.textContent = `
-        .k1:hover {
-                z-index: 1;
-                cursor: grab;
-                position: fixed;
-                width: 250px;
-                height: 270px;
-                top: 14.5%;
-                right: 31%;
-                animation: k1 1s infinite;
-                animation-direction: alternate;
-                background-position: center;
-                background-size: 230px auto;
-                background-image: url("../img/k1.png");
-                background-repeat: no-repeat;
-            }
-                @keyframes k1 {
-                    0% {
-                        background-size: 230px auto;
-                    }
-                    100% {
-                        background-size: 270px auto;
-                    }
-                }
-            
             .yoda {
-                z-index: 1;
+                z-index: 0;
                 width: 133px;
                 height: 133px;
                 position: fixed;
@@ -89,10 +63,6 @@ class YodaAnim extends HTMLElement {
                     }
                
             @media screen and (min-width: 2560px) {
-                .k1:hover{
-                    top: 26%;
-                    right: 37.8%;
-                }
                 .yoda {
                     top: 29.5%;
                     right: 40%;
@@ -100,10 +70,6 @@ class YodaAnim extends HTMLElement {
             }
 
             @media screen and (max-width: 1024px){
-                .k1:hover{
-                    top: 7.5%;
-                    right: 24.8%;
-                }
                 .yoda {
                     height: 80px;
                     width: 80px;
@@ -122,36 +88,32 @@ class YodaAnim extends HTMLElement {
                 }
             }
             @media only screen and (max-width: 426px){
-                .k1{
-                    display: none;
-                }
                 .yoda{
                     display: none;
                 }
             }
             
-        `;
-        this.shadowRoot.appendChild(style);
+        `
+        this.shadowRoot.appendChild(style)
     }
     mode() {
-        const mode = document.querySelector("#theme").getAttribute("state");
-        const yoda = this.shadowRoot.querySelector(".yoda");
+        const mode = document.querySelector("#theme").getAttribute("state")
+        const yoda = this.shadowRoot.querySelector(".yoda")
         if (mode === "solid") {
-            yoda.style.display = "none";
+            yoda.style.display = "none"
         } else {
-            yoda.style.display = "block";
+            yoda.style.display = "block"
         }
     }
     connectedCallback() {
-        const mode = localStorage.getItem("mode");
-        const theme = this.shadowRoot.querySelector(".yoda");
-        if (mode !== "star-wars") theme.style.display = "none";
-
-        document.querySelector("#theme").addEventListener("click", () => this.mode());
+        // const mode = localStorage.getItem("mode");
+        // const theme = this.shadowRoot.querySelector(".yoda");
+        // if (mode !== "star-wars") theme.style.display = "none";
+        // document.querySelector("#theme").addEventListener("click", () => this.mode());
     }
     disconnectedCallback() {
-        document.querySelector("#theme").removeEventListener();
+        document.querySelector("#theme").removeEventListener()
     }
 }
 
-window.customElements.define("yoda-anim", YodaAnim);
+window.customElements.define("yoda-anim", YodaAnim)

@@ -1,12 +1,17 @@
 .about-skills {
-    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
 }
 .main-title {
     position: relative;
     text-align: center;
     font-size: 2.2rem;
     text-transform: uppercase;
-    margin: 5rem auto;
+    margin-bottom: 5rem;
     color: var(--COLOR-SECONDARY-TEXT);
 }
 .skills-form {
@@ -15,7 +20,7 @@
     align-items: center;
     justify-content: center;
     width: 60%;
-    margin: 3rem auto;
+    margin-bottom: 3rem;
     gap: 2rem;
 }
 label {
@@ -122,12 +127,11 @@ label {
 }
 @media only screen and (max-width: 1480px) {
     .about-skills {
-        padding: 0 8%;
-        margin: 4rem 0;
+        margin: 0 8%;
     }
     .main-title {
         font-size: 1.8rem;
-        margin: 4rem auto;
+        margin-bottom: 4rem;
     }
     .skills-form {
         gap: 1.5rem;
@@ -153,14 +157,17 @@ label {
     }
 }
 @media only screen and (max-width: 1040px) {
+    .about-skills {
+        margin: 0 6%;
+    }
     .main-title {
         font-size: 1.5rem;
-        margin: 3rem auto;
+        margin-bottom: 3rem;
     }
     .skills-form {
         width: 90%;
         gap: 1rem;
-        margin: 2rem auto;
+        margin-bottom: 2rem;
     }
     .input-skill,
     .input-progress,
@@ -174,9 +181,10 @@ label {
     }
     .skills-container {
         grid-template-columns: repeat(2, 1fr);
+        row-gap: 0.8rem;
     }
     .skill-name {
-        margin: 0.8rem 0;
+        margin: 0.7rem 0;
     }
     .progress-bar {
         height: 0.4rem;
@@ -184,10 +192,7 @@ label {
 }
 @media only screen and (max-width: 780px) {
     .about-skills {
-        margin: 3rem 0;
-    }
-    .about-skills {
-        padding: 0 10%;
+        margin: 0 10%;
     }
     .main-title {
         font-size: 1.4rem;
@@ -205,10 +210,10 @@ label {
     }
     .skills-container {
         column-gap: 3rem;
-        row-gap: 0.8rem;
     }
     .skill-name {
         font-size: small;
+        margin: 0.6rem 0;
     }
     .progress-bar {
         height: 0.35rem;
@@ -217,10 +222,11 @@ label {
 @media only screen and (max-width: 440px) {
     .main-title {
         font-size: 1.2rem;
+        margin-bottom: 2rem;
     }
     .skills-form {
         gap: 0.7rem;
-        margin: 1.5rem 0;
+        margin-bottom: 1.5rem;
     }
     .label-skill {
         width: 50%;
@@ -241,6 +247,7 @@ label {
         grid-template-columns: repeat(1, 1fr);
     }
     .skill-name {
+        margin: 0.5rem;
         font-size: smaller;
     }
     .progress-bar {
@@ -249,7 +256,7 @@ label {
 }
 @media only screen and (max-width: 390px) {
     .about-skills {
-        padding: 0 15%;
+        margin: 0 15%;
     }
     .main-title {
         font-size: 1rem;
@@ -272,7 +279,7 @@ label {
 }
 @media only screen and (max-width: 340px) {
     .about-skills {
-        padding: 0 18%;
+        margin: 0 18%;
     }
     .label-skill {
         width: 45%;

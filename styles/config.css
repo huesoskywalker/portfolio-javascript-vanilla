@@ -55,7 +55,6 @@
     --SABER-SKY-BLUE: rgb(0, 140, 255);
     --SABER-BLUE-2: rgb(46, 103, 248);
     --SABER-BLUE-3: rgb(21, 242, 253);
-    --SABER-RED: rgb(235, 33, 46);
     --SABER-GREEN: rgb(0, 255, 0);
     --SABER-GREEN-2: rgb(0, 158, 39);
     --SABER-GREEN-3: rgb(33, 235, 82);
@@ -65,7 +64,8 @@
     --SABER-MINT-GREEN: rgb(0, 255, 60);
     --SABER-SILVER-BLUE: rgb(100, 100, 200);
     --SABER-WHITE: rgb(150, 150, 150);
-    --SABER-PINK-RED: rgb(255, 5, 5); /* ANH VADER */
+    --SABER-RED: rgb(235, 33, 46);
+    --SABER-RED-2: rgb(255, 5, 5); /* ANH VADER */
     --SABER-BLOOD-ORANGE: rgb(255, 15, 0);
     --SABER-ORANGE: rgb(255, 30, 0);
     --SABER-GOLD: rgb(255, 180, 0);
@@ -91,6 +91,8 @@
     --PROGRESS-SPAN: rgba(238, 109, 16, 0.9);
     /* --COLOR-PROGRESS-SPAN: rgb(0, 110, 255); */
     --BACKGROUND-BUTTON: rgb(255, 136, 0);
+    --NAVIGATION-PREV: rgb(0, 140, 255);
+    --NAVIGATION-NEXT: rgb(0, 255, 0);
 }
 .dark-theme {
     --INVERT-ICON: invert(1);
@@ -109,6 +111,8 @@
     --COLOR-AKA-TEXT: rgba(255, 232, 31);
     --COLOR-BACKGROUND: rgb(17, 34, 51);
     /* --COLOR-PROGRESS-SPAN: rgb(196, 82, 0); */
-    --PROGRESS-SPAN: rgb(0, 110, 255);
+    --PROGRESS-SPAN: rgb(0, 140, 255);
     --BACKGROUND-BUTTON: rgb(0, 0, 0);
+    --NAVIGATION-PREV: rgb(255, 5, 5);
+    --NAVIGATION-NEXT: rgb(0, 255, 0);
 }

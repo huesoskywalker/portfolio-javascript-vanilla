@@ -1,0 +1,98 @@
+.nav-container {
+    position: fixed;
+    top: 45%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.nav-button {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.previous,
+.next {
+    height: 90px;
+    width: 8px;
+    display: flex;
+    justify-content: center;
+}
+.previous {
+    align-items: flex-end;
+}
+.next {
+    align-items: self-start;
+}
+.previous::before,
+.next::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    border-radius: 10px;
+    filter: brightness(350%);
+}
+.previous::before {
+    bottom: 24%;
+    background-image: linear-gradient(
+        to right,
+        var(--NAVIGATION-PREV) 35%,
+        var(--COLOR-WHITE) 50%,
+        var(--NAVIGATION-PREV) 65%
+    );
+    box-shadow: 0px -3px 1px 0px var(--NAVIGATION-PREV);
+}
+.next::before {
+    top: 24%;
+    background-image: linear-gradient(
+        to right,
+        var(--NAVIGATION-NEXT) 30%,
+        var(--COLOR-WHITE) 50%,
+        var(--NAVIGATION-NEXT) 70%
+    );
+    box-shadow: 0px 3px 1px 0px var(--NAVIGATION-NEXT);
+}
+.previous::after,
+.next::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    height: 25%;
+    border-width: 1px;
+    border-color: rgb(138, 138, 138);
+    border-style: solid;
+    border-radius: 10px;
+    filter: contrast(250%);
+}
+.previous::after {
+    background-image: linear-gradient(rgb(134, 134, 134), rgb(62, 62, 62));
+}
+.next::after {
+    background-image: linear-gradient(rgb(62, 62, 62), rgb(134, 134, 134));
+}
+@media only screen and (max-width: 1480px) {
+    .previous,
+    .next {
+        height: 75px;
+        width: 7px;
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .previous,
+    .next {
+        height: 65px;
+        width: 6px;
+    }
+    .previous::after,
+    .next::after {
+        border-width: 0.1px;
+    }
+}
