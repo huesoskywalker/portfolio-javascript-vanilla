@@ -16,13 +16,21 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+    cursor: pointer;
 }
+
 .previous,
 .next {
     height: 90px;
     width: 8px;
     display: flex;
     justify-content: center;
+}
+.previous:hover {
+    box-shadow: 0px -11px 13px 0px var(--NAVIGATION-PREV);
+}
+.next:hover {
+    box-shadow: 0px 11px 13px 0px var(--NAVIGATION-NEXT);
 }
 .previous {
     align-items: flex-end;
@@ -47,7 +55,7 @@
         var(--COLOR-WHITE) 50%,
         var(--NAVIGATION-PREV) 65%
     );
-    box-shadow: 0px -3px 1px 0px var(--NAVIGATION-PREV);
+    box-shadow: 0px -3px 1px 1px var(--NAVIGATION-PREV);
 }
 .next::before {
     top: 24%;
@@ -57,7 +65,7 @@
         var(--COLOR-WHITE) 50%,
         var(--NAVIGATION-NEXT) 70%
     );
-    box-shadow: 0px 3px 1px 0px var(--NAVIGATION-NEXT);
+    box-shadow: 0px 3px 1px 1px var(--NAVIGATION-NEXT);
 }
 .previous::after,
 .next::after {

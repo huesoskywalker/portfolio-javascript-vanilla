@@ -11,9 +11,9 @@ class SectionNav extends HTMLElement {
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
         this.sections = undefined
-        this.targetSection = 0
         this.observer = undefined
-        this.newIndex
+        this.targetSection = 0
+        this.nextIndex = undefined
     }
 
     async loadContent() {
@@ -42,23 +42,49 @@ class SectionNav extends HTMLElement {
 
         this.observer = new IntersectionObserver((entries) => {
             for (const entry of entries) {
-                if (entry.isIntersecting && !entry.isVisible) {
-                    const sectionIndex = Array.from(this.sections).indexOf(entry.target)
+                if (entry.isIntersecting) {
+                    const parentSection = entry.target.parentNode.host.parentNode
+
+                    const sectionIndex = Array.from(this.sections).indexOf(parentSection)
+
                     this.targetSection = sectionIndex
+
+                    this.entry = entry
                 }
             }
         }, options)
 
         this.sections.forEach((section) => {
-            this.observer.observe(section)
+            const mainContainer = section.firstElementChild.shadowRoot.firstElementChild
+
+            this.observer.observe(mainContainer)
         })
     }
 
     navigation(direction) {
         const newIndex = this.targetSection + direction
 
-        if (newIndex >= 0 && newIndex <= 2) {
-            this.sections[newIndex].scrollIntoView({
+        const currentSection = this.sections[this.targetSection]
+
+        if (
+            this.entry.isVisible &&
+            direction === -1 &&
+            currentSection.getBoundingClientRect().y < 0
+        ) {
+            // This does not work as expected on mobile
+            // target.isVisible does not work well on the layout, don't know why
+            // and this.entry.intersectionRatio on about-life return is below 0.1
+            // hard to grab the visibility. Even targeting the main container of the component.
+            // --------------------------
+            // check if currentSection will make the same work
+            // and save this.isVisibleEntry instead of the whole entry in the observer
+            this.entry.target.parentNode.host.parentNode.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            })
+        } else if (newIndex >= 0 && newIndex <= 2) {
+            const toNavigateSection = this.sections[newIndex]
+            toNavigateSection.scrollIntoView({
                 behavior: "smooth",
             })
         }

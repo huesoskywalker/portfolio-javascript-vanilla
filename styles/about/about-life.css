@@ -1,10 +1,8 @@
 .about-life {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    position: relative;
-    min-height: 100vh;
     margin: 0 10%;
 }
 .main-title {
@@ -25,7 +23,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
     padding: 1.5rem 1.2rem;
     border-radius: 30px;
     border-bottom: 2px solid var(--COLOR-AKA-TEXT);
@@ -86,6 +83,7 @@ a {
     font-size: 1.5rem;
     margin: 0;
     color: var(--COLOR-WHITE);
+    text-align: justify;
 }
 @media only screen and (max-width: 1480px) {
     .main-title {
@@ -148,7 +146,10 @@ a {
         font-size: 1.4rem;
     }
     .timeline {
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
     .timeline-item {
         gap: 10px;

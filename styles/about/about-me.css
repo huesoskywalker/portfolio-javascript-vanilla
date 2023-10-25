@@ -1,32 +1,25 @@
 .about-me {
-    display: grid;
-    grid-template-columns: 3fr 2fr 0.4fr;
-    margin-top: 6%;
-    /* Modify this to flex? what you think? */
-    /* Will look better  */
-    /* display: flex;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    flex-direction: row;
-    gap: 4rem; */
+    gap: 3rem;
+    margin: 3% 8% 0 8%;
 }
 .aka {
-    z-index: 2;
     position: absolute;
-    justify-self: center;
-    top: 5%;
+    top: 3%;
     color: var(--COLOR-AKA-TEXT);
     font-weight: 500;
     font-size: 6rem;
     text-transform: uppercase;
 }
 .left-about {
-    /* flex: 3; */
+    flex: 5;
     position: relative;
-    width: 70%;
-    margin: 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 25px;
 }
@@ -44,13 +37,13 @@
     font-variant: small-caps;
     font-weight: 300;
     font-size: 1.4rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: var(--COLOR-PRIMARY-TEXT);
     font-style: italic;
     margin: 0;
 }
 .right-about {
-    /* flex: 2; */
+    flex: 4;
     position: relative;
     display: flex;
     align-items: center;
@@ -84,24 +77,28 @@
     }
 }
 @media only screen and (max-width: 1040px) {
+    .about-me {
+        gap: 2rem;
+    }
     .aka {
         font-size: 2.9rem;
-    }
-    .left-about {
-        width: 65%;
     }
     .story-title {
         font-size: 1.5rem;
     }
     .story {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .bright-side {
-        font-size: 1.17rem;
+        font-size: 1.1rem;
         -webkit-text-stroke-width: 0.8px;
     }
 }
 @media only screen and (max-width: 780px) {
+    .about-me {
+        gap: 1rem;
+        margin: 3% 10%;
+    }
     .aka {
         font-size: 2.1rem;
     }
@@ -117,12 +114,9 @@
 }
 @media only screen and (max-width: 440px) {
     .about-me {
-        grid-template-columns: repeat(1, 1fr);
-        margin-top: 15%;
-        gap: 50px;
-    }
-    .left-about {
-        gap: 15px;
+        margin: 10% 12% 0 12%;
+        flex-direction: column;
+        gap: 3rem;
     }
     .aka {
         font-size: 1.4rem;
@@ -130,20 +124,14 @@
     .story-title {
         font-size: 1.2rem;
     }
-    .right-about {
-        justify-content: center;
-        align-self: flex-start;
-    }
     .bright-side {
         font-size: 1.1rem;
         -webkit-text-stroke-width: 0.6px;
     }
 }
 @media only screen and (max-width: 390px) {
-    .about-me {
-        margin-top: 25%;
-    }
     .aka {
+        top: 5%;
         font-size: 1.2rem;
     }
     .story-title {
@@ -157,8 +145,8 @@
     }
 }
 @media only screen and (max-width: 340px) {
-    .left-about {
-        gap: 10px;
+    .about-me {
+        margin: 27% 12% 0 12%;
     }
     .aka {
         font-size: 1rem;

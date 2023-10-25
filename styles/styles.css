@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     list-style: none;
     max-width: 100%;
     letter-spacing: 0.5px;
@@ -59,7 +58,7 @@ section {
 }
 @media only screen and (max-width: 780px) {
     section {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
     .contact-content-con {
         display: grid;
