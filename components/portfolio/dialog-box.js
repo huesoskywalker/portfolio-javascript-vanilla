@@ -45,7 +45,7 @@ class DialogBox extends HTMLElement {
         .open{
           z-index: 2;
           position: fixed;
-          top: 23.7%;
+          top: 35%;
           left: 3%;
           color: var(--color-grey-1);
           background-color: var(--color-contact);

@@ -13,7 +13,7 @@ class SectionNav extends HTMLElement {
         this.sections = undefined
         this.observer = undefined
         this.targetSection = 0
-        this.nextIndex = undefined
+        this.entry = undefined
     }
 
     async loadContent() {
@@ -42,7 +42,7 @@ class SectionNav extends HTMLElement {
 
         this.observer = new IntersectionObserver((entries) => {
             for (const entry of entries) {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && entry.isVisible) {
                     const parentSection = entry.target.parentNode.host.parentNode
 
                     const sectionIndex = Array.from(this.sections).indexOf(parentSection)
@@ -62,6 +62,7 @@ class SectionNav extends HTMLElement {
     }
 
     navigation(direction) {
+        // add direction based on the id of the button
         const newIndex = this.targetSection + direction
 
         const currentSection = this.sections[this.targetSection]
@@ -75,10 +76,7 @@ class SectionNav extends HTMLElement {
             // target.isVisible does not work well on the layout, don't know why
             // and this.entry.intersectionRatio on about-life return is below 0.1
             // hard to grab the visibility. Even targeting the main container of the component.
-            // --------------------------
-            // check if currentSection will make the same work
-            // and save this.isVisibleEntry instead of the whole entry in the observer
-            this.entry.target.parentNode.host.parentNode.scrollIntoView({
+            currentSection.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
             })

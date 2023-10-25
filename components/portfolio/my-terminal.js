@@ -12,7 +12,7 @@ class MyTerminal extends HTMLElement {
             border: none;
             position: fixed;
             cursor: pointer;
-            top: 31%;
+            top: 43%;
             left: 3.3%;
             width: 50px;
             height: 50px;

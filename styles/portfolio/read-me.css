@@ -1,0 +1,121 @@
+button {
+    color: var(--COLOR-PRIMARY-TEXT);
+    background-color: var(--DIALOG-BUTTON);
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--COLOR-SECONDARY);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.open-btn {
+    position: fixed;
+    top: 25%;
+    left: 3%;
+    padding: 0.4em 0.6em;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.modal {
+    width: 65%;
+    padding: 1rem;
+    color: var(--COLOR-PRIMARY-TEXT);
+    background-color: var(--COLOR-BACKGROUND);
+    border-width: 7px;
+    border-style: solid;
+    border-color: var(--COLOR-GREY);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.read-me {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+h1 {
+    align-self: center;
+    font-size: 1.5rem;
+}
+p,
+h2,
+ul li {
+    font-size: 1.3rem;
+    margin: 0.3rem;
+}
+p {
+    line-height: 1.4;
+}
+ul li {
+    list-style: none;
+}
+.close-btn {
+    align-self: center;
+    font-size: 1.4rem;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    outline: none;
+}
+@media only screen and (max-width: 1480px) {
+    .open-btn {
+        font-size: 0.8rem;
+    }
+    .modal {
+        padding: 0.8rem;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+    p,
+    h2,
+    ul li {
+        font-size: 0.9rem;
+    }
+
+    .close-btn {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .open-btn {
+        font-size: 0.7rem;
+    }
+    h1 {
+        font-size: 1.1rem;
+    }
+    .close-btn {
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .modal {
+        padding: 0.5rem;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+    p,
+    h2,
+    ul li,
+    .close-btn {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .modal {
+        height: 70%;
+    }
+    ul {
+        padding: 0 0 0 1rem;
+    }
+    ul li {
+        margin-bottom: 0.5rem;
+    }
+}
+@media only screen and (max-width: 390px) {
+    h1 {
+        font-size: 0.9rem;
+    }
+    ul {
+        padding: 0 0 0 0.5rem;
+    }
+}

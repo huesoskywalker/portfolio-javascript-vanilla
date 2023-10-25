@@ -12,33 +12,12 @@
     </head>
     <body>
         <theme-button id="theme"></theme-button>
-        <my-terminal id="terminal"></my-terminal>
+        <menu-button id="menu-button"></menu-button>
 
         <main>
-            <menu-button id="menu-button"></menu-button>
-            <read-me>
-                <pre slot="read-me">
-    <span style="color:rgb(0,128,255)"><em>this</em></span><span style="color:rgb(128,255,255)">.baby</span> = My portfolio
-    
-
-        In this section you can follow my
-studies and some projects I've coded along
-with tutorial to understand how the real 
-world could look like. As well learning by
-practicing.
-
-        In this section you can follow my
-studies and some projects I've coded along
-with tutorial to understand how the real 
-world could look like. As well learning by
-practicing.
-
-Feel free to get in touch and meet up
-
-     I hope you enjoy <span style="color:rgb(0,128,255)"><em>this</em></span><span style="color:rgb(128,255,255)">.baby</span>.
-                </pre>
-            </read-me>
+            <read-me> </read-me>
             <dialog-box></dialog-box>
+            <my-terminal id="terminal"></my-terminal>
             <section class="container portfolio active" id="portfolio">
                 <portfolio-tittle>
                     <span
@@ -58,11 +37,11 @@ Feel free to get in touch and meet up
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
-        <script type="module" src="./components/ThemeButton.js"></script>
-        <script type="module" src="./components/MenuButton.js"></script>
+        <script type="module" src="./components/ThemeButton.js" defer></script>
+        <script type="module" src="./components/MenuButton.js" defer></script>
         <script type="module" src="./components/portfolio/portfolio-tittle.js"></script>
         <script type="module" src="./components/portfolio/portfolio-items.js"></script>
-        <script type="module" src="./components/portfolio/read-me.js"></script>
+        <script type="module" src="./components/portfolio/ReadMe.js"></script>
         <script type="module" src="./components/portfolio/my-terminal.js"></script>
         <script type="module" src="./components//portfolio/dialog-box.js"></script>
     </body>

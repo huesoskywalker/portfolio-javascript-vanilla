@@ -80,7 +80,7 @@
     --PRIMARY-TEXT-INVERT: rgb(255, 255, 255);
     --COLOR-SECONDARY-TEXT: rgba(255, 64, 64);
     --COLOR-MODAL-TEXT: rgb(136, 39, 0);
-    --COLOR-GREY: rgba(182, 182, 182, 0.5);
+    --COLOR-GREY: rgba(182, 182, 182, 0.6);
     --COLOR-GREY-2: rgb(40, 40, 40);
     --COLOR-TEXT-SHADOW: rgb(0, 65, 0);
     --COLOR-TEXT-SHADOW-2: rgb(128, 128, 128);
@@ -93,6 +93,7 @@
     --BACKGROUND-BUTTON: rgb(255, 136, 0);
     --NAVIGATION-PREV: rgb(0, 140, 255);
     --NAVIGATION-NEXT: rgb(0, 255, 0);
+    --DIALOG-BUTTON: rgba(255, 255, 255, 0.55);
 }
 .dark-theme {
     --INVERT-ICON: invert(1);
@@ -100,9 +101,9 @@
     --COLOR-SECONDARY: rgba(158, 38, 38, 0.7);
     --COLOR-PRIMARY-TEXT: rgba(255, 255, 255, 0.9);
     --PRIMARY-TEXT-INVERT: rgb(0, 0, 0);
-    --COLOR-SECONDARY-TEXT: rgba(255, 255, 128);
-    --COLOR-MODAL-TEXT: rgb(255, 255, 128);
-    --COLOR-GREY: rgba(49, 53, 57, 0.5);
+    --COLOR-SECONDARY-TEXT: rgba(255, 255, 128); /* to root*/
+    --COLOR-MODAL-TEXT: rgb(255, 255, 128); /* to root*/
+    --COLOR-GREY: rgba(49, 53, 57, 0.6); /* to root*/
     --COLOR-GREY-2: rgb(128, 128, 128);
     --COLOR-TEXT-SHADOW: rgb(65, 0, 0);
     --COLOR-TEXT-SHADOW-2: rgba(158, 38, 38, 0.7);
@@ -115,4 +116,5 @@
     --BACKGROUND-BUTTON: rgb(0, 0, 0);
     --NAVIGATION-PREV: rgb(255, 5, 5);
     --NAVIGATION-NEXT: rgb(0, 255, 0);
+    --DIALOG-BUTTON: rgba(35, 35, 35, 0.9);
 }
