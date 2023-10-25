@@ -31,7 +31,7 @@ header {
     gap: 10px;
 }
 .salute {
-    color: var(--COLOR-PRIMARY-TEXT);
+    color: var(--PRIMARY-TEXT);
     font-size: 3rem;
     margin: 0;
 }
@@ -39,20 +39,20 @@ header {
     color: var(--COLOR-SECONDARY);
     text-indent: 40px;
     font-size: 3rem;
-    text-shadow: 1px 1px 1px var(--COLOR-TEXT-SHADOW), 1px 1px 1px var(--COLOR-TEXT-SHADOW),
-        1px 1px 1px var(--COLOR-TEXT-SHADOW);
+    text-shadow: 1px 1px 1px var(--TEXT-SHADOW), 1px 1px 1px var(--TEXT-SHADOW),
+        1px 1px 1px var(--TEXT-SHADOW);
     margin: 0;
 }
 .birth {
     align-self: flex-end;
     font-size: 1.6rem;
-    color: var(--COLOR-MODAL-TEXT);
+    color: var(--MODAL-TEXT);
     margin: 0;
 }
 .introduction {
     line-height: 2rem;
     font-size: 1.8rem;
-    color: var(--COLOR-PRIMARY-TEXT);
+    color: var(--PRIMARY-TEXT);
     margin: 0;
 }
 @media only screen and (max-width: 1480px) {

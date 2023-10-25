@@ -76,20 +76,18 @@
     --INVERT-ICON: invert(0);
     --COLOR-PRIMARY: rgba(128, 128, 128, 0.32);
     --COLOR-SECONDARY: rgba(0, 101, 64, 0.945);
-    --COLOR-PRIMARY-TEXT: rgb(0, 0, 0);
+    --PRIMARY-TEXT: rgb(0, 0, 0);
     --PRIMARY-TEXT-INVERT: rgb(255, 255, 255);
-    --COLOR-SECONDARY-TEXT: rgba(255, 64, 64);
-    --COLOR-MODAL-TEXT: rgb(136, 39, 0);
+    --SECONDARY-TEXT: rgba(255, 64, 64);
+    --MODAL-TEXT: rgb(136, 39, 0);
     --COLOR-GREY: rgba(182, 182, 182, 0.6);
     --COLOR-GREY-2: rgb(40, 40, 40);
-    --COLOR-TEXT-SHADOW: rgb(0, 65, 0);
-    --COLOR-TEXT-SHADOW-2: rgb(128, 128, 128);
+    --TEXT-SHADOW: rgb(0, 65, 0);
+    --TEXT-SHADOW-2: rgb(128, 128, 128);
     --BOX-SHADOW: rgb(0, 65, 0);
-    --COLOR-AKA-TEXT: rgb(0, 51, 139);
-    /* --COLOR-AKA-TEXT: rgba(0, 13, 36, 0.88); */
-    --COLOR-BACKGROUND: rgb(133, 101, 101);
+    --AKA-TEXT: rgb(0, 51, 139);
+    --BACKGROUND: rgb(133, 101, 101);
     --PROGRESS-SPAN: rgba(238, 109, 16, 0.9);
-    /* --COLOR-PROGRESS-SPAN: rgb(0, 110, 255); */
     --BACKGROUND-BUTTON: rgb(255, 136, 0);
     --NAVIGATION-PREV: rgb(0, 140, 255);
     --NAVIGATION-NEXT: rgb(0, 255, 0);
@@ -99,19 +97,17 @@
     --INVERT-ICON: invert(1);
     --COLOR-PRIMARY: rgba(0, 0, 0, 0.22);
     --COLOR-SECONDARY: rgba(158, 38, 38, 0.7);
-    --COLOR-PRIMARY-TEXT: rgba(255, 255, 255, 0.9);
+    --PRIMARY-TEXT: rgba(255, 255, 255, 0.9);
     --PRIMARY-TEXT-INVERT: rgb(0, 0, 0);
-    --COLOR-SECONDARY-TEXT: rgba(255, 255, 128); /* to root*/
-    --COLOR-MODAL-TEXT: rgb(255, 255, 128); /* to root*/
+    --SECONDARY-TEXT: rgba(255, 255, 128); /* to root*/
+    --MODAL-TEXT: rgb(255, 255, 128); /* to root*/
     --COLOR-GREY: rgba(49, 53, 57, 0.6); /* to root*/
     --COLOR-GREY-2: rgb(128, 128, 128);
-    --COLOR-TEXT-SHADOW: rgb(65, 0, 0);
-    --COLOR-TEXT-SHADOW-2: rgba(158, 38, 38, 0.7);
+    --TEXT-SHADOW: rgb(65, 0, 0);
+    --TEXT-SHADOW-2: rgba(158, 38, 38, 0.7);
     --BOX-SHADOW: rgb(158, 38, 38);
-    /* --COLOR-AKA-TEXT: rgba(255, 255, 0, 0.7); */
-    --COLOR-AKA-TEXT: rgba(255, 232, 31);
-    --COLOR-BACKGROUND: rgb(17, 34, 51);
-    /* --COLOR-PROGRESS-SPAN: rgb(196, 82, 0); */
+    --AKA-TEXT: rgba(255, 232, 31);
+    --BACKGROUND: rgb(17, 34, 51);
     --PROGRESS-SPAN: rgb(0, 140, 255);
     --BACKGROUND-BUTTON: rgb(0, 0, 0);
     --NAVIGATION-PREV: rgb(255, 5, 5);

@@ -37,12 +37,12 @@ label {
 }
 .line1 {
     transform-origin: 13% 0%;
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    background: var(--color-menu-button);
+    transition: transform 0.3s ease-in-out;
+    background: var(--PRIMARY-TEXT);
 }
 .line2 {
     transition: transform 0.2s ease-in-out;
-    background: var(--color-secondary);
+    background: var(--COLOR-SECONDARY);
 }
 .line3 {
     transform-origin: 13% 100%;

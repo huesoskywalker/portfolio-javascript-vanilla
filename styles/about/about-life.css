@@ -11,7 +11,7 @@
     font-size: 2.2rem;
     text-transform: uppercase;
     margin-bottom: 5rem;
-    color: var(--COLOR-SECONDARY-TEXT);
+    color: var(--SECONDARY-TEXT);
 }
 .timeline {
     display: grid;
@@ -25,9 +25,9 @@
     align-items: center;
     padding: 1.5rem 1.2rem;
     border-radius: 30px;
-    border-bottom: 2px solid var(--COLOR-AKA-TEXT);
+    border-bottom: 2px solid var(--AKA-TEXT);
     gap: 30px;
-    background: var(--COLOR-BACKGROUND);
+    background: var(--BACKGROUND);
     transition: background 0.3s ease-in-out;
 }
 .image-container {
@@ -46,7 +46,7 @@
     padding: 0.4rem 0.8rem;
     font-size: 1.1rem;
     background-color: var(--COLOR-GREY);
-    color: var(--COLOR-PRIMARY-TEXT);
+    color: var(--PRIMARY-TEXT);
     font-weight: 500;
 }
 .title-container {
@@ -60,9 +60,9 @@
     font-size: 1.6rem;
     font-weight: 900;
     margin: 0;
-    color: var(--COLOR-AKA-TEXT);
-    text-shadow: 1px 1px 1px var(--COLOR-TEXT-SHADOW-2), 1px 1px 1px var(--COLOR-TEXT-SHADOW-2),
-        1px 1px 1px var(--COLOR-TEXT-SHADOW-2);
+    color: var(--AKA-TEXT);
+    text-shadow: 1px 1px 1px var(--TEXT-SHADOW-2), 1px 1px 1px var(--TEXT-SHADOW-2),
+        1px 1px 1px var(--TEXT-SHADOW-2);
 }
 a {
     text-decoration: none;

@@ -1,5 +1,5 @@
 button {
-    color: var(--COLOR-PRIMARY-TEXT);
+    color: var(--PRIMARY-TEXT);
     background-color: var(--DIALOG-BUTTON);
     border-width: 3px;
     border-style: solid;
@@ -18,8 +18,8 @@ button {
 .modal {
     width: 65%;
     padding: 1rem;
-    color: var(--COLOR-PRIMARY-TEXT);
-    background-color: var(--COLOR-BACKGROUND);
+    color: var(--PRIMARY-TEXT);
+    background-color: var(--BACKGROUND);
     border-width: 7px;
     border-style: solid;
     border-color: var(--COLOR-GREY);

@@ -9,7 +9,7 @@
 .aka {
     position: absolute;
     top: 3%;
-    color: var(--COLOR-AKA-TEXT);
+    color: var(--AKA-TEXT);
     font-weight: 500;
     font-size: 6rem;
     text-transform: uppercase;
@@ -26,8 +26,8 @@
 .story-title {
     text-align: center;
     color: var(--COLOR-SECONDARY);
-    text-shadow: 1px 1px 1px var(--COLOR-TEXT-SHADOW), 1px 1px 1px var(--COLOR-TEXT-SHADOW),
-        1px 1px 1px var(--COLOR-TEXT-SHADOW);
+    text-shadow: 1px 1px 1px var(--TEXT-SHADOW), 1px 1px 1px var(--TEXT-SHADOW),
+        1px 1px 1px var(--TEXT-SHADOW);
     font-size: 2.4rem;
     text-transform: uppercase;
     margin: 0;
@@ -38,7 +38,7 @@
     font-weight: 300;
     font-size: 1.4rem;
     letter-spacing: 1px;
-    color: var(--COLOR-PRIMARY-TEXT);
+    color: var(--PRIMARY-TEXT);
     font-style: italic;
     margin: 0;
 }
@@ -54,7 +54,7 @@
     color: transparent;
     text-transform: uppercase;
     -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: var(--COLOR-AKA-TEXT);
+    -webkit-text-stroke-color: var(--AKA-TEXT);
     margin: 0;
 }
 @media screen and (max-width: 1480px) {

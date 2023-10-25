@@ -35,18 +35,17 @@ class SectionNav extends HTMLElement {
         const options = {
             root: null,
             rootMargin: "0px",
-            threshold: 0,
+            threshold: 0.0,
             trackVisibility: true,
-            delay: 100,
+            delay: 200,
         }
 
         this.observer = new IntersectionObserver((entries) => {
             for (const entry of entries) {
                 if (entry.isIntersecting && entry.isVisible) {
-                    const parentSection = entry.target.parentNode.host.parentNode
+                    const parentSection = entry.target.parentNode.parentNode.host.parentNode
 
                     const sectionIndex = Array.from(this.sections).indexOf(parentSection)
-
                     this.targetSection = sectionIndex
 
                     this.entry = entry
@@ -55,14 +54,15 @@ class SectionNav extends HTMLElement {
         }, options)
 
         this.sections.forEach((section) => {
-            const mainContainer = section.firstElementChild.shadowRoot.firstElementChild
+            const mainContainer =
+                section.firstElementChild.shadowRoot.firstElementChild.firstElementChild
+            console.log(mainContainer)
 
             this.observer.observe(mainContainer)
         })
     }
 
     navigation(direction) {
-        // add direction based on the id of the button
         const newIndex = this.targetSection + direction
 
         const currentSection = this.sections[this.targetSection]
@@ -72,10 +72,6 @@ class SectionNav extends HTMLElement {
             direction === -1 &&
             currentSection.getBoundingClientRect().y < 0
         ) {
-            // This does not work as expected on mobile
-            // target.isVisible does not work well on the layout, don't know why
-            // and this.entry.intersectionRatio on about-life return is below 0.1
-            // hard to grab the visibility. Even targeting the main container of the component.
             currentSection.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
@@ -92,13 +88,14 @@ class SectionNav extends HTMLElement {
         await this.loadContent()
 
         this.sections = document.querySelectorAll("section")
-        this.initObserver()
 
         this.previousButton = this.shadowRoot.getElementById("prevNav")
         this.previousButton.addEventListener("click", () => this.navigation(-1))
 
         this.nextButton = this.shadowRoot.getElementById("nextNav")
         this.nextButton.addEventListener("click", () => this.navigation(+1))
+
+        this.initObserver()
     }
 
     disconnectedCallback() {

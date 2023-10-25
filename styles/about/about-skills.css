@@ -11,7 +11,7 @@
     font-size: 2.2rem;
     text-transform: uppercase;
     margin-bottom: 5rem;
-    color: var(--COLOR-SECONDARY-TEXT);
+    color: var(--SECONDARY-TEXT);
 }
 .skills-form {
     position: relative;
@@ -41,18 +41,18 @@ label {
     border-radius: 10px;
     border-width: 2px;
     border-style: solid;
-    border-color: var(--COLOR-AKA-TEXT);
+    border-color: var(--AKA-TEXT);
     outline: none;
 }
 .input-skill,
 .input-progress {
-    background-color: var(--COLOR-BACKGROUND);
-    color: var(--COLOR-PRIMARY-TEXT);
+    background-color: var(--BACKGROUND);
+    color: var(--PRIMARY-TEXT);
 }
 .input-skill:focus,
 .input-progress:focus {
     background-color: var(--PRIMARY-TEXT-INVERT);
-    border-color: var(--COLOR-SECONDARY-TEXT);
+    border-color: var(--SECONDARY-TEXT);
     transition: background 0.3s, border-color 0.3s;
 }
 
@@ -62,7 +62,7 @@ label {
 }
 .add-button {
     width: 13%;
-    color: var(--COLOR-AKA-TEXT);
+    color: var(--AKA-TEXT);
     background-color: var(--BACKGROUND-BUTTON);
     cursor: pointer;
     transform: scale(1);
@@ -71,11 +71,11 @@ label {
         2px 2px 2px var(--BOX-SHADOW);
 }
 .add-button:hover {
-    border-color: var(--COLOR-SECONDARY-TEXT);
+    border-color: var(--SECONDARY-TEXT);
 }
 .clicked {
     transform: scale(0.9);
-    background-color: var(--COLOR-BACKGROUND);
+    background-color: var(--BACKGROUND);
     box-shadow: none;
 }
 .error-input {
@@ -104,9 +104,9 @@ label {
     text-transform: uppercase;
     font-weight: 600;
     font-size: larger;
-    color: var(--COLOR-AKA-TEXT);
-    text-shadow: 1px 1px 1px var(--COLOR-TEXT-SHADOW-2), 1px 1px 1px var(--COLOR-TEXT-SHADOW-2),
-        1px 1px 1px var(--COLOR-TEXT-SHADOW-2);
+    color: var(--AKA-TEXT);
+    text-shadow: 1px 1px 1px var(--TEXT-SHADOW-2), 1px 1px 1px var(--TEXT-SHADOW-2),
+        1px 1px 1px var(--TEXT-SHADOW-2);
 }
 .progress-container {
     display: flex;
