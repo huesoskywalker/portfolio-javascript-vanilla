@@ -49,6 +49,7 @@
 :root {
     --COLOR-WHITE: rgb(255, 255, 255);
     --COLOR-BLACK: rgb(0, 0, 0);
+    /* --COLOR-GREY-RENAME: rgb(108, 121, 131); */
 
     --COLOR-STAR-WARS: rgb(255, 232, 31);
     --SABER-BLUE: rgb(0, 0, 255);
@@ -89,8 +90,8 @@
     --BACKGROUND: rgb(133, 101, 101);
     --PROGRESS-SPAN: rgba(238, 109, 16, 0.9);
     --BACKGROUND-BUTTON: rgb(255, 136, 0);
-    --NAVIGATION-PREV: rgb(0, 140, 255);
-    --NAVIGATION-NEXT: rgb(0, 255, 0);
+    --NAVIGATION-NEXT: rgb(0, 140, 255); /* to root */
+    --NAVIGATION-PREV: rgb(0, 255, 0);
     --DIALOG-BUTTON: rgba(255, 255, 255, 0.55);
 }
 .dark-theme {
@@ -108,7 +109,7 @@
     --BOX-SHADOW: rgb(158, 38, 38);
     --AKA-TEXT: rgba(255, 232, 31);
     --BACKGROUND: rgb(17, 34, 51);
-    --PROGRESS-SPAN: rgb(0, 140, 255);
+    --PROGRESS-SPAN: rgb(0, 140, 255); /* to root */
     --BACKGROUND-BUTTON: rgb(0, 0, 0);
     --NAVIGATION-PREV: rgb(255, 5, 5);
     --NAVIGATION-NEXT: rgb(0, 255, 0);

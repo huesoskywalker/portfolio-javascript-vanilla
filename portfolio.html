@@ -7,42 +7,34 @@
         <link rel="stylesheet" type="text/css" href="styles/styles.css" />
         <link rel="icon" type="image/jpg" href="./favicon.ico" />
         <title>huesoskywalker</title>
-
-        <script src="https://kit.fontawesome.com/3c15a7e7ed.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <theme-button id="theme"></theme-button>
-        <menu-button id="menu-button"></menu-button>
+        <theme-button id="themeButton"></theme-button>
+        <menu-button id="menuButton"></menu-button>
 
         <main>
             <read-me> </read-me>
-            <dialog-box></dialog-box>
-            <my-terminal id="terminal"></my-terminal>
-            <section class="container portfolio active" id="portfolio">
-                <portfolio-tittle>
+            <path-selector></path-selector>
+            <!-- <my-terminal id="terminal"></my-terminal> -->
+            <section>
+                <!-- <portfolio-tittle>
                     <span
                         slot="working"
                         class="txt-type"
                         data-wait="3000"
                         data-words='["king"]'
                     ></span>
-                </portfolio-tittle>
-                <portfolio-items id="portfolio-items"></portfolio-items>
+                </portfolio-tittle> -->
+                <portfolio-items id="portfolioItems"></portfolio-items>
             </section>
         </main>
 
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.4/lottie.min.js"
-            integrity="sha512-ilxj730331yM7NbrJAICVJcRmPFErDqQhXJcn+PLbkXdE031JJbcK87Wt4VbAK+YY6/67L+N8p7KdzGoaRjsTg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
         <script type="module" src="./components/ThemeButton.js" defer></script>
         <script type="module" src="./components/MenuButton.js" defer></script>
-        <script type="module" src="./components/portfolio/portfolio-tittle.js"></script>
+        <script type="module" src="./components/portfolio/ReadMe.js" defer></script>
+        <script type="module" src="./components//portfolio/PathSelector.js" defer></script>
+        <!-- <script type="module" src="./components/portfolio/portfolio-tittle.js"></script> -->
         <script type="module" src="./components/portfolio/portfolio-items.js"></script>
-        <script type="module" src="./components/portfolio/ReadMe.js"></script>
-        <script type="module" src="./components/portfolio/my-terminal.js"></script>
-        <script type="module" src="./components//portfolio/dialog-box.js"></script>
+        <!-- <script type="module" src="./components/portfolio/my-terminal.js"></script> -->
     </body>
 </html>

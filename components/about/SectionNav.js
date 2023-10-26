@@ -56,7 +56,6 @@ class SectionNav extends HTMLElement {
         this.sections.forEach((section) => {
             const mainContainer =
                 section.firstElementChild.shadowRoot.firstElementChild.firstElementChild
-            console.log(mainContainer)
 
             this.observer.observe(mainContainer)
         })

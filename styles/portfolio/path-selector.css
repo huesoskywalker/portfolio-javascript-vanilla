@@ -11,114 +11,118 @@ button {
 button:hover {
     border-color: var(--NAVIGATION-PREV);
 }
-.open-btn {
+.open-button {
     position: fixed;
-    top: 25%;
+    top: 35%;
     left: 3%;
     font-size: 1.1rem;
     font-weight: 500;
 }
 .modal {
-    width: 65%;
-    padding: 1rem;
-    color: var(--COLOR-WHITE);
+    width: 25%;
+    padding: 1.2rem;
     background-color: var(--BACKGROUND);
     border-width: 7px;
     border-style: solid;
     border-color: var(--COLOR-GREY);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.read-me {
+.modal-form {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 2rem;
 }
-h1 {
-    align-self: center;
+label {
+    color: var(--COLOR-WHITE);
+    font-weight: bold;
     font-size: 1.5rem;
+    display: block;
+    align-items: center;
 }
-p,
-h2,
-ul li {
-    font-size: 1.3rem;
-    margin: 0.3rem;
+select {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.5rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--COLOR-GREY);
+    border-radius: 4px;
+    font-size: 1.1rem;
+    overflow-y: scroll;
 }
-p {
-    line-height: 1.4;
+optgroup {
+    font-size: 1rem;
 }
-ul li {
-    list-style: none;
+option {
+    font-size: 0.9rem;
 }
-.close-btn {
-    align-self: center;
+.confirm-button {
+    justify-self: center;
     font-size: 1.3rem;
 }
 @media only screen and (max-width: 1480px) {
-    .open-btn {
+    .open-button {
         font-size: 0.8rem;
     }
     .modal {
-        padding: 0.8rem;
+        border-width: 6px;
     }
-    h1 {
+    label {
         font-size: 1.2rem;
     }
-    p,
-    h2,
-    ul li {
+    select {
+        padding: 0.3rem;
         font-size: 0.9rem;
     }
-
-    .close-btn {
+    .confirm-button {
         font-size: 1rem;
     }
 }
 @media only screen and (max-width: 1040px) {
-    .open-btn {
+    .open-button {
         font-size: 0.7rem;
     }
-    h1 {
+    .modal {
+        width: 30%;
+    }
+    .modal-form {
+        gap: 1.3rem;
+    }
+    label {
         font-size: 1.1rem;
     }
-    .close-btn {
+    .confirm-button {
         font-size: 0.9rem;
     }
 }
 @media only screen and (max-width: 780px) {
     .modal {
-        padding: 0.5rem;
+        width: 35%;
     }
-    h1 {
+    label {
         font-size: 1rem;
     }
-    p,
-    h2,
-    ul li,
-    .close-btn {
+    select,
+    .confirm-button {
         font-size: 0.8rem;
     }
 }
 @media only screen and (max-width: 440px) {
-    .open-btn {
-        top: 20%;
+    .open-button {
+        top: 30%;
     }
     .modal {
-        height: 70%;
+        width: 50%;
+        padding: 0.8rem;
     }
-    ul {
-        padding: 0 0 0 1rem;
-    }
-    ul li {
-        margin-bottom: 0.5rem;
+    .modal-form {
+        gap: 1rem;
     }
 }
 @media only screen and (max-width: 390px) {
-    h1 {
+    label {
         font-size: 0.9rem;
-    }
-    ul {
-        padding: 0 0 0 0.5rem;
     }
 }

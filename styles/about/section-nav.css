@@ -104,3 +104,8 @@
         border-width: 0.1px;
     }
 }
+@media only screen and (max-width: 780px) {
+    .nav-container {
+        top: 35%;
+    }
+}
