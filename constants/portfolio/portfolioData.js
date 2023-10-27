@@ -14,9 +14,21 @@ export const portfolioData = [
             alt: "Full Stack Course",
         },
         type: "Course",
-        section: "Java",
+        section: "Full Stack",
         link: "https://www.udemy.com/certificate/UC-873f7935-7ffe-4f98-a600-27cbd3d898b6/",
         author: "Udemy",
+    },
+    {
+        title: "Portfolio",
+        image: {
+            src: "../../img/portfolio.png",
+            srcset: "",
+            alt: "Portfolio",
+        },
+        type: "Project",
+        section: "Web Development",
+        link: "https://www.github.com/huesoskywalker/portfolio-javascript-vanilla",
+        author: "huesoskywalker",
     },
     {
         title: "Certificate",
@@ -26,7 +38,7 @@ export const portfolioData = [
             alt: "Solidity Course",
         },
         type: "Course",
-        section: "Solidity",
+        section: "Blockchain",
         link: "https://www.udemy.com/certificate/UC-f1fc04e1-8294-45ef-882d-cd8e482862ef/?utm_campaign=email",
         author: "Udemy",
     },
@@ -66,18 +78,7 @@ export const portfolioData = [
         link: "https://exploringjs.com/nodejs-shell-scripting/toc.html",
         author: "Dr. Axel Rauschmayer",
     },
-    {
-        title: "Portfolio",
-        image: {
-            src: "../../img/portfolio.png",
-            srcset: "",
-            alt: "Portfolio",
-        },
-        type: "Project",
-        section: "Portfolio",
-        link: "https://www.github.com/huesoskywalker/portfolio-javascript-vanilla",
-        author: "huesoskywalker",
-    },
+
     {
         title: "Certificate",
         image: {
@@ -114,6 +115,7 @@ export const portfolioData = [
         link: "https://www.udemy.com/certificate/UC-3b45d537-6ab3-4aa5-a259-31a44164ea0a/",
         author: "Udemy",
     },
+
     {
         title: "Chat",
         image: {
@@ -124,18 +126,6 @@ export const portfolioData = [
         type: "Project",
         section: "Viper",
         link: "https://www.youtube.com/watch?v=-Y1cdWwqD_o",
-        author: "huesoskywalker",
-    },
-    {
-        title: "Cypress",
-        image: {
-            src: "../../img/cypress-e2e.png",
-            srcset: "",
-            alt: "Cypress test",
-        },
-        type: "Project",
-        section: "Viper",
-        link: "https://youtu.be/Vnpv851Q6Pc",
         author: "huesoskywalker",
     },
     {
@@ -163,6 +153,18 @@ export const portfolioData = [
         author: "husoskywalker",
     },
     {
+        title: "Cypress",
+        image: {
+            src: "../../img/cypress-e2e.png",
+            srcset: "",
+            alt: "Cypress test",
+        },
+        type: "Project",
+        section: "Viper",
+        link: "https://youtu.be/Vnpv851Q6Pc",
+        author: "huesoskywalker",
+    },
+    {
         title: "Only API's",
         image: {
             src: "../../img/viper.jpg",
@@ -174,7 +176,6 @@ export const portfolioData = [
         link: "https://github.com/huesoskywalker/viper-nextjs-mongodb",
         author: "huesoskywalker",
     },
-
     {
         title: "Entry point",
         image: {
@@ -183,7 +184,7 @@ export const portfolioData = [
             alt: "TypeScript Book",
         },
         type: "Book",
-        section: "JavaScript",
+        section: "TypeScript",
         link: "https://www.typescriptlang.org/docs/handbook/intro.html",
         author: "typescriptlang.org",
     },
@@ -195,7 +196,7 @@ export const portfolioData = [
             alt: "Real State Map",
         },
         type: "Project",
-        section: "Google Maps API",
+        section: "Google Maps",
         link: "https://www.youtube.com/watch?v=USTM_HdKN2I",
         author: "huesoskywalker",
     },
@@ -207,7 +208,7 @@ export const portfolioData = [
             alt: "Chicago Medial",
         },
         type: "Project",
-        section: "Chicago Medical",
+        section: "Web Development",
         link: "https://chicago-medical-checkup.vercel.app/",
         author: "huesoskywalker",
     },

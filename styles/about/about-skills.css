@@ -51,6 +51,11 @@ label {
     background-color: var(--BACKGROUND);
     color: var(--PRIMARY-TEXT);
 }
+.input-progress::-webkit-outer-spin-button,
+.input-progress::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 .input-skill:focus,
 .input-progress:focus {
     background-color: var(--PRIMARY-TEXT-INVERT);

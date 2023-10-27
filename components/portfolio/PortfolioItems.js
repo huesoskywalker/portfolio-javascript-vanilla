@@ -41,8 +41,7 @@ class PortfolioItems extends HTMLElement {
 
     attributeChangedCallback(props, oldValue, newValue) {
         if (props === "state") {
-            // this should be renamed none or default
-            if (newValue === "hide" || newValue === "default") {
+            if (newValue === "default") {
                 this.portfolioItems.innerHTML = ``
             } else {
                 this.renderItems()

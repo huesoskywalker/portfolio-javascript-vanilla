@@ -33,7 +33,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 label {
     color: var(--COLOR-WHITE);
@@ -89,7 +89,7 @@ option {
         width: 30%;
     }
     .modal-form {
-        gap: 1.3rem;
+        gap: 1.2rem;
     }
     label {
         font-size: 1.1rem;

@@ -1,3 +1,4 @@
+import { selectorData } from "/../../constants/portfolio/selectorData.js"
 import { ContentLoaderInterface } from "/../../interfaces/ContentLoaderInterface.js"
 import { ContentLoaderInjector } from "/../../util/ContentLoaderInjector.js"
 
@@ -10,6 +11,7 @@ class PathSelector extends HTMLElement {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
+        this.selectorData = selectorData
         this.openModal = undefined
         this.modal = undefined
         this.confirmBtn = undefined
@@ -30,6 +32,30 @@ class PathSelector extends HTMLElement {
         this.shadowRoot.appendChild(style)
     }
 
+    renderSelector() {
+        const fragment = new DocumentFragment()
+
+        const defaultOption = document.createElement("option")
+        defaultOption.value = "default"
+        defaultOption.textContent = "None"
+        fragment.appendChild(defaultOption)
+
+        Object.keys(this.selectorData).forEach((type) => {
+            const optGroup = document.createElement("optgroup")
+            optGroup.label = type
+
+            this.selectorData[type].forEach((section) => {
+                const option = document.createElement("option")
+                option.value = section
+                option.textContent = section
+                optGroup.appendChild(option)
+            })
+
+            fragment.appendChild(optGroup)
+        })
+        this.pathSelector.appendChild(fragment)
+    }
+
     displayModal() {
         this.modal.showModal()
     }
@@ -45,7 +71,6 @@ class PathSelector extends HTMLElement {
     }
     async connectedCallback() {
         await this.loadContent()
-        // build the options dynamically based on the object type
 
         this.openModal = this.shadowRoot.getElementById("openModal")
         this.openModal.addEventListener("click", () => this.displayModal())
@@ -54,6 +79,7 @@ class PathSelector extends HTMLElement {
         this.modal.addEventListener("close", () => this.triggerItems())
 
         this.pathSelector = this.modal.querySelector("select")
+        this.renderSelector()
         this.pathSelector.addEventListener("change", () => this.selectPath())
 
         this.confirmBtn = this.modal.querySelector("#confirmButton")
