@@ -1,0 +1,113 @@
+.portfolio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    gap: 3rem;
+    margin-top: 11rem;
+}
+.portfolio-item {
+    position: relative;
+}
+.tall {
+    width: var(--PORTFOLIO-ITEM-TALL);
+    height: calc((4 / 3) * var(--PORTFOLIO-ITEM-TALL));
+}
+.wide {
+    width: var(--PORTFOLIO-ITEM-WIDE);
+    height: calc((3 / 4) * var(--PORTFOLIO-ITEM-WIDE));
+}
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10%;
+}
+.item-description {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-hover-portfolio);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.item-title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--AKA-TEXT);
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 1px var(--color-about-life), 1px 1px 1px var(--color-about-life),
+        1px 1px 1px var(--color-about-life);
+}
+.item-link {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgb(0, 128, 255);
+    text-decoration: none;
+}
+@media only screen and (max-width: 1480px) {
+    .portfolio {
+        gap: 2rem;
+        margin-top: 8rem;
+    }
+    .item-title {
+        font-size: 2rem;
+    }
+    .item-link {
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .item-title {
+        font-size: 1.6rem;
+    }
+    .item-link {
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .item-title {
+        font-size: 1.4rem;
+    }
+    .item-link {
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .portfolio {
+        margin-top: 6rem;
+        gap: 1rem;
+    }
+    .item-title {
+        font-size: 1.2rem;
+    }
+    .item-link {
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .item-title {
+        font-size: 1.1rem;
+    }
+    .item-link {
+        font-size: 0.6rem;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .portfolio {
+        width: 90%;
+        margin-top: 12rem;
+    }
+    .item-title {
+        font-size: 0.9rem;
+    }
+}

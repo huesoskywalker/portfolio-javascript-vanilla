@@ -45,7 +45,7 @@ class PathSelector extends HTMLElement {
     }
     async connectedCallback() {
         await this.loadContent()
-        // will build the options dynamically based on the object
+        // build the options dynamically based on the object type
 
         this.openModal = this.shadowRoot.getElementById("openModal")
         this.openModal.addEventListener("click", () => this.displayModal())
@@ -58,6 +58,7 @@ class PathSelector extends HTMLElement {
 
         this.confirmBtn = this.modal.querySelector("#confirmButton")
     }
+
     disconnectedCallback() {
         this.openModal.removeEventListener("click", () => this.displayModal())
         this.modal.removeEventListener("close", () => this.triggerItems())

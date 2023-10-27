@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    /* margin: 0 0 5rem 0; */
+    margin: 3rem 0 5rem 0;
 }
 .main-title {
     position: relative;
@@ -126,7 +128,7 @@ label {
 }
 @media only screen and (max-width: 1480px) {
     .about-skills {
-        margin: 0 8%;
+        margin: 3rem 8% 5rem 8%;
     }
     .main-title {
         font-size: 1.8rem;
@@ -157,7 +159,7 @@ label {
 }
 @media only screen and (max-width: 1040px) {
     .about-skills {
-        margin: 0 6%;
+        margin: 2rem 6% 4rem 6%;
     }
     .main-title {
         font-size: 1.5rem;
@@ -191,7 +193,7 @@ label {
 }
 @media only screen and (max-width: 780px) {
     .about-skills {
-        margin: 0 10%;
+        margin: 2rem 10% 4rem 10%;
     }
     .main-title {
         font-size: 1.4rem;
@@ -255,7 +257,7 @@ label {
 }
 @media only screen and (max-width: 390px) {
     .about-skills {
-        margin: 0 15%;
+        margin: 2rem 15% 3rem 15%;
     }
     .main-title {
         font-size: 1rem;
@@ -278,7 +280,7 @@ label {
 }
 @media only screen and (max-width: 340px) {
     .about-skills {
-        margin: 0 18%;
+        margin: 2rem 18% 3rem 18%;
     }
     .label-skill {
         width: 45%;

@@ -95,7 +95,7 @@ header {
         font-size: 1.5rem;
     }
     .name {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .birth {
         font-size: 0.9rem;
@@ -120,7 +120,7 @@ header {
     }
     .name {
         text-indent: 15px;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     .birth {
         font-size: 1rem;
@@ -145,10 +145,10 @@ header {
 }
 @media only screen and (max-width: 340px) {
     .salute {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .name {
         text-indent: 5px;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }

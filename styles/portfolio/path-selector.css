@@ -4,7 +4,7 @@ button {
     border-width: 3px;
     border-style: solid;
     border-color: var(--COLOR-SECONDARY);
-    box-shadow: 0 0 5px var(--BOX-SHADOW);
+    box-shadow: 0 0 3px var(--BOX-SHADOW);
     padding: 0.3em 0.6em;
     cursor: pointer;
 }
@@ -12,6 +12,7 @@ button:hover {
     border-color: var(--NAVIGATION-PREV);
 }
 .open-button {
+    z-index: 2;
     position: fixed;
     top: 35%;
     left: 3%;
@@ -111,7 +112,7 @@ option {
 }
 @media only screen and (max-width: 440px) {
     .open-button {
-        top: 30%;
+        top: 27%;
     }
     .modal {
         width: 50%;

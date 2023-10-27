@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    margin: 3% 8% 0 8%;
+    margin: 19% 8%;
 }
 .aka {
     position: absolute;
@@ -16,10 +16,9 @@
 }
 .left-about {
     flex: 5;
-    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 25px;
 }
@@ -44,10 +43,9 @@
 }
 .right-about {
     flex: 4;
-    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
 }
 .bright-side {
     font-size: 2.1rem;
@@ -72,13 +70,14 @@
         font-size: 1.1rem;
     }
     .bright-side {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         -webkit-text-stroke-width: 1.2px;
     }
 }
 @media only screen and (max-width: 1040px) {
     .about-me {
         gap: 2rem;
+        margin: 25% 10%;
     }
     .aka {
         font-size: 2.9rem;
@@ -90,14 +89,13 @@
         font-size: 0.9rem;
     }
     .bright-side {
-        font-size: 1.1rem;
+        font-size: 1rem;
         -webkit-text-stroke-width: 0.8px;
     }
 }
 @media only screen and (max-width: 780px) {
     .about-me {
         gap: 1rem;
-        margin: 3% 10%;
     }
     .aka {
         font-size: 2.1rem;
@@ -114,7 +112,7 @@
 }
 @media only screen and (max-width: 440px) {
     .about-me {
-        margin: 10% 12% 0 12%;
+        margin: 35% 12% 0 12%;
         flex-direction: column;
         gap: 3rem;
     }
@@ -146,7 +144,7 @@
 }
 @media only screen and (max-width: 340px) {
     .about-me {
-        margin: 27% 12% 0 12%;
+        margin: 45% 12% 0 12%;
     }
     .aka {
         font-size: 1rem;

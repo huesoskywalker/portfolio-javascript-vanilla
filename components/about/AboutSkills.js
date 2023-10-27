@@ -82,13 +82,13 @@ class AboutSkills extends HTMLElement {
         if (isSkillValid && isProgressValid) {
             this.formButton.classList.toggle("clicked")
 
-            if (progress.value < 0 || progress.value > 100) {
-            }
             this.skillsData.push({ skill: skill.value, progress: progress.value })
 
             this.renderSkills(this.skillsData)
+
             this.shadowRoot.getElementById("skill").value = ""
             this.shadowRoot.getElementById("progress").value = ""
+
             setTimeout(() => {
                 this.formButton.classList.toggle("clicked")
             }, 500)
@@ -97,6 +97,7 @@ class AboutSkills extends HTMLElement {
 
     validateField(field) {
         const fieldLabel = this.shadowRoot.querySelector(`label[for=${field.id}]`)
+
         const existingErrorMessage = fieldLabel.querySelector("#errorMessage")
 
         const isValidField = field.checkValidity()
@@ -105,15 +106,18 @@ class AboutSkills extends HTMLElement {
             if (existingErrorMessage) {
                 fieldLabel.removeChild(existingErrorMessage)
             }
+
             const errorMessageElement = document.createElement("div")
             errorMessageElement.id = "errorMessage"
             errorMessageElement.classList.add("error-message")
+
             if (!field.value) {
                 const capitalized = field.id.at(0).toUpperCase() + field.id.slice(1)
                 errorMessageElement.textContent = `${capitalized} field is required`
             } else {
                 errorMessageElement.textContent = `Please enter a valid value`
             }
+
             fieldLabel.appendChild(errorMessageElement)
 
             field.classList.add("error-input")
@@ -127,6 +131,7 @@ class AboutSkills extends HTMLElement {
 
     async connectedCallback() {
         await this.loadContent()
+
         this.renderSkills(this.skillsData)
 
         this.formButton = this.shadowRoot.getElementById("addButton")

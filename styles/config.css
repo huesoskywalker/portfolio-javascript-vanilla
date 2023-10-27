@@ -20,7 +20,7 @@
     --color-theme-btn: rgba(255, 255, 0, 0.6);
     --color-theme-inverse: rgba(1, 1, 1, 0.788);
     --color-input-form: rgba(0, 13, 36, 0.369);
-    --color-hover-portfolio: rgba(164, 164, 164, 0.15);
+    --color-hover-portfolio: rgba(164, 164, 164, 0.2);
 }
 .dark-theme {
     --color-primary: rgba(0, 0, 0, 0.22);
@@ -44,11 +44,14 @@
     --color-theme-btn: rgba(255, 255, 255, 0.55);
     --color-theme-inverse: rgb(1, 1, 1);
     --color-input-form: rgba(0, 13, 36, 0.369);
-    --color-hover-portfolio: rgba(52, 52, 52, 0.334);
+    /* --color-hover-portfolio: rgba(52, 52, 52, 0.334); */
+    --color-hover-portfolio: rgba(164, 164, 164, 0.2);
 }
 :root {
     --COLOR-WHITE: rgb(255, 255, 255);
     --COLOR-BLACK: rgb(0, 0, 0);
+    --PORTFOLIO-ITEM-WIDE: 600px;
+    --PORTFOLIO-ITEM-TALL: 400px;
     /* --COLOR-GREY-RENAME: rgb(108, 121, 131); */
 
     --COLOR-STAR-WARS: rgb(255, 232, 31);
