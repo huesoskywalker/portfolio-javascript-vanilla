@@ -4,7 +4,7 @@
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    margin: 11rem auto 5rem auto;
+    margin: 2rem auto 5rem auto;
     gap: 3rem;
 }
 .portfolio-item {
@@ -56,7 +56,6 @@
 @media only screen and (max-width: 1480px) {
     .portfolio {
         gap: 2rem;
-        margin-top: 8rem;
     }
     .item-title {
         font-size: 2rem;
@@ -83,7 +82,6 @@
 }
 @media only screen and (max-width: 440px) {
     .portfolio {
-        margin-top: 5.5rem;
         gap: 1rem;
     }
     .item-title {

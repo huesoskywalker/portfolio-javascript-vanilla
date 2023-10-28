@@ -25,9 +25,6 @@ section {
     width: 100%;
     height: 100%;
 }
-.txt-type > .txt {
-    border-right: 0.1rem solid rgb(128, 128, 128);
-}
 /* Contact Grid */
 /* Contact Page */
 .contact-content-con {

@@ -17,14 +17,15 @@
             <path-selector></path-selector>
             <!-- <my-terminal id="terminal"></my-terminal> -->
             <section>
-                <!-- <portfolio-tittle>
+                <portfolio-tittle>
                     <span
-                        slot="working"
-                        class="txt-type"
+                        id="typeText"
+                        slot="king"
+                        class="type-text"
                         data-wait="3000"
-                        data-words='["king"]'
+                        data-words='["king", "pepe"]'
                     ></span>
-                </portfolio-tittle> -->
+                </portfolio-tittle>
                 <portfolio-items id="portfolioItems"></portfolio-items>
             </section>
         </main>
@@ -33,7 +34,8 @@
         <script type="module" src="./components/MenuButton.js" defer></script>
         <script type="module" src="./components/portfolio/ReadMe.js" defer></script>
         <script type="module" src="./components//portfolio/PathSelector.js" defer></script>
-        <!-- <script type="module" src="./components/portfolio/portfolio-tittle.js"></script> -->
+        <!-- check if we move the title outside the section -->
+        <script type="module" src="./components/portfolio/PortfolioTitle.js" defer></script>
         <script type="module" src="./components/portfolio/PortfolioItems.js" defer></script>
         <!-- <script type="module" src="./components/portfolio/my-terminal.js"></script> -->
     </body>
