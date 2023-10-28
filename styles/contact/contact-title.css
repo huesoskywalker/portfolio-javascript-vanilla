@@ -13,15 +13,16 @@
 }
 .static-text {
     position: absolute;
-    left: 40%;
+    left: 36.5%;
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 500;
     color: var(--COLOR-WHITE);
 }
-::slotted(span) {
+.static-text-next {
     color: var(--NAVIGATION-PREV);
 }
+
 @media only screen and (max-width: 1480px) {
     .background-text {
         font-size: 6rem;
@@ -35,11 +36,11 @@
         font-size: 4.5rem;
     }
     .static-text {
-        left: 38%;
         font-size: 2.3rem;
+        left: 35%;
     }
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 768px) {
     .title-container {
         margin-top: 0.5rem;
     }
@@ -47,7 +48,7 @@
         font-size: 3.5rem;
     }
     .static-text {
-        left: 36%;
+        left: 34.5%;
         font-size: 1.8rem;
     }
 }
@@ -56,7 +57,7 @@
         font-size: 2.3rem;
     }
     .static-text {
-        left: 35%;
+        left: 29.5%;
         font-size: 1.3rem;
     }
 }
@@ -68,7 +69,7 @@
         font-size: 1.8rem;
     }
     .static-text {
-        left: 37%;
+        left: 31.5%;
         font-size: 1rem;
     }
 }

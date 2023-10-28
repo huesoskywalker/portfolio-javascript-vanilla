@@ -8,11 +8,11 @@ export const skillsData = [
         progress: 80,
     },
     {
-        skill: "Next.Js",
+        skill: "React.Js",
         progress: 77,
     },
     {
-        skill: "React.Js",
+        skill: "Next.Js",
         progress: 75,
     },
     {
