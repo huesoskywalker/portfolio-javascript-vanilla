@@ -69,6 +69,7 @@ class PathSelector extends HTMLElement {
 
         portfolioItems.setAttribute("state", `${this.modal.returnValue}`)
     }
+
     async connectedCallback() {
         await this.loadContent()
 

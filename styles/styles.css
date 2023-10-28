@@ -23,11 +23,7 @@ body {
 }
 section {
     width: 100%;
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    height: 100%;
 }
 .txt-type > .txt {
     border-right: 0.1rem solid rgb(128, 128, 128);
@@ -76,7 +72,7 @@ section {
 }
 @media only screen and (max-width: 440px) {
     :root {
-        --PORTFOLIO-ITEM-WIDE: 200px;
+        --PORTFOLIO-ITEM-WIDE: 230px;
         --PORTFOLIO-ITEM-TALL: 180px;
     }
     body {
@@ -95,13 +91,12 @@ section {
 }
 @media only screen and (max-width: 390px) {
     :root {
-        --PORTFOLIO-ITEM-WIDE: 160px;
-        --PORTFOLIO-ITEM-TALL: 150px;
+        --PORTFOLIO-ITEM-WIDE: 200px;
     }
 }
 @media only screen and (max-width: 340px) {
     :root {
-        --PORTFOLIO-ITEM-WIDE: 130px;
-        --PORTFOLIO-ITEM-TALL: 120px;
+        --PORTFOLIO-ITEM-WIDE: 155px;
+        --PORTFOLIO-ITEM-TALL: 150px;
     }
 }

@@ -115,7 +115,7 @@ option {
         top: 27%;
     }
     .modal {
-        width: 50%;
+        width: 60%;
         padding: 0.8rem;
     }
     .modal-form {
@@ -123,6 +123,10 @@ option {
     }
 }
 @media only screen and (max-width: 390px) {
+    button {
+        border-width: 2px;
+        padding: 0.3em 0.5em;
+    }
     label {
         font-size: 0.9rem;
     }

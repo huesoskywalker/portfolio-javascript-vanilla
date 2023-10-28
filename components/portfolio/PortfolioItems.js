@@ -54,7 +54,9 @@ class PortfolioItems extends HTMLElement {
 
         const filteredData = this.portfolioData.filter(({ section }) => section === this.state)
 
-        filteredData.forEach((data) => {
+        const sortedData = filteredData.sort((a, b) => b.date - a.date)
+
+        sortedData.forEach((data) => {
             const item = document.createElement("div")
             item.classList.add("portfolio-item")
             if (data.type.toLocaleLowerCase() === "book") {
@@ -66,7 +68,7 @@ class PortfolioItems extends HTMLElement {
             const itemImage = document.createElement("img")
             itemImage.classList.add("item-image")
             itemImage.src = data.image.src
-            // itemImage.srcset = data.image.srcset
+            itemImage.srcset = data.image.srcset
             itemImage.alt = data.image.alt
             itemImage.loading = "lazy"
             item.appendChild(itemImage)
