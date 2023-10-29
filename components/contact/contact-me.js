@@ -229,11 +229,11 @@ class ContactMe extends HTMLElement {
         this.shadowRoot.querySelector("#hisMessage").focus({ focusVisible: true })
     }
     connectedCallback() {
-        this.shadowRoot
-            .querySelector("#hisMessage")
-            .addEventListener("keypress", () => this.farAway())
-        this.shadowRoot.querySelector("#mailSender").addEventListener("click", () => this.sendIt())
-        this.shadowRoot.addEventListener("DOMContentLoaded", this.init())
+        // this.shadowRoot
+        //     .querySelector("#hisMessage")
+        //     .addEventListener("keypress", () => this.farAway())
+        // this.shadowRoot.querySelector("#mailSender").addEventListener("click", () => this.sendIt())
+        // this.shadowRoot.addEventListener("DOMContentLoaded", this.init())
     }
     disconnectedCallback() {
         this.shadowRoot.querySelector("#mailSender").removeEventListener()

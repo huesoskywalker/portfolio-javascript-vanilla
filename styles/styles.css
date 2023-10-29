@@ -25,12 +25,11 @@ section {
     width: 100%;
     height: 100%;
 }
-/* Contact Grid */
-/* Contact Page */
 .contact-content-con {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5rem;
+    /* grid-gap: 5rem; */
+    margin-top: 8rem;
 }
 @media only screen and (max-width: 1480px) {
     :root {
@@ -38,7 +37,8 @@ section {
         --PORTFOLIO-ITEM-TALL: 300px;
     }
     .contact-content-con {
-        grid-gap: 2rem;
+        margin-top: 5rem;
+        /* grid-gap: 2rem; */
     }
 }
 @media only screen and (max-width: 1040px) {
@@ -61,11 +61,6 @@ section {
         --PORTFOLIO-ITEM-WIDE: 230px;
         --PORTFOLIO-ITEM-TALL: 200px;
     }
-    .contact-content-con {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 1rem;
-    }
 }
 @media only screen and (max-width: 440px) {
     :root {
@@ -82,8 +77,11 @@ section {
         background-image: url("../img/background/tatooine_425w.jpg");
     }
     .contact-content-con {
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        width: 80%;
+        margin: 5rem auto;
     }
 }
 @media only screen and (max-width: 390px) {

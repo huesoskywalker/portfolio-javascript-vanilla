@@ -4,12 +4,12 @@ export const skillsData = [
         progress: 85,
     },
     {
-        skill: "Node.Js",
+        skill: "React.Js",
         progress: 80,
     },
     {
-        skill: "React.Js",
-        progress: 77,
+        skill: "Node.Js",
+        progress: 78,
     },
     {
         skill: "Next.Js",
