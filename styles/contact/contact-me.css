@@ -1,0 +1,133 @@
+.right-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+label {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+input,
+textarea {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--BACKGROUND);
+    border-radius: 25px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--PROGRESS-SPAN);
+    outline: none;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.1rem;
+    color: var(--COLOR-WHITE);
+    resize: none;
+}
+textarea {
+    height: 8rem;
+}
+::placeholder {
+    color: rgba(158, 171, 184, 0.9);
+}
+.submit-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--BACKGROUND);
+    font-weight: 600;
+    border-radius: 30px;
+    margin-left: 0.3rem;
+    cursor: pointer;
+    border: 3px solid var(--NAVIGATION-NEXT);
+    overflow: hidden;
+}
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%);
+}
+.submit-btn:hover::before {
+    width: 100%;
+    height: 100%;
+    background-color: var(--AKA-TEXT);
+    transform: translateX(0);
+    transition: 1s;
+}
+.btn-text {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.6rem;
+    color: var(--COLOR-WHITE);
+    z-index: 1;
+}
+.submit-btn:active {
+    transform: translateY(15px);
+    transition: 2s;
+}
+@media only screen and (max-width: 1480px) {
+    .contact-form {
+        gap: 1rem;
+    }
+    input,
+    textarea {
+        width: 75%;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        padding: 0.7rem 0.9rem;
+    }
+    textarea {
+        height: 6rem;
+    }
+    .btn-text {
+        font-size: 1rem;
+        padding: 0.4rem 1.1rem;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .contact-form {
+        gap: 1rem;
+    }
+    input,
+    textarea {
+        border-radius: 15px;
+        font-size: 0.8rem;
+        padding: 0.6rem 0.8rem;
+        border-width: 2px;
+    }
+    .submit-btn {
+        border-radius: 20px;
+    }
+    .btn-text {
+        font-size: 0.8rem;
+        padding: 0.3rem 1rem;
+    }
+}
+@media only screen and (max-width: 426px) {
+    .btn-text {
+        padding: 0.3rem 0.8rem;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .btn-text {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
+    }
+}
+@media only screen and (max-width: 340px) {
+    input,
+    textarea {
+        width: 70%;
+    }
+}

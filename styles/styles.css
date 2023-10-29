@@ -28,8 +28,8 @@ section {
 .contact-content-con {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-gap: 5rem; */
-    margin-top: 8rem;
+    width: 90%;
+    margin: 8rem auto 0 auto;
 }
 @media only screen and (max-width: 1480px) {
     :root {
@@ -38,7 +38,6 @@ section {
     }
     .contact-content-con {
         margin-top: 5rem;
-        /* grid-gap: 2rem; */
     }
 }
 @media only screen and (max-width: 1040px) {
@@ -79,9 +78,9 @@ section {
     .contact-content-con {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-gap: 1rem;
+        grid-gap: 3rem;
         width: 80%;
-        margin: 5rem auto;
+        margin: 3rem auto;
     }
 }
 @media only screen and (max-width: 390px) {

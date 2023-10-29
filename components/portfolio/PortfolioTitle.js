@@ -17,6 +17,7 @@ class PortfolioTittle extends HTMLElement {
         this.text = ""
         this.wordIndex = 0
         this.isDeleting = false
+        this.timeoutId = null
     }
     async loadContent() {
         const templatePath = "/templates/portfolio/portfolio-title.html"
@@ -58,7 +59,8 @@ class PortfolioTittle extends HTMLElement {
             this.isDeleting = false
             typeSpeed = 500
         }
-        setTimeout(() => this.type(), typeSpeed)
+
+        this.timeoutId = setTimeout(() => this.type(), typeSpeed)
     }
 
     async connectedCallback() {
@@ -70,7 +72,11 @@ class PortfolioTittle extends HTMLElement {
 
         this.wait = JSON.parse(this.textElement.getAttribute("data-wait"), 10)
 
-        this.type()
+        setTimeout(() => this.type(), 500)
+    }
+
+    disconnectedCallback() {
+        clearTimeout(this.timeoutId)
     }
 }
 

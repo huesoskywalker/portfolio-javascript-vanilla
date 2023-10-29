@@ -44,7 +44,6 @@
     --color-theme-btn: rgba(255, 255, 255, 0.55);
     --color-theme-inverse: rgb(1, 1, 1);
     --color-input-form: rgba(0, 13, 36, 0.369);
-    /* --color-hover-portfolio: rgba(52, 52, 52, 0.334); */
     --color-hover-portfolio: rgba(164, 164, 164, 0.2);
 }
 :root {
@@ -93,8 +92,8 @@
     --BACKGROUND: rgb(133, 101, 101);
     --PROGRESS-SPAN: rgba(238, 109, 16, 0.9);
     --BACKGROUND-BUTTON: rgb(255, 136, 0);
-    --NAVIGATION-NEXT: rgb(0, 140, 255); /* to root */
     --NAVIGATION-PREV: rgb(0, 255, 0);
+    --NAVIGATION-NEXT: rgb(0, 140, 255); /* to root */
     --DIALOG-BUTTON: rgba(255, 255, 255, 0.55);
 }
 .dark-theme {

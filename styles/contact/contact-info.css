@@ -9,9 +9,9 @@ h2 {
     font-size: 1.8rem;
     margin: 0;
     text-transform: uppercase;
-    color: var(--color-about-tittle);
-    text-shadow: 1px 1px 1px var(--color-theme-inverse), 1px 1px 1px var(--color-theme-inverse),
-        1px 1px 1px var(--color-theme-inverse);
+    color: var(--SECONDARY-TEXT);
+    text-shadow: 1px 1px 1px var(--TEXT-SHADOW), 1px 1px 1px var(--TEXT-SHADOW),
+        1px 1px 1px var(--TEXT-SHADOW);
 }
 .contact-info {
     display: flex;
@@ -31,7 +31,6 @@ h2 {
     justify-content: center;
     align-items: flex-end;
     gap: 1rem;
-    color: var(--PRIMARY-TEXT);
 }
 .contact-image {
     width: 45px;
@@ -39,6 +38,7 @@ h2 {
     filter: var(--INVERT-ICON);
 }
 .contact-type {
+    color: var(--PRIMARY-TEXT);
     font-size: 1.6rem;
 }
 .contact-value {
