@@ -16,6 +16,7 @@ class ContactMe extends HTMLElement {
         this.sendButton = undefined
 
         this.words = ""
+        this.text = ""
         this.wordIndex = 0
     }
 
@@ -40,12 +41,12 @@ class ContactMe extends HTMLElement {
 
         let typeSpeed = 150
 
-        const text = fullText.substring(0, text.length + 1)
-        this.mailSubject.value = text
+        this.text = fullText.substring(0, this.text.length + 1)
+        this.mailSubject.value = this.text
 
         const timeoutID = setTimeout(() => this.writeSubject(), typeSpeed)
 
-        if (text === fullText) {
+        if (this.text === fullText) {
             // document.querySelector("#resistance").setAttribute("state", "gogogo")
             clearTimeout(timeoutID)
             this.shadowRoot.getElementById("message").focus({ focusVisible: true })
