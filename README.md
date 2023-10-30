@@ -1,15 +1,18 @@
-# Hello !
+# Welcome to My Portfolio!
 
-### This is my **portfolio** where you can see what I've code for practice and my studies.
+## Explore My Coding Journey
 
-### I hope you enjoy it as much as I do and we get in touch !
+This is my portfolio where I share the projects I've built for practice and during my studies. I'm excited to showcase my work and hope you find it as enjoyable as I do.
+
+## Stay Connected
+
+Feel free to reach out and get in touch! Let's connect and discuss anything related to software development or more.
 
 ---
 
-```
-run with live server
-```
+**[View Live Preview](https://huesoskywalker.netlify.app)**
 
-> ## Author:
+> ## About the Author:
 >
-> -   ### Agustin Bigoni Lavezzari aka huesoskywalker
+> -   **Agustin Bigoni Lavezzari**
+> -   _AKA huesoskywalker_

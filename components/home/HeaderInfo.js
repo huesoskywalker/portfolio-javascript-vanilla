@@ -44,17 +44,20 @@ class HeaderInfo extends HTMLElement {
     renderRightHeader() {
         const rightContainer = this.shadowRoot.getElementById("rightHome")
 
-        const shadowFragment = new DocumentFragment()
+        const fragment = new DocumentFragment()
 
         this.rightHeader.forEach((data) => {
             const element = document.createElement(data.tag)
 
             element.classList.add(data.class)
             element.textContent = data.content
-            shadowFragment.appendChild(element)
+            fragment.appendChild(element)
         })
 
-        rightContainer.insertBefore(shadowFragment, rightContainer.firstChild)
+        rightContainer.appendChild(fragment)
+
+        const roadMapComponent = document.createElement("road-map")
+        rightContainer.appendChild(roadMapComponent)
     }
 
     async connectedCallback() {

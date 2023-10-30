@@ -18,7 +18,7 @@ class AboutSkills extends HTMLElement {
     async loadContent() {
         const templatePath = "/templates/about/about-skills.html"
         const stylePath = "/styles/about/about-skills.css"
-        const nonce = "about-stats"
+        const nonce = "about-skills"
 
         const { template, style } = await this.contentLoader.loadContent(
             templatePath,
