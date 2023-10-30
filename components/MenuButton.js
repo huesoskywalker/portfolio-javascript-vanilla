@@ -58,6 +58,8 @@ class MenuButton extends HTMLElement {
             itemImage.src = item.image.src
             itemImage.alt = item.image.alt
             itemImage.srcset = item.image.srcset
+            itemImage.width = 50
+            itemImage.height = 50
             itemImage.loading = "lazy"
             itemLink.appendChild(itemImage)
 

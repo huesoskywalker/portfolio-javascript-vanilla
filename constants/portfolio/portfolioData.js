@@ -7,7 +7,7 @@ export const portfolioData = [
             alt: "Full Stack Course",
         },
         type: "Course",
-        section: "Full Stack",
+        section: "FullStack",
         date: new Date("2021-07-01"),
         link: "https://www.udemy.com/certificate/UC-873f7935-7ffe-4f98-a600-27cbd3d898b6/",
         author: "Udemy",

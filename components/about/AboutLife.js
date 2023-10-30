@@ -44,6 +44,8 @@ class AboutLife extends HTMLElement {
             itemImg.src = data.image.src
             itemImg.alt = data.image.alt
             itemImg.srcset = data.image.srcset
+            itemImg.width = 60
+            itemImg.height = 60
             itemImg.loading = "lazy"
             imageContainer.appendChild(itemImg)
 

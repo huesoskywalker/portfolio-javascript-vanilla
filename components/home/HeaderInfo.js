@@ -35,6 +35,8 @@ class HeaderInfo extends HTMLElement {
         profileImage.src = this.leftHeader.image.src
         profileImage.alt = this.leftHeader.image.alt
         profileImage.srcset = this.leftHeader.image.srcset
+        profileImage.width = 170
+        profileImage.height = 320
         profileImage.loading = "lazy"
 
         leftContainer.appendChild(profileImage)

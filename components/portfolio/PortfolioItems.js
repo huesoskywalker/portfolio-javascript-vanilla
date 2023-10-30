@@ -44,26 +44,21 @@ class PortfolioItems extends HTMLElement {
             if (newValue === "default") {
                 this.portfolioItems.innerHTML = ``
             } else {
-                this.renderItems()
+                this.renderItems(newValue)
             }
         }
     }
 
-    renderItems() {
+    renderItems(state) {
         const fragment = new DocumentFragment()
 
-        const filteredData = this.portfolioData.filter(({ section }) => section === this.state)
+        const filteredData = this.portfolioData.filter(({ section }) => section === state)
 
         const sortedData = filteredData.sort((a, b) => b.date - a.date)
 
         sortedData.forEach((data) => {
             const item = document.createElement("div")
             item.classList.add("portfolio-item")
-            if (data.type.toLocaleLowerCase() === "book") {
-                item.classList.add("tall")
-            } else {
-                item.classList.add("wide")
-            }
 
             const itemImage = document.createElement("img")
             itemImage.classList.add("item-image")
@@ -72,6 +67,16 @@ class PortfolioItems extends HTMLElement {
             itemImage.alt = data.image.alt
             itemImage.loading = "lazy"
             item.appendChild(itemImage)
+
+            if (data.type.toLocaleLowerCase() === "book") {
+                itemImage.width = 250
+                itemImage.height = (3 / 4) * itemImage.width
+                itemImage.classList.add("tall")
+            } else {
+                itemImage.width = 350
+                itemImage.height = (3 / 5) * itemImage.width
+                itemImage.classList.add("wide")
+            }
 
             const itemDescription = document.createElement("div")
             itemDescription.classList.add("item-description")

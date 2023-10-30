@@ -10,13 +10,13 @@ header {
     min-height: 100vh;
 }
 .left-home {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     justify-content: center;
 }
 .left-home img {
-    width: 35%;
+    width: 245px;
     height: auto;
     border-radius: 40px;
     border: solid;
@@ -56,6 +56,9 @@ header {
     margin: 0;
 }
 @media only screen and (max-width: 1480px) {
+    .left-home img {
+        width: 195px;
+    }
     .salute {
         font-size: 2rem;
     }
@@ -72,7 +75,7 @@ header {
 }
 @media only screen and (max-width: 1040px) {
     .left-home img {
-        width: 45%;
+        width: 165px;
     }
     .salute {
         font-size: 1.8rem;
@@ -89,7 +92,7 @@ header {
 }
 @media only screen and (max-width: 780px) {
     .left-home img {
-        width: 55%;
+        width: 150px;
     }
     .salute {
         font-size: 1.5rem;
@@ -111,9 +114,6 @@ header {
     .home-content {
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
-    }
-    .left-home img {
-        width: 48%;
     }
     .salute {
         font-size: 1.3rem;
