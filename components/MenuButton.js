@@ -88,10 +88,7 @@ class MenuButton extends HTMLElement {
     }
 
     toggleMenu() {
-        const navItems = this.navContainer.querySelectorAll(".nav-menu__item")
-
         this.navContainer.classList.toggle("open")
-        navItems.forEach((item) => item.classList.toggle("moveX"))
 
         const stateHandler = {
             open: "closed",
