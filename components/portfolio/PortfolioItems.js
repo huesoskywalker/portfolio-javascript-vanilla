@@ -9,8 +9,21 @@ class PortfolioItems extends HTMLElement {
     /**
      *
      * @param {ContentLoaderInjectorInterface} contentLoader
+     * @param {Array<{
+     * title: string,
+     * image: {
+     * src: string,
+     * srcset: string,
+     * alt: string
+     * },
+     * type: string,
+     * section: string,
+     * date: Date,
+     * link: string,
+     * author: string
+     * }>} portfolioData
      */
-    constructor(contentLoader) {
+    constructor(contentLoader, portfolioData) {
         super()
         this.attachShadow({ mode: "open" })
         this.contentLoader = contentLoader
@@ -117,7 +130,7 @@ customElements.define(
     "portfolio-items",
     class extends PortfolioItems {
         constructor() {
-            super(contentLoaderInstance)
+            super(contentLoaderInstance, portfolioData)
         }
     }
 )

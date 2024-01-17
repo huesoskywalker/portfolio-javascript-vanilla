@@ -63,7 +63,7 @@ a {
     border-radius: 50%;
 }
 a:hover {
-    background-color: var(--COLOR-SECONDARY);
+    background-color: var(--PROGRESS-SPAN);
 }
 .network-image {
     height: 60px;
