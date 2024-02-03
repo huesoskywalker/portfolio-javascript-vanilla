@@ -13,11 +13,24 @@ export const portfolioData = [
         author: "Udemy",
     },
     {
+        title: "Profile",
+        image: {
+            src: "/img/portfolio/wide/viper-v-2-profile_1920w.jpg",
+            srcset: "/img/portfolio/wide/viper-v2-profile_1920w.jpg 1920w, /img/portfolio/wide/viper-v2-profile_768w.jpg 768w",
+            alt: "Viper v2 Profile section",
+        },
+        type: "Project",
+        section: "Viper-v2",
+        date: new Date("2023-2-1"),
+        link: "https://www.youtube.com/watch?v=zdgkLJKhrSw",
+        author: "huesoskywalker",
+    },
+    {
         title: "Auth",
         image: {
             src: "/img/portfolio/wide/viper-v2-entry_1920w.jpg",
-            srcset: "/img/portfolio/wide/viper-v2-entry_1920w.jpg 1920w, '/img/portfolio/wide/viper-v2-entry_768w.jpg 768w",
-            alt: "Viper v2 entry point",
+            srcset: "/img/portfolio/wide/viper-v2-entry_1920w.jpg 1920w, /img/portfolio/wide/viper-v2-entry_768w.jpg 768w",
+            alt: "Viper v2 auth process",
         },
         type: "Project",
         section: "Viper-v2",
