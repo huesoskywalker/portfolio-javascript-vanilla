@@ -1,5 +1,57 @@
 export const portfolioData = [
     {
+        title: "DevOps",
+        image: {
+            src: "/img/portfolio/wide/devops_1920w.jpg",
+            srcset: "/img/portfolio/wide/devops_1920w.jpg 1920w, /img/portfolio/wide/devops_768w.jpg 768w",
+            alt: "DevOps",
+        },
+        type: "Course",
+        section: "DevOps",
+        date: new Date("2023-09-21"),
+        link: "https://www.udemy.com/certificate/UC-3b45d537-6ab3-4aa5-a259-31a44164ea0a/",
+        author: "Udemy",
+    },
+    {
+        title: "Practitioner",
+        image: {
+            src: "/img/portfolio/wide/cloud-practitioner_1920w.jpg",
+            srcset: "/img/portfolio/wide/cloud-practitioner_1920w.jpg 1920w, /img/portfolio/wide/cloud-practitioner_768w.jpg 768w",
+            alt: "Cloud Practitioner",
+        },
+        type: "Course",
+        section: "AWS",
+        date: new Date("2023-06-27"),
+        link: "https://www.udemy.com/certificate/UC-e478599a-70b3-4041-bdbe-43d69e9e1e05/",
+        author: "Udemy",
+    },
+    {
+        title: "Certificate",
+        image: {
+            src: "/img/portfolio/wide/data-structure_1920w.jpg",
+            srcset: "/img/portfolio/wide/data-structure_1920w.jpg 1920w, /img/portfolio/wide/data-structure_768w.jpg 768w",
+            alt: "Algorithms & Data Structure",
+        },
+        type: "Course",
+        section: "Algorithm & DS",
+        date: new Date("2022-10-18"),
+        link: "https://www.udemy.com/certificate/UC-0fb3ba80-5b92-432a-bb9d-c99a11114225/",
+        author: "Udemy",
+    },
+    {
+        title: "Certificate",
+        image: {
+            src: "/img/portfolio/wide/blockchain_1920w.jpg",
+            srcset: "/img/portfolio/wide/blockchain_1920w.jpg 1920w, /img/portfolio/wide/blockchain_768w.jpg 768w",
+            alt: "Solidity Course",
+        },
+        type: "Course",
+        section: "Blockchain",
+        date: new Date("2022-08-22"),
+        link: "https://www.udemy.com/certificate/UC-f1fc04e1-8294-45ef-882d-cd8e482862ef/?utm_campaign=email",
+        author: "Udemy",
+    },
+    {
         title: "Certificate",
         image: {
             src: "/img/portfolio/wide/full-stack_1920w.jpg",
@@ -104,7 +156,7 @@ export const portfolioData = [
         author: "huesoskywalker",
     },
     {
-        title: "Real State",
+        title: "Really State",
         image: {
             src: "/img/portfolio/wide/real-state_1920w.jpg",
             srcset: "/img/portfolio/wide/real-state_1920w.jpg 1920w, /img/portfolio/wide/real-state_768w.jpg 768w",
@@ -113,7 +165,7 @@ export const portfolioData = [
         type: "Project",
         section: "Real State map",
         date: new Date("2023-08-01"),
-        link: "https://www.youtube.com/watch?v=USTM_HdKN2I",
+        link: "https://really-stateful.vercel.app",
         author: "huesoskywalker",
     },
     {
@@ -141,19 +193,6 @@ export const portfolioData = [
         date: new Date("2023-10-10"),
         link: "https://chicago-medical-checkup.vercel.app/",
         author: "huesoskywalker",
-    },
-    {
-        title: "Certificate",
-        image: {
-            src: "/img/portfolio/wide/blockchain_1920w.jpg",
-            srcset: "/img/portfolio/wide/blockchain_1920w.jpg 1920w, /img/portfolio/wide/blockchain_768w.jpg 768w",
-            alt: "Solidity Course",
-        },
-        type: "Course",
-        section: "Blockchain",
-        date: new Date("2022-08-22"),
-        link: "https://www.udemy.com/certificate/UC-f1fc04e1-8294-45ef-882d-cd8e482862ef/?utm_campaign=email",
-        author: "Udemy",
     },
     {
         title: "Recap",
@@ -206,45 +245,6 @@ export const portfolioData = [
         date: new Date("2023-11-01"),
         link: "",
         author: "Nicholas C. Zakas",
-    },
-    {
-        title: "Certificate",
-        image: {
-            src: "/img/portfolio/wide/data-structure_1920w.jpg",
-            srcset: "/img/portfolio/wide/data-structure_1920w.jpg 1920w, /img/portfolio/wide/data-structure_768w.jpg 768w",
-            alt: "Algorithms & Data Structure",
-        },
-        type: "Course",
-        section: "Algorithm & DS",
-        date: new Date("2022-10-18"),
-        link: "https://www.udemy.com/certificate/UC-0fb3ba80-5b92-432a-bb9d-c99a11114225/",
-        author: "Udemy",
-    },
-    {
-        title: "Practitioner",
-        image: {
-            src: "/img/portfolio/wide/cloud-practitioner_1920w.jpg",
-            srcset: "/img/portfolio/wide/cloud-practitioner_1920w.jpg 1920w, /img/portfolio/wide/cloud-practitioner_768w.jpg 768w",
-            alt: "Cloud Practitioner",
-        },
-        type: "Course",
-        section: "AWS",
-        date: new Date("2023-06-27"),
-        link: "https://www.udemy.com/certificate/UC-e478599a-70b3-4041-bdbe-43d69e9e1e05/",
-        author: "Udemy",
-    },
-    {
-        title: "DevOps",
-        image: {
-            src: "/img/portfolio/wide/devops_1920w.jpg",
-            srcset: "/img/portfolio/wide/devops_1920w.jpg 1920w, /img/portfolio/wide/devops_768w.jpg 768w",
-            alt: "DevOps",
-        },
-        type: "Course",
-        section: "DevOps",
-        date: new Date("2023-09-21"),
-        link: "https://www.udemy.com/certificate/UC-3b45d537-6ab3-4aa5-a259-31a44164ea0a/",
-        author: "Udemy",
     },
     {
         title: "Entry point",
